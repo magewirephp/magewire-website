@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Magewire — Reactive Magento, PHP-first</title>
+    <meta name="description" content="MagewirePHP brings reactive, server-driven UI development to Magento 2. Build dynamic interfaces without writing JavaScript. V3 Beta available now.">
+
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800,900|jetbrains-mono:400,500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+            },
+            extend: {
+                colors: {
+                    mw: {
+                         50: '#fff4ee',
+                        100: '#ffe6d3',
+                        200: '#ffc9a6',
+                        300: '#ffa36d',
+                        400: '#ff7232',
+                        500: '#f26322',
+                        600: '#e04e0f',
+                        700: '#b83a0e',
+                        800: '#932f13',
+                        900: '#772913',
+                    },
+                },
+            },
+        },
+    }
+    </script>
+
+    @fluxAppearance
+    @fluxStyles
+
+    <style>
+        :root {
+            --color-accent:             #f26322;
+            --color-accent-foreground:  #ffffff;
+            --color-accent-content:     #e04e0f;
+        }
+
+        /* ── Entrance animations ── */
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+        .e1  { animation: fade-up .7s .00s ease both; }
+        .e2  { animation: fade-up .7s .10s ease both; }
+        .e3  { animation: fade-up .7s .22s ease both; }
+        .e4  { animation: fade-up .7s .34s ease both; }
+        .e4b { animation: fade-up .7s .46s ease both; }
+        .e5  { animation: fade-up .7s .58s ease both; }
+
+        /* ── Scroll-triggered reveal ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1);
+        }
+        .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+        /* ── Gradient text ── */
+        .grad {
+            background: linear-gradient(135deg, #ff8c42 0%, #f26322 40%, #c94b0a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ── Section eyebrow label ── */
+        .eyebrow {
+            display: inline-block;
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: #f26322;
+            margin-bottom: 1rem;
+        }
+
+        /* ── Navigation ── */
+        .nav-glass { transition: background .3s, box-shadow .3s, border-color .3s; }
+        .nav-solid  {
+            background: rgba(255,255,255,.98) !important;
+            box-shadow: 0 1px 0 rgba(0,0,0,.06);
+            border-bottom-color: #f0eeec !important;
+        }
+        .nav-link {
+            font-size: .9375rem;
+            font-weight: 500;
+            color: #52525b;
+            text-decoration: none;
+            padding: .375rem .75rem;
+            border-radius: 9999px;
+            transition: color .15s, background .15s;
+        }
+        .nav-link:hover { color: #f26322; background: #fff4ee; }
+
+        /* ── Code block scrollbar ── */
+        .code-block { max-width: 100%; }
+        .code-block::-webkit-scrollbar        { height: 5px; width: 5px; }
+        .code-block::-webkit-scrollbar-track  { background: transparent; }
+        .code-block::-webkit-scrollbar-thumb  { background: rgba(255,255,255,.15); border-radius: 99px; }
+
+        /* ── Tab ── */
+        .tab-btn {
+            transition: color .15s, border-color .15s;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+        }
+        .tab-btn.active {
+            border-bottom-color: white;
+            color: white;
+        }
+
+        /* ── Card hover ── */
+        .card-lift { transition: transform .2s, box-shadow .2s; }
+        .card-lift:hover { transform: translateY(-2px); box-shadow: 0 12px 40px -8px rgba(0,0,0,.10); }
+
+        /* ── Sponsor / feature card ── */
+        .sponsor-card {
+            transition: box-shadow .2s, transform .2s, border-color .2s;
+            box-shadow: 0 1px 4px rgba(0,0,0,.04);
+        }
+        .sponsor-card:hover {
+            transform: translateY(-2px);
+            border-color: #f26322 !important;
+            box-shadow: 0 8px 32px -4px rgba(242,99,34,.15), 0 1px 4px rgba(0,0,0,.04);
+        }
+
+        /* ── A11y ── */
+        :focus-visible { outline: 2px solid #f26322; outline-offset: 3px; border-radius: 4px; }
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="bg-[#fafaf8] text-[#1a1a1a] antialiased font-sans overflow-x-hidden">
+
+{{-- Skip link --}}
+<a href="#main"
+   class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999]
+          focus:bg-mw-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-xl
+          focus:font-semibold focus:shadow-lg">
+    Skip to main content
+</a>
+
+{{-- ══════════════════════════════════
+     NAVIGATION
+     ══════════════════════════════════ --}}
+<header id="site-nav" role="banner"
+        class="nav-glass fixed top-0 inset-x-0 z-50 border-b border-transparent bg-white/70 backdrop-blur-xl">
+    <div class="mx-auto max-w-6xl px-6 flex items-center justify-between h-[68px]">
+
+        {{-- Logo --}}
+        <a href="/" aria-label="Magewire — go to homepage"
+           class="shrink-0 select-none group">
+            <span class="text-[18px] font-bold tracking-tight text-[#1d1d1f]
+                         group-hover:text-mw-600 transition-colors">MagewirePHP</span>
+        </a>
+
+        {{-- Nav links --}}
+        <nav aria-label="Primary" class="hidden md:flex items-center gap-1">
+            <a href="https://magewirephp.github.io/magewire-docs/index.html"
+               target="_blank" rel="noopener" class="nav-link">Docs</a>
+            <a href="https://magewirephp.github.io/magewire-docs/blogs/index.html"
+               target="_blank" rel="noopener" class="nav-link">Blog</a>
+            <a href="#sponsors" class="nav-link">Sponsors</a>
+            <a href="#install"  class="nav-link">Install</a>
+        </nav>
+
+        {{-- GitHub + Discord icons --}}
+        <div class="flex items-center gap-2 shrink-0">
+            <a href="https://github.com/magewirephp/magewire"
+               target="_blank" rel="noopener" aria-label="GitHub"
+               class="w-9 h-9 flex items-center justify-center rounded-full border border-[#d2d2d7] text-[#52525b] hover:border-mw-500 hover:text-mw-600 transition-colors">
+                <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+            </a>
+            <a href="https://discord.gg/magewire"
+               target="_blank" rel="noopener" aria-label="Discord"
+               class="w-9 h-9 flex items-center justify-center rounded-full border border-[#d2d2d7] text-[#52525b] hover:border-mw-500 hover:text-mw-600 transition-colors">
+                <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.055a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03ZM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/>
+                </svg>
+            </a>
+        </div>
+
+    </div>
+</header>
+
+<main id="main">
+
+{{-- ══════════════════════════════════
+     HERO  — wave background
+     ══════════════════════════════════ --}}
+<section class="relative z-10 min-h-[100svh] flex flex-col items-center justify-center
+                pt-24 pb-32 px-6 overflow-hidden">
+
+    {{-- ── Background ── --}}
+    <div aria-hidden="true" class="absolute inset-0 pointer-events-none overflow-hidden">
+        {{-- Warm white base --}}
+        <div class="absolute inset-0" style="background:#fafaf8;"></div>
+        {{-- Dot grid --}}
+        <svg class="absolute inset-0 w-full h-full opacity-[0.45]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="hero-dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+                    <circle cx="1.5" cy="1.5" r="1.5" fill="#d4c5bb"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#hero-dots)"/>
+        </svg>
+        {{-- Radial orange glow from top-center --}}
+        <div class="absolute inset-0"
+             style="background: radial-gradient(ellipse 75% 55% at 50% -5%, rgba(242,99,34,0.13) 0%, transparent 70%);"></div>
+        {{-- Bottom fade to white --}}
+        <div class="absolute bottom-0 inset-x-0 h-48"
+             style="background: linear-gradient(to bottom, transparent, #fafaf8);"></div>
+    </div>
+
+    {{-- Hero content --}}
+    <div class="relative z-10 max-w-5xl mx-auto text-center">
+
+        {{-- V3 badge --}}
+        <div class="e1 inline-flex items-center gap-2.5 mb-10
+                    text-sm font-semibold text-green-700 bg-green-50
+                    border border-green-200 px-5 py-2 rounded-full shadow-sm">
+            <span class="relative flex h-2.5 w-2.5 shrink-0" aria-hidden="true">
+                <span class="absolute animate-ping inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500"></span>
+            </span>
+            Magewire <strong class="font-bold">V3</strong> &mdash; Public Beta
+        </div>
+
+        {{-- Headline --}}
+        <h1 class="e2 text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem]
+                   font-black tracking-tight leading-[1.04] text-[#1a1a1a]">
+            Reactive Magento<br>
+            <span class="grad">without the JavaScript</span>
+        </h1>
+
+        <p class="e3 mt-6 text-lg sm:text-xl text-[#71717a] max-w-xl mx-auto leading-relaxed font-normal">
+            Ship reactive Magento&nbsp;2 UIs in pure PHP. No JavaScript. No context switching. Just you and your code.
+        </p>
+
+        {{-- CTAs --}}
+        <div class="e4 mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://magewirephp.github.io/magewire-docs/index.html"
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 bg-mw-500 hover:bg-mw-600
+                      text-white text-base font-semibold px-7 py-3.5 rounded-full
+                      transition-colors shadow-lg shadow-mw-300/50">
+                Read the Docs
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5"
+                     viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                </svg>
+            </a>
+            <a href="#install"
+               class="inline-flex items-center gap-2 bg-white border border-[#e4e2de]
+                      text-[#52525b] text-base font-semibold px-7 py-3.5 rounded-full
+                      hover:border-mw-300 hover:text-mw-600 transition-colors shadow-sm">
+                Quick Install
+            </a>
+        </div>
+
+        {{-- Live stats --}}
+        <div x-data="{
+                stars: 254,
+                downloads: 1125229,
+                fmt(n) {
+                    if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+                    if (n >= 1e3) return Math.round(n / 1e3) + 'K';
+                    return n;
+                },
+                async init() {
+                    try {
+                        const [gh, pkg] = await Promise.all([
+                            fetch('https://api.github.com/repos/magewirephp/magewire').then(r => r.json()),
+                            fetch('https://packagist.org/packages/magewirephp/magewire.json').then(r => r.json()),
+                        ]);
+                        if (gh.stargazers_count) this.stars = gh.stargazers_count;
+                        if (pkg.package?.downloads?.total) this.downloads = pkg.package.downloads.total;
+                    } catch(e) {}
+                }
+             }"
+             class="e4b mt-10 flex items-center justify-center gap-6 text-sm">
+            <a href="https://github.com/magewirephp/magewire" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-[#6b7280] hover:text-[#1d1d1f] transition-colors">
+                {{-- GitHub mark --}}
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.197 22 16.444 22 12.021 22 6.484 17.522 2 12 2Z"/>
+                </svg>
+                <strong class="text-[#1d1d1f] font-bold" x-text="stars">254</strong>
+                <span>stars</span>
+            </a>
+            <span class="w-px h-4 bg-[#d1d5db]" aria-hidden="true"></span>
+            <a href="https://packagist.org/packages/magewirephp/magewire" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-[#6b7280] hover:text-[#1d1d1f] transition-colors">
+                {{-- Download / package icon --}}
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.75"
+                     viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+                </svg>
+                <strong class="text-[#1d1d1f] font-bold" x-text="fmt(downloads)">1.1M</strong>
+                <span>Packagist installs</span>
+            </a>
+        </div>
+
+        {{-- Meta pills --}}
+        <div class="e5 mt-12 flex items-center justify-center flex-wrap gap-3">
+            <span class="inline-flex items-center gap-2.5 bg-white border border-[#e4e2de] rounded-full pl-2 pr-5 py-1.5 shadow-sm shadow-black/5">
+                <span class="w-7 h-7 rounded-full bg-mw-100 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-mw-600" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                    </svg>
+                </span>
+                <span class="text-sm font-semibold text-[#1d1d1f]">PHP 8.2+</span>
+            </span>
+            <span class="inline-flex items-center gap-2.5 bg-white border border-[#e4e2de] rounded-full pl-2 pr-5 py-1.5 shadow-sm shadow-black/5">
+                <span class="w-7 h-7 rounded-full bg-mw-100 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-mw-600" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                    </svg>
+                </span>
+                <span class="text-sm font-semibold text-[#1d1d1f]">Magento 2.4.4+</span>
+            </span>
+            <span class="inline-flex items-center gap-2.5 bg-white border border-[#e4e2de] rounded-full pl-2 pr-5 py-1.5 shadow-sm shadow-black/5">
+                <span class="w-7 h-7 rounded-full bg-mw-100 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-mw-600" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                    </svg>
+                </span>
+                <span class="text-sm font-semibold text-[#1d1d1f]">Open Source &mdash; MIT</span>
+            </span>
+            <span class="inline-flex items-center gap-2.5 bg-white border border-[#e4e2de] rounded-full pl-2 pr-5 py-1.5 shadow-sm shadow-black/5">
+                <span class="w-7 h-7 rounded-full bg-mw-100 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-mw-600" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                    </svg>
+                </span>
+                <span class="text-sm font-semibold text-[#1d1d1f]">Powers Hyvä Checkout</span>
+            </span>
+        </div>
+
+        {{-- Code editor — bleeds into Features section below --}}
+        <div class="mt-20 px-6 relative z-10 w-full max-w-5xl mx-auto text-left">
+
+
+            <div x-data="{ tab: 'php' }" class="w-full rounded-3xl overflow-hidden border border-[#3f3f46] shadow-2xl shadow-black/40">
+
+                {{-- Tab bar --}}
+                <div class="flex bg-[#1c1c1e] border-b border-[#3f3f46]">
+                    <button @click="tab = 'php'"
+                            :class="tab === 'php' ? 'active' : ''"
+                            class="tab-btn text-sm font-mono font-medium
+                                   text-[#9ca3af] hover:text-white px-5 py-3.5">
+                        Counter.php
+                    </button>
+                    <button @click="tab = 'xml'"
+                            :class="tab === 'xml' ? 'active' : ''"
+                            class="tab-btn text-sm font-mono font-medium
+                                   text-[#9ca3af] hover:text-white px-5 py-3.5">
+                        default.xml
+                    </button>
+                    <button @click="tab = 'phtml'"
+                            :class="tab === 'phtml' ? 'active' : ''"
+                            class="tab-btn text-sm font-mono font-medium
+                                   text-[#9ca3af] hover:text-white px-5 py-3.5">
+                        counter.phtml
+                    </button>
+                    <button @click="tab = 'result'"
+                            :class="tab === 'result' ? 'active' : ''"
+                            class="tab-btn text-sm font-mono font-medium
+                                   text-[#9ca3af] hover:text-white px-5 py-3.5 ml-auto">
+                        &#9654; Result
+                    </button>
+                </div>
+
+                <div class="bg-[#111827]">
+                <div style="display:grid">
+
+                    {{-- PHP --}}
+                    <div :style="tab === 'php' ? 'grid-area:1/1' : 'grid-area:1/1;visibility:hidden'">
+<pre class="code-block overflow-x-auto text-sm leading-relaxed p-8 font-mono" aria-label="Counter PHP component"><code><span style="color:#9ca3af">&lt;?php</span>
+
+<span style="color:#818cf8">declare</span><span style="color:#9ca3af">(</span><span style="color:#fcd34d">strict_types</span><span style="color:#9ca3af">=</span><span style="color:#86efac">1</span><span style="color:#9ca3af">);</span>
+
+<span style="color:#818cf8">namespace</span> <span style="color:#e2e8f0">Vendor\Module\Magewire;</span>
+
+<span style="color:#818cf8">use</span> <span style="color:#67e8f9">Magewire\Component;</span>
+
+<span style="color:#818cf8">class</span> <span style="color:#fcd34d">Counter</span> <span style="color:#818cf8">extends</span> <span style="color:#67e8f9">Component</span>
+<span style="color:#9ca3af">{</span>
+    <span style="color:#818cf8">public int</span> <span style="color:#93c5fd">$count</span> <span style="color:#9ca3af">= </span><span style="color:#86efac">0</span><span style="color:#9ca3af">;</span>
+
+    <span style="color:#818cf8">public function</span> <span style="color:#fcd34d">increment</span><span style="color:#9ca3af">():</span> <span style="color:#818cf8">void</span>
+    <span style="color:#9ca3af">{</span>
+        <span style="color:#93c5fd">$this</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span><span style="color:#9ca3af">++;</span>
+    <span style="color:#9ca3af">}</span>
+
+    <span style="color:#818cf8">public function</span> <span style="color:#fcd34d">decrement</span><span style="color:#9ca3af">():</span> <span style="color:#818cf8">void</span>
+    <span style="color:#9ca3af">{</span>
+        <span style="color:#93c5fd">$this</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span><span style="color:#9ca3af">--;</span>
+    <span style="color:#9ca3af">}</span>
+<span style="color:#9ca3af">}</span></code></pre>
+                    </div>
+
+                    {{-- XML --}}
+                    <div :style="tab === 'xml' ? 'grid-area:1/1' : 'grid-area:1/1;visibility:hidden'">
+<pre class="code-block overflow-x-auto text-sm leading-relaxed p-8 font-mono" aria-label="Magento layout XML registering the counter component"><code><span style="color:#9ca3af">&lt;?xml version="1.0"?&gt;</span>
+<span style="color:#67e8f9">&lt;page</span>
+    <span style="color:#86efac">xmlns:xsi</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"http://www.w3.org/2001/XMLSchema-instance"</span>
+    <span style="color:#86efac">xsi:noNamespaceSchemaLocation</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span style="color:#67e8f9">&gt;</span>
+    <span style="color:#67e8f9">&lt;body&gt;</span>
+        <span style="color:#67e8f9">&lt;referenceContainer</span> <span style="color:#86efac">name</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"content"</span><span style="color:#67e8f9">&gt;</span>
+            <span style="color:#67e8f9">&lt;block</span>
+                <span style="color:#86efac">name</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"counter"</span>
+                <span style="color:#86efac">template</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"Vendor_Module::magewire/counter.phtml"</span><span style="color:#67e8f9">&gt;</span>
+                <span style="color:#67e8f9">&lt;arguments&gt;</span>
+                    <span style="color:#67e8f9">&lt;argument</span>
+                        <span style="color:#86efac">name</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"magewire"</span>
+                        <span style="color:#86efac">xsi:type</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"object"</span><span style="color:#67e8f9">&gt;</span>
+                        <span style="color:#e2e8f0">Vendor\Module\Magewire\Counter</span>
+                    <span style="color:#67e8f9">&lt;/argument&gt;</span>
+                <span style="color:#67e8f9">&lt;/arguments&gt;</span>
+            <span style="color:#67e8f9">&lt;/block&gt;</span>
+        <span style="color:#67e8f9">&lt;/referenceContainer&gt;</span>
+    <span style="color:#67e8f9">&lt;/body&gt;</span>
+<span style="color:#67e8f9">&lt;/page&gt;</span></code></pre>
+                    </div>
+
+                    {{-- PHTML --}}
+                    <div :style="tab === 'phtml' ? 'grid-area:1/1' : 'grid-area:1/1;visibility:hidden'">
+<pre class="code-block overflow-x-auto text-sm leading-relaxed p-8 font-mono" aria-label="PHTML template for the counter component"><code><span style="color:#67e8f9">&lt;div</span> <span style="color:#86efac">class</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"counter"</span><span style="color:#67e8f9">&gt;</span>
+
+    <span style="color:#67e8f9">&lt;p</span> <span style="color:#86efac">class</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"count"</span><span style="color:#67e8f9">&gt;</span>
+        Count: <span style="color:#67e8f9">&lt;strong&gt;</span><span style="color:#9ca3af">&lt;?= </span><span style="color:#93c5fd">$magewire</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span> <span style="color:#9ca3af">?&gt;</span><span style="color:#67e8f9">&lt;/strong&gt;</span>
+    <span style="color:#67e8f9">&lt;/p&gt;</span>
+
+    <span style="color:#67e8f9">&lt;button</span> <span style="color:#86efac">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"increment"</span><span style="color:#67e8f9">&gt;</span>+<span style="color:#67e8f9">&lt;/button&gt;</span>
+    <span style="color:#67e8f9">&lt;button</span> <span style="color:#86efac">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"decrement"</span><span style="color:#67e8f9">&gt;</span>-<span style="color:#67e8f9">&lt;/button&gt;</span>
+
+<span style="color:#67e8f9">&lt;/div&gt;</span></code></pre>
+                    </div>
+
+                    {{-- Result --}}
+                    <div :style="tab === 'result' ? 'grid-area:1/1' : 'grid-area:1/1;visibility:hidden'" class="bg-[#111827] flex items-center justify-center min-h-[320px]">
+                        <livewire:counter />
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+{{-- ══════════════════════════════════
+     INSTALLATION
+     ══════════════════════════════════ --}}
+<section id="install" class="-mt-52 pt-[260px] pb-36 px-6 bg-[#fafaf8] relative z-0"
+         style="box-shadow: 0 -40px 80px 0 rgba(0,0,0,0.10)">
+    <div class="mx-auto max-w-3xl">
+
+        <div class="reveal text-center mb-16">
+            <span class="eyebrow">Get started</span>
+            <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
+                Install
+            </h2>
+            <p class="mt-6 text-lg text-[#71717a] max-w-xl mx-auto leading-relaxed">
+                Four commands. You're up and running.
+            </p>
+        </div>
+
+        <div x-data="{ copied: false }"
+             class="reveal rounded-3xl overflow-hidden border border-[#3f3f46] shadow-2xl shadow-black/40"
+             style="transition-delay:.15s">
+
+            <div class="flex items-center justify-between bg-[#1c1c1e] px-6 py-4 border-b border-[#3f3f46]">
+                <div class="flex gap-2" aria-hidden="true">
+                    <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#febc2e]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#28c840]"></div>
+                </div>
+                <span class="text-sm text-[#6b7280] font-mono">Terminal</span>
+                <button
+                    @click="
+                        navigator.clipboard.writeText('composer require magewirephp/magewire\nphp bin/magento module:enable Magewirephp_Magewire\nphp bin/magento setup:upgrade\nphp bin/magento cache:clean');
+                        copied = true;
+                        setTimeout(() => copied = false, 2000)
+                    "
+                    class="text-sm text-[#6b7280] hover:text-white transition-colors font-medium"
+                    aria-label="Copy install commands">
+                    <span x-show="!copied">Copy</span>
+                    <span x-show="copied" x-cloak class="text-green-400">Copied!</span>
+                </button>
+            </div>
+
+            <div class="bg-[#111827] px-8 py-8 font-mono text-base leading-loose">
+                <div class="flex items-start gap-3">
+                    <span class="text-mw-500 select-none shrink-0">$</span>
+                    <span class="text-[#e2e8f0]">composer require magewirephp/magewire</span>
+                </div>
+                <div class="flex items-start gap-3 mt-1">
+                    <span class="text-mw-500 select-none shrink-0">$</span>
+                    <span class="text-[#e2e8f0]">php bin/magento module:enable Magewirephp_Magewire</span>
+                </div>
+                <div class="flex items-start gap-3 mt-1">
+                    <span class="text-mw-500 select-none shrink-0">$</span>
+                    <span class="text-[#e2e8f0]">php bin/magento setup:upgrade</span>
+                </div>
+                <div class="flex items-start gap-3 mt-1">
+                    <span class="text-mw-500 select-none shrink-0">$</span>
+                    <span class="text-[#e2e8f0]">php bin/magento cache:clean</span>
+                </div>
+                <div class="flex items-start gap-3 mt-4">
+                    <span class="text-green-500 select-none shrink-0">&#10003;</span>
+                    <span class="text-[#6b7280]">Magewire is ready. Happy building!</span>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="mt-8 text-center text-[#6e6e73] text-lg">
+            Need more? Everything else is in the
+            <a href="https://magewirephp.github.io/magewire-docs/index.html"
+               class="text-mw-500 font-semibold hover:underline" target="_blank" rel="noopener">
+                documentation</a>.
+        </p>
+
+    </div>
+</section>
+
+{{-- ══════════════════════════════════
+     LIVEWIRE PARITY
+     ══════════════════════════════════ --}}
+<section class="py-36 px-6 bg-[#fafaf8]">
+
+    <div class="mx-auto max-w-5xl">
+
+        {{-- Header --}}
+        <div class="reveal text-center mb-16">
+            <span class="eyebrow">Familiar by Design</span>
+            <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a] mt-2">
+                Know Livewire?<br>
+                <span class="grad">You already know Magewire.</span>
+            </h2>
+            <p class="mt-5 text-lg text-[#6e6e73] max-w-2xl mx-auto leading-relaxed">
+                A faithful port of Laravel Livewire for Magento&nbsp;2. Same component model. Same <code class="font-mono text-mw-500">wire:</code> directives. Same mental model. If you know Livewire, you're already productive.
+            </p>
+        </div>
+
+        {{-- ── PHP COMPARISON ── --}}
+        <div class="reveal flex items-center gap-4 mb-4" style="transition-delay:.05s">
+            <span class="text-xs font-mono font-medium text-[#9ca3af] uppercase tracking-widest">Component class</span>
+            <span class="flex-1 h-px bg-[#e8e5e1]"></span>
+        </div>
+
+        <div class="reveal grid md:grid-cols-2 gap-4 items-start" style="transition-delay:.1s">
+
+            {{-- Laravel Livewire PHP --}}
+            <div class="rounded-2xl overflow-hidden border border-[#e8e5e1] shadow-sm">
+                <div class="flex items-center bg-[#f5f3f0] px-5 py-3.5 border-b border-[#e8e5e1]">
+                    <span class="text-sm font-semibold text-[#1d1d1f]">Laravel · Livewire</span>
+                    <span class="ml-auto text-xs text-[#9ca3af] font-mono">Counter.php</span>
+                </div>
+<pre class="text-sm leading-relaxed p-5 font-mono overflow-x-auto bg-[#111110]"><code><span style="color:#9ca3af">&lt;?php</span>
+
+<span style="color:#818cf8">namespace</span> <span style="color:#e2e8f0">App\Livewire;</span>
+
+<span style="color:#818cf8">use</span> <span style="color:#67e8f9">Livewire\Component;</span>
+
+<span style="color:#818cf8">class</span> <span style="color:#fcd34d">Counter</span> <span style="color:#818cf8">extends</span> <span style="color:#67e8f9">Component</span>
+<span style="color:#9ca3af">{</span>
+    <span style="color:#818cf8">public int</span> <span style="color:#93c5fd">$count</span> <span style="color:#9ca3af">= </span><span style="color:#86efac">0</span><span style="color:#9ca3af">;</span>
+
+    <span style="color:#818cf8">public function</span> <span style="color:#fcd34d">increment</span><span style="color:#9ca3af">():</span> <span style="color:#818cf8">void</span>
+    <span style="color:#9ca3af">{</span>
+        <span style="color:#93c5fd">$this</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span><span style="color:#9ca3af">++;</span>
+    <span style="color:#9ca3af">}</span>
+
+    <span style="color:#818cf8">public function</span> <span style="color:#fcd34d">decrement</span><span style="color:#9ca3af">():</span> <span style="color:#818cf8">void</span>
+    <span style="color:#9ca3af">{</span>
+        <span style="color:#93c5fd">$this</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span><span style="color:#9ca3af">--;</span>
+    <span style="color:#9ca3af">}</span>
+<span style="color:#9ca3af">}</span></code></pre>
+            </div>
+
+            {{-- Magewire PHP --}}
+            <div class="rounded-2xl overflow-hidden border border-[#e8e5e1] shadow-sm">
+                <div class="flex items-center bg-[#f5f3f0] px-5 py-3.5 border-b border-[#e8e5e1]">
+                    <span class="text-sm font-semibold text-[#1d1d1f]">Magento&nbsp;2 · Magewire</span>
+                    <span class="ml-auto text-xs text-[#9ca3af] font-mono">Counter.php</span>
+                </div>
+<pre class="text-sm leading-relaxed p-5 font-mono overflow-x-auto bg-[#111110]"><code><span style="color:#9ca3af">&lt;?php</span>
+
+<span style="color:#818cf8">namespace</span> <span style="background:rgba(242,99,34,0.18);border-radius:3px;padding:1px 4px"><span style="color:#e2e8f0">Vendor\Module\Magewire;</span></span>
+
+<span style="color:#818cf8">use</span> <span style="background:rgba(242,99,34,0.18);border-radius:3px;padding:1px 4px"><span style="color:#67e8f9">Magewire\Component;</span></span>
+
+<span style="color:#818cf8">class</span> <span style="color:#fcd34d">Counter</span> <span style="color:#818cf8">extends</span> <span style="color:#67e8f9">Component</span>
+<span style="color:#9ca3af">{</span>
+    <span style="color:#818cf8">public int</span> <span style="color:#93c5fd">$count</span> <span style="color:#9ca3af">= </span><span style="color:#86efac">0</span><span style="color:#9ca3af">;</span>
+
+    <span style="color:#818cf8">public function</span> <span style="color:#fcd34d">increment</span><span style="color:#9ca3af">():</span> <span style="color:#818cf8">void</span>
+    <span style="color:#9ca3af">{</span>
+        <span style="color:#93c5fd">$this</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span><span style="color:#9ca3af">++;</span>
+    <span style="color:#9ca3af">}</span>
+
+    <span style="color:#818cf8">public function</span> <span style="color:#fcd34d">decrement</span><span style="color:#9ca3af">():</span> <span style="color:#818cf8">void</span>
+    <span style="color:#9ca3af">{</span>
+        <span style="color:#93c5fd">$this</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span><span style="color:#9ca3af">--;</span>
+    <span style="color:#9ca3af">}</span>
+<span style="color:#9ca3af">}</span></code></pre>
+            </div>
+
+        </div>
+
+        {{-- PHP diff callout --}}
+        <div class="reveal mt-4 flex items-center justify-center gap-3 text-sm" style="transition-delay:.15s">
+            <span class="w-16 h-px bg-[#e8e5e1]"></span>
+            <span class="inline-flex items-center gap-2 bg-white border border-[#e8e5e1] rounded-full px-4 py-1.5 text-[#6e6e73]">
+                <span class="w-2 h-2 rounded-full bg-mw-500 shrink-0"></span>
+                Two lines changed. Zero new concepts.
+            </span>
+            <span class="w-16 h-px bg-[#e8e5e1]"></span>
+        </div>
+
+        {{-- ── TEMPLATE COMPARISON ── --}}
+        <div class="reveal flex items-center gap-4 mt-12 mb-4" style="transition-delay:.2s">
+            <span class="text-xs font-mono font-medium text-[#9ca3af] uppercase tracking-widest">Template</span>
+            <span class="flex-1 h-px bg-[#e8e5e1]"></span>
+        </div>
+
+        <div class="reveal grid md:grid-cols-2 gap-4 items-start" style="transition-delay:.25s">
+
+            {{-- Blade template --}}
+            <div class="rounded-2xl overflow-hidden border border-[#e8e5e1] shadow-sm">
+                <div class="flex items-center bg-[#f5f3f0] px-5 py-3.5 border-b border-[#e8e5e1]">
+                    <span class="text-sm font-semibold text-[#1d1d1f]">Laravel · Livewire</span>
+                    <span class="ml-auto text-xs text-[#9ca3af] font-mono">counter.blade.php</span>
+                </div>
+<pre class="text-sm leading-relaxed p-5 font-mono overflow-x-auto bg-[#111110]"><code><span style="color:#9ca3af">&lt;div&gt;</span>
+
+    <span style="color:#9ca3af">&lt;h2&gt;</span><span style="color:#a1a1aa">&#123;&#123;</span> <span style="color:#93c5fd">$count</span> <span style="color:#a1a1aa">&#125;&#125;</span><span style="color:#9ca3af">&lt;/h2&gt;</span>
+
+    <span style="color:#9ca3af">&lt;button</span> <span style="color:#fb923c">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#86efac">"decrement"</span><span style="color:#9ca3af">&gt;</span>&minus;<span style="color:#9ca3af">&lt;/button&gt;</span>
+    <span style="color:#9ca3af">&lt;button</span> <span style="color:#fb923c">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#86efac">"increment"</span><span style="color:#9ca3af">&gt;</span>+<span style="color:#9ca3af">&lt;/button&gt;</span>
+
+<span style="color:#9ca3af">&lt;/div&gt;</span></code></pre>
+            </div>
+
+            {{-- PHTML template --}}
+            <div class="rounded-2xl overflow-hidden border border-[#e8e5e1] shadow-sm">
+                <div class="flex items-center bg-[#f5f3f0] px-5 py-3.5 border-b border-[#e8e5e1]">
+                    <span class="text-sm font-semibold text-[#1d1d1f]">Magento&nbsp;2 · Magewire</span>
+                    <span class="ml-auto text-xs text-[#9ca3af] font-mono">counter.phtml</span>
+                </div>
+<pre class="text-sm leading-relaxed p-5 font-mono overflow-x-auto bg-[#111110]"><code><span style="color:#9ca3af">&lt;div&gt;</span>
+
+    <span style="color:#9ca3af">&lt;h2&gt;</span><span style="color:#a1a1aa">&lt;?=</span> <span style="color:#93c5fd">$magewire</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span> <span style="color:#a1a1aa">?&gt;</span><span style="color:#9ca3af">&lt;/h2&gt;</span>
+
+    <span style="color:#9ca3af">&lt;button</span> <span style="color:#fb923c">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#86efac">"decrement"</span><span style="color:#9ca3af">&gt;</span>&minus;<span style="color:#9ca3af">&lt;/button&gt;</span>
+    <span style="color:#9ca3af">&lt;button</span> <span style="color:#fb923c">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#86efac">"increment"</span><span style="color:#9ca3af">&gt;</span>+<span style="color:#9ca3af">&lt;/button&gt;</span>
+
+<span style="color:#9ca3af">&lt;/div&gt;</span></code></pre>
+            </div>
+
+        </div>
+
+        {{-- Template diff callout --}}
+        <div class="reveal mt-4 flex items-center justify-center gap-3 text-sm" style="transition-delay:.3s">
+            <span class="w-16 h-px bg-[#e8e5e1]"></span>
+            <span class="inline-flex items-center gap-2 bg-white border border-[#e8e5e1] rounded-full px-4 py-1.5 text-[#6e6e73]">
+                <span class="w-2 h-2 rounded-full bg-mw-500 shrink-0"></span>
+                Same wire: directives. Different template engine. That's it.
+            </span>
+            <span class="w-16 h-px bg-[#e8e5e1]"></span>
+        </div>
+
+        {{-- Alpine.js / Hyvä callout --}}
+        <div class="reveal mt-10" style="transition-delay:.35s">
+            <div class="sponsor-card rounded-2xl border border-mw-200 bg-mw-50 p-6 flex flex-col sm:flex-row items-start gap-5">
+                <div class="shrink-0 w-11 h-11 rounded-xl border border-mw-200 bg-white flex items-center justify-center">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M3 20l5-8 4 5 3-4 6 7H3Z" stroke="#f26322" stroke-width="1.5" stroke-linejoin="round" fill="rgba(242,99,34,0.08)"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-bold text-[#1d1d1f] text-base mb-2">Alpine.js under the hood. Hyvä developers already know it.</p>
+                    <p class="text-sm text-[#52525b] leading-relaxed">
+                        Magewire's reactive layer runs on <a href="https://alpinejs.dev" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Alpine.js</a> — the same engine that powers <a href="https://hyva.io" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Hyvä Theme</a>. If you've built on Hyvä, you already speak Alpine.
+                        <code class="font-mono text-mw-600 text-xs">x-data</code>,
+                        <code class="font-mono text-mw-600 text-xs">x-on</code>,
+                        <code class="font-mono text-mw-600 text-xs">@click</code> — all second nature. You're ahead before you write a line.
+                    </p>
+                    <p class="text-sm text-[#52525b] leading-relaxed mt-3">
+                        <a href="https://alpinejs.dev" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Alpine.js</a> and <a href="https://livewire.laravel.com" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Livewire</a> share the same creator: <strong class="text-[#1d1d1f] font-semibold">Caleb Porzio</strong>. They don't just work well together — they were built for each other.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {{-- Three advantages --}}
+        <div class="reveal grid sm:grid-cols-3 gap-4 mt-8" style="transition-delay:.4s">
+
+            <div class="sponsor-card group flex flex-col gap-4 bg-white border border-[#e8e5e1] rounded-2xl p-6">
+                <div class="w-10 h-10 rounded-xl bg-[#f5f3f0] border border-[#e8e5e1] flex items-center justify-center">
+                    <svg class="w-5 h-5 text-mw-500" fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84 51.39 51.39 0 0 0-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-semibold text-[#1d1d1f] mb-1">Hit the ground running</p>
+                    <p class="text-sm text-[#6e6e73] leading-relaxed">Any Livewire developer can ship Magewire code from day one. No ramp-up. No custom docs. They already know how.</p>
+                </div>
+            </div>
+
+            <div class="sponsor-card group flex flex-col gap-4 bg-white border border-[#e8e5e1] rounded-2xl p-6">
+                <div class="w-10 h-10 rounded-xl bg-[#f5f3f0] border border-[#e8e5e1] flex items-center justify-center">
+                    <svg class="w-5 h-5 text-mw-500" fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-semibold text-[#1d1d1f] mb-1">No invented abstractions</p>
+                    <p class="text-sm text-[#6e6e73] leading-relaxed">Nothing to unlearn. No custom APIs. No proprietary directives. Everything maps 1-to-1 with Livewire — on purpose.</p>
+                </div>
+            </div>
+
+            <div class="sponsor-card group flex flex-col gap-4 bg-white border border-[#e8e5e1] rounded-2xl p-6">
+                <div class="w-10 h-10 rounded-xl bg-[#f5f3f0] border border-[#e8e5e1] flex items-center justify-center">
+                    <svg class="w-5 h-5 text-mw-500" fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253M3.157 7.582A8.959 8.959 0 0 0 3 12c0 .778.099 1.533.284 2.253"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-semibold text-[#1d1d1f] mb-1">AI-ready, out of the box</p>
+                    <p class="text-sm text-[#6e6e73] leading-relaxed">ChatGPT, Copilot, Claude — they all know Livewire inside out. That means they know Magewire too. Ask. Apply. Ship.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{{-- ══════════════════════════════════
+     THEME COMPATIBILITY
+     ══════════════════════════════════ --}}
+<section class="py-36 px-6 bg-white">
+    <div class="mx-auto max-w-4xl">
+
+        <div class="reveal text-center mb-16">
+            <span class="eyebrow">Theme Support</span>
+            <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
+                Compatibility
+            </h2>
+        </div>
+        <div class="reveal grid grid-cols-2 sm:grid-cols-4 gap-6" style="transition-delay:.15s">
+
+            <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
+                <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-lg font-bold text-[#1d1d1f]">Hyvä</p>
+                    <p class="text-sm text-green-600 font-medium mt-1">Supported</p>
+                </div>
+            </div>
+
+            <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
+                <div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-lg font-bold text-[#1d1d1f]">Breeze</p>
+                    <p class="text-sm text-amber-500 font-medium mt-1">In progress</p>
+                </div>
+            </div>
+
+            <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
+                <div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-lg font-bold text-[#1d1d1f]">Magento Backend</p>
+                    <p class="text-sm text-amber-500 font-medium mt-1">In progress</p>
+                </div>
+            </div>
+
+            <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
+                <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-lg font-bold text-[#1d1d1f]">Luma</p>
+                    <p class="text-sm text-red-400 font-medium mt-1">No active plans</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+{{-- ══════════════════════════════════
+     SPONSORS
+     ══════════════════════════════════ --}}
+<section id="sponsors" class="py-36 px-6 bg-[#fafaf8]">
+    <div class="mx-auto max-w-5xl">
+
+        <div class="reveal text-center mb-16">
+            <span class="eyebrow">Open Source</span>
+            <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
+                Sponsors
+            </h2>
+            <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
+                Free and open source. Kept running by these generous sponsors.
+            </p>
+        </div>
+
+        <div class="reveal grid sm:grid-cols-2 gap-6 mb-8" style="transition-delay:.15s">
+
+            <a href="https://vendic.nl" target="_blank" rel="noopener sponsored"
+               class="sponsor-card group rounded-2xl border border-[#e8e5e1] bg-white
+                      p-8 flex flex-col items-center text-center gap-5">
+                <img src="https://vendic.nl/img/logo.svg"
+                     alt="Vendic" class="h-10 w-auto" loading="lazy">
+                <p class="text-base text-[#6e6e73]">Magento &amp; Hyvä agency from the Netherlands</p>
+            </a>
+
+            <a href="https://zero1.co.uk" target="_blank" rel="noopener sponsored"
+               class="sponsor-card group rounded-2xl border border-[#e8e5e1] bg-white
+                      p-8 flex flex-col items-center text-center gap-5">
+                <img src="https://www.zero1.co.uk/static/version1769734989/frontend/z1/hyva/en_GB/images/logo.svg"
+                     alt="Zero 1" class="h-10 w-auto" loading="lazy">
+                <p class="text-base text-[#6e6e73]">Ecommerce agency &amp; Magento specialists, UK</p>
+            </a>
+
+        </div>
+
+        <div class="rounded-2xl border border-[#f0ece7] bg-[#fffaf7]
+                    p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+                <p class="text-lg font-semibold text-[#1a1a1a]">Become a sponsor</p>
+                <p class="text-base text-[#71717a] mt-1">
+                    Help keep Magewire free. Get your logo right here.
+                </p>
+            </div>
+            <a href="https://github.com/sponsors/magewirephp"
+               target="_blank" rel="noopener"
+               class="shrink-0 inline-flex items-center gap-2 bg-mw-500 hover:bg-mw-600
+                      text-white font-semibold text-sm px-6 py-3 rounded-full
+                      transition-colors shadow-md shadow-mw-200/60">
+                Sponsor on GitHub
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                     viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                </svg>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+{{-- ══════════════════════════════════
+     POWERED BY MAGEWIRE
+     ══════════════════════════════════ --}}
+<section class="py-36 px-6 bg-white">
+    <div class="mx-auto max-w-5xl">
+
+        <div class="reveal text-center mb-16">
+            <span class="eyebrow">Built with Magewire</span>
+            <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
+                Powered by Magewire.
+            </h2>
+            <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
+                Real products. Real teams. Shipped on Magewire.
+            </p>
+        </div>
+
+        <div class="reveal grid md:grid-cols-2 gap-6" style="transition-delay:.15s">
+
+            {{-- Hyvä Checkout --}}
+            <a href="https://www.hyva.io/hyva-checkout.html" target="_blank" rel="noopener"
+               class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
+                <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" stroke-width="1.75"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.97-7.143a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-lg font-bold text-[#1d1d1f]">Hyvä Checkout</p>
+                    <p class="text-sm text-green-600 font-medium mt-1">hyva.io</p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 text-green-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                    Read more
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                    </svg>
+                </span>
+            </a>
+
+            {{-- Hyvä CMS --}}
+            <a href="https://www.hyva.io/hyva-cms.html" target="_blank" rel="noopener"
+               class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
+                <div class="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.75"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-lg font-bold text-[#1d1d1f]">Hyvä CMS</p>
+                    <p class="text-sm text-purple-600 font-medium mt-1">hyva.io</p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 text-purple-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                    Read more
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                    </svg>
+                </span>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+{{-- ══════════════════════════════════
+     FOOTER
+     ══════════════════════════════════ --}}
+<footer class="bg-[#0f0f0e] px-6 py-16">
+    <div class="mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-8">
+        <span class="text-base font-bold text-[#9ca3af]">MagewirePHP</span>
+        <nav aria-label="Footer" class="flex flex-wrap items-center justify-center gap-6">
+            <a href="https://magewirephp.github.io/magewire-docs/index.html"
+               target="_blank" rel="noopener"
+               class="text-base text-[#9ca3af] hover:text-white transition-colors">Docs</a>
+            <a href="https://magewirephp.github.io/magewire-docs/blogs/index.html"
+               target="_blank" rel="noopener"
+               class="text-base text-[#9ca3af] hover:text-white transition-colors">Blog</a>
+            <a href="https://github.com/magewirephp/magewire"
+               target="_blank" rel="noopener"
+               class="text-base text-[#9ca3af] hover:text-white transition-colors">GitHub</a>
+            <a href="https://github.com/sponsors/magewirephp"
+               target="_blank" rel="noopener"
+               class="text-base text-[#9ca3af] hover:text-white transition-colors">Sponsors</a>
+            <a href="https://discord.gg/magewire"
+               target="_blank" rel="noopener"
+               class="text-base text-[#9ca3af] hover:text-white transition-colors">Discord</a>
+        </nav>
+        <p class="text-sm text-[#9ca3af]">
+            MIT License &mdash; &copy; {{ date('Y') }} MagewirePHP
+        </p>
+    </div>
+</footer>
+
+</main>
+
+@fluxScripts
+
+<script>
+    // Nav glass on scroll
+    const nav = document.getElementById('site-nav');
+    function updateNav() {
+        nav.classList.toggle('nav-solid', window.scrollY > 12);
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    // Scroll-triggered reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+
+</body>
+</html>
