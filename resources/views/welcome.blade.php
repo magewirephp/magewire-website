@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Magewire — Reactive Magento, PHP-first</title>
-    <meta name="description" content="MagewirePHP brings reactive, server-driven UI development to Magento 2. Build dynamic interfaces without writing JavaScript. V3 Beta available now.">
+    <meta name="description" content="MagewirePHP brings reactive, server-driven UI development to Magento 2. Build dynamic interfaces without writing JavaScript. V3 available now.">
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800,900|jetbrains-mono:400,500&display=swap" rel="stylesheet">
@@ -89,7 +89,7 @@
         /* ── Navigation ── */
         .nav-glass { transition: background .3s, box-shadow .3s, border-color .3s; }
         .nav-solid  {
-            background: rgba(255,255,255,.98) !important;
+            background: rgba(255,255,255,.88) !important;
             box-shadow: 0 1px 0 rgba(0,0,0,.06);
             border-bottom-color: #f0eeec !important;
         }
@@ -155,7 +155,7 @@
      NAVIGATION
      ══════════════════════════════════ --}}
 <header id="site-nav" role="banner"
-        class="nav-glass fixed top-0 inset-x-0 z-50 border-b border-transparent bg-white/70 backdrop-blur-xl">
+        class="nav-glass fixed top-0 inset-x-0 z-50 border-b border-transparent bg-white/30 backdrop-blur-xl">
     <div class="mx-auto max-w-6xl px-6 flex items-center justify-between h-[68px]">
 
         {{-- Logo --}}
@@ -167,9 +167,9 @@
 
         {{-- Nav links --}}
         <nav aria-label="Primary" class="hidden md:flex items-center gap-1">
-            <a href="https://magewirephp.github.io/magewire-docs/index.html"
+            <a href="https://docs.magewirephp.nl/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Docs</a>
-            <a href="https://magewirephp.github.io/magewire-docs/blogs/index.html"
+            <a href="https://docs.magewirephp.nl/blogs/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Blog</a>
             <a href="#sponsors" class="nav-link">Sponsors</a>
             <a href="#install"  class="nav-link">Install</a>
@@ -236,7 +236,7 @@
                 <span class="absolute animate-ping inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                 <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500"></span>
             </span>
-            Magewire <strong class="font-bold">V3</strong> &mdash; Public Beta
+            Magewire <strong class="font-bold">V3</strong> &mdash; Now Available
         </div>
 
         {{-- Headline --}}
@@ -252,7 +252,7 @@
 
         {{-- CTAs --}}
         <div class="e4 mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://magewirephp.github.io/magewire-docs/index.html"
+            <a href="https://docs.magewirephp.nl/?ref=main-website"
                target="_blank" rel="noopener"
                class="inline-flex items-center gap-2 bg-mw-500 hover:bg-mw-600
                       text-white text-base font-semibold px-7 py-3.5 rounded-full
@@ -467,6 +467,13 @@
 
         </div>
 
+        {{-- Below-editor note --}}
+        <p class="mt-8 text-center text-sm text-[#71717a] max-w-lg mx-auto leading-relaxed">
+            This is just a counter. Magewire handles forms, modals, search, pagination, real-time validation, and much more.
+            <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener"
+               class="text-mw-600 font-semibold hover:underline">Explore the docs</a>, get inspired, and ship something great.
+        </p>
+
     </div>
 </section>
 
@@ -539,7 +546,7 @@
 
         <p class="mt-8 text-center text-[#6e6e73] text-lg">
             Need more? Everything else is in the
-            <a href="https://magewirephp.github.io/magewire-docs/index.html"
+            <a href="https://docs.magewirephp.nl/?ref=main-website"
                class="text-mw-500 font-semibold hover:underline" target="_blank" rel="noopener">
                 documentation</a>.
         </p>
@@ -805,15 +812,15 @@
             </div>
 
             <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
-                <div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center shrink-0">
-                    <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" stroke-width="2.5"
+                <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2.5"
                          viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
                     </svg>
                 </div>
                 <div>
                     <p class="text-lg font-bold text-[#1d1d1f]">Magento Backend</p>
-                    <p class="text-sm text-amber-500 font-medium mt-1">In progress</p>
+                    <p class="text-sm text-green-600 font-medium mt-1">Supported</p>
                 </div>
             </div>
 
@@ -973,10 +980,10 @@
     <div class="mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-8">
         <span class="text-base font-bold text-[#9ca3af]">MagewirePHP</span>
         <nav aria-label="Footer" class="flex flex-wrap items-center justify-center gap-6">
-            <a href="https://magewirephp.github.io/magewire-docs/index.html"
+            <a href="https://docs.magewirephp.nl/?ref=main-website"
                target="_blank" rel="noopener"
                class="text-base text-[#9ca3af] hover:text-white transition-colors">Docs</a>
-            <a href="https://magewirephp.github.io/magewire-docs/blogs/index.html"
+            <a href="https://docs.magewirephp.nl/blogs/?ref=main-website"
                target="_blank" rel="noopener"
                class="text-base text-[#9ca3af] hover:text-white transition-colors">Blog</a>
             <a href="https://github.com/magewirephp/magewire"
