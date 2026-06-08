@@ -388,12 +388,6 @@
                                    text-[#9ca3af] hover:text-white px-5 py-3.5">
                         counter.phtml
                     </button>
-                    <button @click="tab = 'result'"
-                            :class="tab === 'result' ? 'active' : ''"
-                            class="tab-btn text-sm font-mono font-medium
-                                   text-[#9ca3af] hover:text-white px-5 py-3.5 ml-auto">
-                        &#9654; Result
-                    </button>
                 </div>
 
                 <div class="bg-[#111827]">
@@ -461,11 +455,6 @@
     <span style="color:#67e8f9">&lt;button</span> <span style="color:#86efac">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"decrement"</span><span style="color:#67e8f9">&gt;</span>-<span style="color:#67e8f9">&lt;/button&gt;</span>
 
 <span style="color:#67e8f9">&lt;/div&gt;</span></code></pre>
-                    </div>
-
-                    {{-- Result --}}
-                    <div :style="tab === 'result' ? 'grid-area:1/1' : 'grid-area:1/1;visibility:hidden'" class="bg-[#111827] flex items-center justify-center min-h-[320px]">
-                        <livewire:counter />
                     </div>
 
                 </div>
