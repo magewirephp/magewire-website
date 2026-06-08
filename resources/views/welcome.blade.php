@@ -478,11 +478,11 @@
 <pre class="code-block overflow-x-auto text-sm leading-relaxed p-8 font-mono" aria-label="PHTML template for the counter component"><code><span style="color:#67e8f9">&lt;div</span> <span style="color:#86efac">class</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"counter"</span><span style="color:#67e8f9">&gt;</span>
 
     <span style="color:#67e8f9">&lt;p</span> <span style="color:#86efac">class</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"count"</span><span style="color:#67e8f9">&gt;</span>
-        Count: <span style="color:#67e8f9">&lt;strong&gt;</span><span style="color:#9ca3af">&lt;?= </span><span style="color:#93c5fd">$magewire</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span> <span style="color:#9ca3af">?&gt;</span><span style="color:#67e8f9">&lt;/strong&gt;</span>
+        Count: <span style="color:#67e8f9">&lt;strong&gt;</span><span style="color:#9ca3af">&#123;&#123; </span><span style="color:#93c5fd">$magewire</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span> <span style="color:#9ca3af">&#125;&#125;</span><span style="color:#67e8f9">&lt;/strong&gt;</span>
     <span style="color:#67e8f9">&lt;/p&gt;</span>
 
-    <span style="color:#67e8f9">&lt;button</span> <span style="color:#86efac">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"increment"</span><span style="color:#67e8f9">&gt;</span>+<span style="color:#67e8f9">&lt;/button&gt;</span>
-    <span style="color:#67e8f9">&lt;button</span> <span style="color:#86efac">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"decrement"</span><span style="color:#67e8f9">&gt;</span>-<span style="color:#67e8f9">&lt;/button&gt;</span>
+    <span style="color:#67e8f9">&lt;button</span> <span style="color:#86efac">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"increment"</span><span style="color:#67e8f9">&gt;</span>Increment<span style="color:#67e8f9">&lt;/button&gt;</span>
+    <span style="color:#67e8f9">&lt;button</span> <span style="color:#86efac">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"decrement"</span><span style="color:#67e8f9">&gt;</span>Decrement<span style="color:#67e8f9">&lt;/button&gt;</span>
 
 <span style="color:#67e8f9">&lt;/div&gt;</span></code></pre>
                     </div>
