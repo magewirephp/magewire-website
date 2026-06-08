@@ -112,7 +112,7 @@
         .nav-link:hover { color: #f26322; background: #fff4ee; }
 
         /* ── Code block scrollbar ── */
-        .code-block { max-width: 100%; }
+        .code-block { max-width: 100%; color: #e2e8f0; }
         .code-block::-webkit-scrollbar        { height: 5px; width: 5px; }
         .code-block::-webkit-scrollbar-track  { background: transparent; }
         .code-block::-webkit-scrollbar-thumb  { background: rgba(255,255,255,.15); border-radius: 99px; }
