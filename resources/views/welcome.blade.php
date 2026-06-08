@@ -814,10 +814,12 @@
                 <div>
                     <p class="text-lg font-bold text-[#1d1d1f]">Breeze</p>
                     <p class="text-sm text-amber-500 font-medium mt-1">In progress</p>
+                    <span class="inline-flex items-center mt-2 text-xs font-semibold text-mw-600 bg-mw-50 border border-mw-200 px-2.5 py-0.5 rounded-full">Community-driven</span>
                 </div>
             </div>
 
-            <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
+            <a href="https://github.com/magewirephp/magewire-admin" target="_blank" rel="noopener"
+               class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8 hover:border-mw-500 transition-colors">
                 <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
                     <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2.5"
                          viewBox="0 0 24 24" aria-hidden="true">
@@ -825,10 +827,10 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="text-lg font-bold text-[#1d1d1f]">Magento Backend</p>
+                    <p class="text-lg font-bold text-[#1d1d1f] group-hover:text-mw-600 transition-colors">Magento Backend</p>
                     <p class="text-sm text-green-600 font-medium mt-1">Supported</p>
                 </div>
-            </div>
+            </a>
 
             <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
                 <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center shrink-0">
