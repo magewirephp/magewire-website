@@ -791,6 +791,20 @@
         </div>
         <div class="reveal grid grid-cols-2 sm:grid-cols-4 gap-6" style="transition-delay:.15s">
 
+            <a href="https://github.com/magewirephp/magewire-admin" target="_blank" rel="noopener"
+               class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8 hover:border-mw-500 transition-colors">
+                <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2.5"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-lg font-bold text-[#1d1d1f] group-hover:text-mw-600 transition-colors">Magento Backend</p>
+                    <p class="text-sm text-green-600 font-medium mt-1">Supported</p>
+                </div>
+            </a>
+
             <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
                 <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
                     <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -817,20 +831,6 @@
                     <span class="inline-flex items-center mt-2 text-xs font-semibold text-mw-600 bg-mw-50 border border-mw-200 px-2.5 py-0.5 rounded-full">Community-driven</span>
                 </div>
             </div>
-
-            <a href="https://github.com/magewirephp/magewire-admin" target="_blank" rel="noopener"
-               class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8 hover:border-mw-500 transition-colors">
-                <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
-                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2.5"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
-                    </svg>
-                </div>
-                <div>
-                    <p class="text-lg font-bold text-[#1d1d1f] group-hover:text-mw-600 transition-colors">Magento Backend</p>
-                    <p class="text-sm text-green-600 font-medium mt-1">Supported</p>
-                </div>
-            </a>
 
             <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
                 <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center shrink-0">
@@ -891,9 +891,6 @@
                     p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
                 <p class="text-lg font-semibold text-[#1a1a1a]">Become a sponsor</p>
-                <p class="text-base text-[#71717a] mt-1">
-                    Help keep Magewire free. Get your logo right here.
-                </p>
             </div>
             <a href="https://github.com/sponsors/magewirephp"
                target="_blank" rel="noopener"
@@ -905,6 +902,74 @@
                      viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
                 </svg>
+            </a>
+        </div>
+
+        {{-- Contributors --}}
+        <div class="reveal mt-24 text-center mb-12">
+            <span class="eyebrow">Built by the community</span>
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#1a1a1a]">
+                Contributors
+            </h2>
+            <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
+                Every commit, fix, and bright idea traces back to these people &mdash; and the teams who champion Magewire as their own.
+            </p>
+        </div>
+
+        {{-- People --}}
+        @php
+            $contributors = [
+                ['handle' => 'wpoortman',      'name' => 'Willem Poortman'],
+                ['handle' => 'Vinai',          'name' => 'Vinai Kopp'],
+                ['handle' => 'pykettk',        'name' => 'Kiel'],
+                ['handle' => 'Tjitse-E',       'name' => 'Tjitse'],
+                ['handle' => 'ryanhissey',     'name' => 'Ryan Hissey'],
+                ['handle' => 'adamzero1',      'name' => 'Adam'],
+                ['handle' => 'angelvilaplana', 'name' => 'Angel Vilaplana'],
+                ['handle' => 'speedupmate',    'name' => 'Anton Siniorg'],
+                ['handle' => 'alucardatem',    'name' => 'Dan-Andrei Rotariu'],
+                ['handle' => 'quanghien95',    'name' => 'Jacob'],
+                ['handle' => 'JeroenBoersma',  'name' => 'Jeroen Boersma'],
+                ['handle' => 'jeroennoten',    'name' => 'Jeroen Noten'],
+                ['handle' => 'jissereitsma',   'name' => 'Jisse Reitsma'],
+                ['handle' => 'KamilBalwierz',  'name' => 'Kamil Balwierz'],
+                ['handle' => 'ProxiBlue',      'name' => 'Lucas van Staden'],
+                ['handle' => 'markshust',      'name' => 'Mark Shust'],
+                ['handle' => 'MartinNguyen211','name' => 'Martin Nguyen'],
+                ['handle' => 'mehmetuygun',    'name' => 'Mehmet Uygun'],
+                ['handle' => 'psopacua',       'name' => 'Pascal Sopacua'],
+                ['handle' => 'peterjaap',      'name' => 'Peter Jaap Blaakmeer'],
+                ['handle' => 'hostep',         'name' => 'Pieter Hoste'],
+                ['handle' => 'rossmc',         'name' => 'Ross'],
+                ['handle' => 'Morgy93',        'name' => 'Thomas Hauschild'],
+                ['handle' => 'kolaente',       'name' => 'kolaente'],
+                ['handle' => 'mvenghaus',      'name' => 'mvenghaus'],
+            ];
+        @endphp
+        <h3 class="reveal text-center text-sm font-semibold uppercase tracking-wide text-[#9ca3af] mb-6">People</h3>
+        <div class="reveal flex flex-wrap justify-center gap-6 mb-16" style="transition-delay:.15s">
+            @foreach ($contributors as $c)
+                <a href="https://github.com/{{ $c['handle'] }}" target="_blank" rel="noopener"
+                   class="group flex flex-col items-center gap-2 w-20"
+                   title="{{ $c['name'] }} (@{{ $c['handle'] }})">
+                    <img src="https://github.com/{{ $c['handle'] }}.png?size=96"
+                         alt="{{ $c['name'] }}" loading="lazy"
+                         class="h-14 w-14 rounded-full ring-2 ring-transparent group-hover:ring-mw-400 transition-all">
+                    <span class="text-xs text-[#71717a] group-hover:text-mw-600 transition-colors truncate max-w-full">{{ $c['name'] }}</span>
+                </a>
+            @endforeach
+        </div>
+
+        {{-- Companies backing Magewire --}}
+        <h3 class="reveal text-center text-sm font-semibold uppercase tracking-wide text-[#9ca3af] mb-6">Organizations</h3>
+        <div class="reveal flex flex-wrap justify-center gap-6" style="transition-delay:.15s">
+            <a href="https://hyva.io" target="_blank" rel="noopener"
+               class="group flex flex-col items-center gap-2 w-20"
+               title="Hyvä Themes">
+                <img src="https://www.hyva.io/media/favicon/stores/1/Favicon.png"
+                     alt="Hyvä Themes" loading="lazy"
+                     class="h-14 w-14 rounded-full ring-2 ring-transparent group-hover:ring-mw-400 transition-all">
+                <span class="text-xs text-[#71717a] group-hover:text-mw-600 transition-colors truncate max-w-full">Hyvä</span>
             </a>
         </div>
 
