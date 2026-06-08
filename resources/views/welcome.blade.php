@@ -176,6 +176,7 @@
             <a href="https://docs.magewirephp.nl/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Docs</a>
             <a href="#install"  class="nav-link">Install</a>
+            <a href="#compatibility" class="nav-link">Compatibility</a>
             <a href="#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Blog</a>
@@ -780,7 +781,7 @@
 {{-- ══════════════════════════════════
      THEME COMPATIBILITY
      ══════════════════════════════════ --}}
-<section class="py-36 px-6 bg-white">
+<section id="compatibility" class="py-36 px-6 bg-white">
     <div class="mx-auto max-w-4xl">
 
         <div class="reveal text-center mb-16">
