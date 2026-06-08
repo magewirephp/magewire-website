@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Magewire — Reactive Magento, PHP-first</title>
+    <title>Magewire: Reactive Magento, PHP-first</title>
     <meta name="description" content="MagewirePHP brings reactive, server-driven UI development to Magento 2. Build dynamic interfaces without writing JavaScript. V3 available now.">
 
     {{-- Favicon --}}
@@ -16,6 +16,7 @@
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800,900|jetbrains-mono:400,500&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script>
     tailwind.config = {
         theme: {
@@ -160,12 +161,12 @@
 {{-- ══════════════════════════════════
      NAVIGATION
      ══════════════════════════════════ --}}
-<header id="site-nav" role="banner"
+<header id="site-nav" role="banner" x-data="{ menu: false }" @keydown.escape.window="menu = false"
         class="nav-glass fixed top-0 inset-x-0 z-50 border-b border-transparent bg-white/30 backdrop-blur-xl">
     <div class="mx-auto max-w-6xl px-6 flex items-center justify-between h-[68px]">
 
         {{-- Logo --}}
-        <a href="/" aria-label="Magewire — go to homepage"
+        <a href="/" aria-label="Magewire, go to homepage"
            class="shrink-0 select-none group">
             <span class="text-[18px] font-bold tracking-tight text-[#1d1d1f]
                          group-hover:text-mw-600 transition-colors">MagewirePHP</span>
@@ -198,9 +199,38 @@
                     <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.055a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03ZM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/>
                 </svg>
             </a>
+
+            {{-- Mobile menu toggle --}}
+            <button @click="menu = !menu" :aria-expanded="menu" aria-controls="mobile-menu"
+                    class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-[#d2d2d7] text-[#52525b] hover:border-mw-500 hover:text-mw-600 transition-colors"
+                    aria-label="Toggle navigation menu">
+                <svg x-show="!menu" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/>
+                </svg>
+                <svg x-show="menu" x-cloak width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                </svg>
+            </button>
         </div>
 
     </div>
+
+    {{-- Mobile menu panel --}}
+    <nav id="mobile-menu" x-show="menu" x-cloak x-transition.opacity aria-label="Mobile"
+         class="md:hidden border-t border-[#e8e5e1] bg-white/90 backdrop-blur-xl">
+        <div class="mx-auto max-w-6xl px-6 py-4 flex flex-col">
+            <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" @click="menu = false"
+               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Docs</a>
+            <a href="#install" @click="menu = false"
+               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Install</a>
+            <a href="#compatibility" @click="menu = false"
+               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Compatibility</a>
+            <a href="#sponsors" @click="menu = false"
+               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Sponsors</a>
+            <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" @click="menu = false"
+               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors">Blog</a>
+        </div>
+    </nav>
 </header>
 
 <main id="main">
@@ -233,7 +263,7 @@
     </div>
 
     {{-- Hero content --}}
-    <div class="relative z-10 max-w-5xl mx-auto text-center">
+    <div class="relative z-10 w-full max-w-5xl mx-auto text-center">
 
         {{-- V3 badge --}}
         <div class="e1 inline-flex items-center gap-2.5 mb-10
@@ -247,8 +277,8 @@
         </div>
 
         {{-- Headline --}}
-        <h1 class="e2 text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem]
-                   font-black tracking-tight leading-[1.04] text-[#1a1a1a]">
+        <h1 class="e2 text-[2rem] sm:text-5xl md:text-7xl lg:text-[5.5rem]
+                   font-black tracking-tight leading-[1.08] sm:leading-[1.05] text-[#1a1a1a]">
             Reactive Magento<br>
             <span class="grad">without the JavaScript</span>
         </h1>
@@ -298,7 +328,7 @@
                     } catch(e) {}
                 }
              }"
-             class="e4b mt-10 flex items-center justify-center gap-6 text-sm">
+             class="e4b mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
             <a href="https://github.com/magewirephp/magewire" target="_blank" rel="noopener"
                class="inline-flex items-center gap-2 text-[#6b7280] hover:text-[#1d1d1f] transition-colors">
                 {{-- GitHub mark --}}
@@ -487,7 +517,7 @@
                 Install
             </h2>
             <p class="mt-6 text-lg text-[#71717a] max-w-xl mx-auto leading-relaxed">
-                Four commands. You're up and running.
+                Three commands. You're up and running.
             </p>
         </div>
 
@@ -504,7 +534,7 @@
                 <span class="text-sm text-[#6b7280] font-mono">Terminal</span>
                 <button
                     @click="
-                        navigator.clipboard.writeText('composer require magewirephp/magewire\nphp bin/magento module:enable Magewirephp_Magewire\nphp bin/magento setup:upgrade\nphp bin/magento cache:clean');
+                        navigator.clipboard.writeText('composer require magewirephp/magewire\nphp bin/magento module:enable Magewirephp_Magewire\nphp bin/magento setup:upgrade');
                         copied = true;
                         setTimeout(() => copied = false, 2000)
                     "
@@ -527,10 +557,6 @@
                 <div class="flex items-start gap-3 mt-1">
                     <span class="text-mw-500 select-none shrink-0">$</span>
                     <span class="text-[#e2e8f0]">php bin/magento setup:upgrade</span>
-                </div>
-                <div class="flex items-start gap-3 mt-1">
-                    <span class="text-mw-500 select-none shrink-0">$</span>
-                    <span class="text-[#e2e8f0]">php bin/magento cache:clean</span>
                 </div>
                 <div class="flex items-start gap-3 mt-4">
                     <span class="text-green-500 select-none shrink-0">&#10003;</span>
@@ -677,7 +703,7 @@
                 </div>
 <pre class="text-sm leading-relaxed p-5 font-mono overflow-x-auto bg-[#111110]"><code><span style="color:#9ca3af">&lt;div&gt;</span>
 
-    <span style="color:#9ca3af">&lt;h2&gt;</span><span style="color:#a1a1aa">&lt;?=</span> <span style="color:#93c5fd">$magewire</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span> <span style="color:#a1a1aa">?&gt;</span><span style="color:#9ca3af">&lt;/h2&gt;</span>
+    <span style="color:#9ca3af">&lt;h2&gt;</span><span style="color:#a1a1aa">&#123;&#123;</span> <span style="color:#93c5fd">$magewire</span><span style="color:#9ca3af">-&gt;</span><span style="color:#93c5fd">count</span> <span style="color:#a1a1aa">&#125;&#125;</span><span style="color:#9ca3af">&lt;/h2&gt;</span>
 
     <span style="color:#9ca3af">&lt;button</span> <span style="color:#fb923c">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#86efac">"decrement"</span><span style="color:#9ca3af">&gt;</span>&minus;<span style="color:#9ca3af">&lt;/button&gt;</span>
     <span style="color:#9ca3af">&lt;button</span> <span style="color:#fb923c">wire:click</span><span style="color:#9ca3af">=</span><span style="color:#86efac">"increment"</span><span style="color:#9ca3af">&gt;</span>+<span style="color:#9ca3af">&lt;/button&gt;</span>
@@ -708,13 +734,13 @@
                 <div>
                     <p class="font-bold text-[#1d1d1f] text-base mb-2">Alpine.js under the hood. Hyvä developers already know it.</p>
                     <p class="text-sm text-[#52525b] leading-relaxed">
-                        Magewire's reactive layer runs on <a href="https://alpinejs.dev" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Alpine.js</a> — the same engine that powers <a href="https://hyva.io" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Hyvä Theme</a>. If you've built on Hyvä, you already speak Alpine.
+                        Magewire's reactive layer runs on <a href="https://alpinejs.dev" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Alpine.js</a>, the same engine that powers <a href="https://hyva.io" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Hyvä Theme</a>. If you've built on Hyvä, you already speak Alpine.
                         <code class="font-mono text-mw-600 text-xs">x-data</code>,
                         <code class="font-mono text-mw-600 text-xs">x-on</code>,
-                        <code class="font-mono text-mw-600 text-xs">@click</code> — all second nature. You're ahead before you write a line.
+                        <code class="font-mono text-mw-600 text-xs">@click</code>, all second nature. You're ahead before you write a line.
                     </p>
                     <p class="text-sm text-[#52525b] leading-relaxed mt-3">
-                        <a href="https://alpinejs.dev" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Alpine.js</a> and <a href="https://livewire.laravel.com" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Livewire</a> share the same creator: <strong class="text-[#1d1d1f] font-semibold">Caleb Porzio</strong>. They don't just work well together — they were built for each other.
+                        <a href="https://alpinejs.dev" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Alpine.js</a> and <a href="https://livewire.laravel.com" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Livewire</a> share the same creator: <strong class="text-[#1d1d1f] font-semibold">Caleb Porzio</strong>. They don't just work well together; they were built for each other.
                     </p>
                 </div>
             </div>
@@ -745,7 +771,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-[#1d1d1f] mb-1">No invented abstractions</p>
-                    <p class="text-sm text-[#6e6e73] leading-relaxed">Nothing to unlearn. No custom APIs. No proprietary directives. Everything maps 1-to-1 with Livewire — on purpose.</p>
+                    <p class="text-sm text-[#6e6e73] leading-relaxed">Nothing to unlearn. No custom APIs. No proprietary directives. Everything maps 1-to-1 with Livewire, on purpose.</p>
                 </div>
             </div>
 
@@ -758,7 +784,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-[#1d1d1f] mb-1">AI-ready, out of the box</p>
-                    <p class="text-sm text-[#6e6e73] leading-relaxed">ChatGPT, Copilot, Claude — they all know Livewire inside out. That means they know Magewire too. Ask. Apply. Ship.</p>
+                    <p class="text-sm text-[#6e6e73] leading-relaxed">ChatGPT, Copilot, Claude: they all know Livewire inside out. That means they know Magewire too. Ask. Apply. Ship.</p>
                 </div>
             </div>
 
@@ -979,7 +1005,7 @@
                 Powered by Magewire.
             </h2>
             <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
-                Real products. Real teams. Shipped on Magewire.
+                Real products. Build with Magewire.
             </p>
         </div>
 
@@ -1031,6 +1057,25 @@
                 </span>
             </a>
 
+        </div>
+
+        {{-- Suggest a project callout --}}
+        <div class="reveal mt-10" style="transition-delay:.3s">
+            <div class="sponsor-card rounded-2xl border border-mw-200 bg-mw-50 p-6 flex flex-col sm:flex-row items-start gap-5">
+                <div class="shrink-0 w-11 h-11 rounded-xl border border-mw-200 bg-white flex items-center justify-center">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#f26322" stroke-width="1.6" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.183-.498c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-bold text-[#1d1d1f] text-base mb-2">Know an awesome project built on Magewire?</p>
+                    <p class="text-sm text-[#52525b] leading-relaxed">
+                        We'd love to feature it here.
+                        <a href="https://github.com/magewirephp/magewire/discussions" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Start a discussion on GitHub</a>
+                        and let's make it happen.
+                    </p>
+                </div>
+            </div>
         </div>
 
     </div>
