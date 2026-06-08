@@ -169,10 +169,10 @@
         <nav aria-label="Primary" class="hidden md:flex items-center gap-1">
             <a href="https://docs.magewirephp.nl/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Docs</a>
+            <a href="#install"  class="nav-link">Install</a>
+            <a href="#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Blog</a>
-            <a href="#sponsors" class="nav-link">Sponsors</a>
-            <a href="#install"  class="nav-link">Install</a>
         </nav>
 
         {{-- GitHub + Discord icons --}}
