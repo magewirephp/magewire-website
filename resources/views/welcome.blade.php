@@ -1035,7 +1035,7 @@
             </a>
 
             {{-- Hyvä CMS --}}
-            <a href="https://www.hyva.io/hyva-cms.html" target="_blank" rel="noopener"
+            <a href="https://www.hyva.io/hyva-commerce.html" target="_blank" rel="noopener"
                class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
                 <div class="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
                     <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.75"
@@ -1045,7 +1045,7 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="text-lg font-bold text-[#1d1d1f]">Hyvä CMS</p>
+                    <p class="text-lg font-bold text-[#1d1d1f]">Hyvä CMS with Liveview</p>
                     <p class="text-sm text-purple-600 font-medium mt-1">hyva.io</p>
                 </div>
                 <span class="inline-flex items-center gap-1.5 text-purple-600 font-semibold text-sm group-hover:gap-3 transition-all">
