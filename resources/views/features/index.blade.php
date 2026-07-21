@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Compiler — Magewire Features</title>
-    <meta name="description" content="Discover Magewire's template compiler: expressive PHTML syntax, safe output, automatic recompilation, and extensible directives for Magento 2.">
+    <title>Compiler &amp; Fragments — Magewire Features</title>
+    <meta name="description" content="Discover Magewire's handpicked features: expressive PHTML compilation and typed output fragments with validation, modifiers, and Magento CSP integration.">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -326,17 +326,124 @@
         </div>
     </section>
 
+    <section id="fragments" class="relative overflow-hidden border-y border-white/10 bg-[#111318] px-6 py-28 text-white sm:py-36">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_65%_60%_at_80%_20%,rgba(242,99,34,0.16),transparent_70%)]" aria-hidden="true"></div>
+        <div class="absolute inset-0 opacity-[.07] dot-grid" aria-hidden="true"></div>
+
+        <div class="relative mx-auto max-w-6xl">
+            <div class="grid items-center gap-14 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-300">Fragments</span>
+                    <h2 class="mt-4 text-5xl font-black leading-[.98] tracking-[-.055em] sm:text-6xl">
+                        Markup with<br><span class="text-mw-400">a second pass.</span>
+                    </h2>
+                    <p class="mt-7 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                        Write normal PHTML. Let Magewire handle the hard parts.
+                    </p>
+                    <p class="mt-4 max-w-xl text-lg leading-relaxed text-[#a9a9b2]">
+                        A fragment creates a typed boundary around rendered output. Magewire can validate it,
+                        decorate it, and register it with Magento's CSP tooling before it reaches the browser.
+                    </p>
+
+                    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                        <a href="https://docs.magewirephp.nl/pages/concepts/fragments.html?ref=main-website"
+                           target="_blank" rel="noopener"
+                           class="inline-flex items-center justify-center gap-2 rounded-full bg-mw-500 px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-mw-600">
+                            Read the Fragments docs
+                            <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M3 8h10m-3-3 3 3-3 3"/></svg>
+                        </a>
+                        <a href="https://github.com/magewirephp/magewire/blob/main/src/Model/View/Fragment.php"
+                           target="_blank" rel="noopener"
+                           class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-bold text-[#e5e7eb] transition-colors hover:border-mw-400 hover:text-white">
+                            Browse the source
+                        </a>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden rounded-3xl border border-white/10 bg-[#1b1d23] shadow-2xl shadow-black/30">
+                    <div class="flex items-center justify-between border-b border-white/10 px-5 py-4">
+                        <span class="font-mono text-xs text-[#9ca3af]">checkout.phtml</span>
+                        <span class="rounded-full bg-mw-500/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-mw-300">Script fragment</span>
+                    </div>
+                    <pre class="code-scroll overflow-x-auto px-6 py-7 font-mono text-[13px] leading-7 text-[#d7dae0] sm:px-8"><code><span class="text-[#c792ea]">&#64;script</span>
+<span class="text-[#89ddff]">&lt;script&gt;</span>
+    window.checkoutReady = <span class="text-[#c3e88d]">true</span>
+<span class="text-[#89ddff]">&lt;/script&gt;</span>
+<span class="text-[#c792ea]">&#64;endscript</span></code></pre>
+
+                    <div class="border-t border-white/10 bg-[#17191f] px-5 py-5 sm:px-7">
+                        <ol class="grid grid-cols-3 gap-2" aria-label="Fragment processing stages">
+                            <li class="rounded-xl border border-white/10 bg-white/[.03] px-3 py-3 text-center">
+                                <span class="block font-mono text-[10px] text-mw-300">01</span>
+                                <span class="mt-1 block text-xs font-semibold">Validate</span>
+                            </li>
+                            <li class="rounded-xl border border-white/10 bg-white/[.03] px-3 py-3 text-center">
+                                <span class="block font-mono text-[10px] text-mw-300">02</span>
+                                <span class="mt-1 block text-xs font-semibold">Modify</span>
+                            </li>
+                            <li class="rounded-xl border border-mw-400/30 bg-mw-500/10 px-3 py-3 text-center">
+                                <span class="block font-mono text-[10px] text-mw-300">03</span>
+                                <span class="mt-1 block text-xs font-semibold">Register</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 grid gap-5 md:grid-cols-3">
+                <article class="rounded-2xl border border-white/10 bg-white/[.04] p-7">
+                    <span class="font-mono text-xs font-bold text-mw-300">TYPE</span>
+                    <h3 class="mt-4 text-lg font-bold">Validate the shape</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-[#a9a9b2]">Choose HTML, script, style, JavaScript, component, or a custom type. Each fragment can reject output that does not match its contract.</p>
+                </article>
+                <article class="rounded-2xl border border-white/10 bg-white/[.04] p-7">
+                    <span class="font-mono text-xs font-bold text-mw-300">MODIFY</span>
+                    <h3 class="mt-4 text-lg font-bold">Enhance in one place</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-[#a9a9b2]">Add root attributes, developer annotations, or your own DI-registered modifiers after rendering—without complicating the template.</p>
+                </article>
+                <article class="rounded-2xl border border-white/10 bg-white/[.04] p-7">
+                    <span class="font-mono text-xs font-bold text-mw-300">CSP</span>
+                    <h3 class="mt-4 text-lg font-bold">Work with Magento</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-[#a9a9b2]">Inline script fragments integrate with Magento's CSP collector, choosing the right strategy for cached and uncached responses.</p>
+                </article>
+            </div>
+
+            <div class="mt-5 grid gap-5 md:grid-cols-2">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-6 sm:p-7">
+                    <div class="flex items-center justify-between gap-4">
+                        <h3 class="text-sm font-bold">Uncached request</h3>
+                        <span class="rounded-full bg-green-400/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-green-300">Nonce</span>
+                    </div>
+                    <code class="mt-5 block overflow-x-auto font-mono text-xs text-[#cbd5e1]">&lt;script <span class="text-mw-300">nonce=&quot;...&quot;</span>&gt;</code>
+                    <p class="mt-4 text-sm leading-relaxed text-[#8f939d]">Magewire injects a nonce attribute into the script element.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-6 sm:p-7">
+                    <div class="flex items-center justify-between gap-4">
+                        <h3 class="text-sm font-bold">Cached page</h3>
+                        <span class="rounded-full bg-sky-400/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-sky-300">Hash</span>
+                    </div>
+                    <code class="mt-5 block overflow-x-auto font-mono text-xs text-[#cbd5e1]">Content-Security-Policy: <span class="text-sky-300">sha256-...</span></code>
+                    <p class="mt-4 text-sm leading-relaxed text-[#8f939d]">For full-page cache, its script hash is registered with Magento's dynamic CSP collector.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="border-t border-[#e9e5e0] bg-white px-6 py-24">
         <div class="mx-auto max-w-6xl text-center">
             <span class="text-xs font-bold uppercase tracking-[.14em] text-[#9ca3af]">Handpicked features</span>
-            <h2 class="mt-4 text-3xl sm:text-4xl font-bold tracking-tight">The Compiler is just the beginning.</h2>
-            <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#71717a]">More focused feature stories can join this page as Magewire grows.</p>
-            <div class="mt-8 flex justify-center gap-3">
-                <span class="inline-flex items-center gap-2 rounded-full bg-mw-50 px-4 py-2 text-sm font-semibold text-mw-700 ring-1 ring-inset ring-mw-200">
+            <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Two deep dives. More to come.</h2>
+            <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#71717a]">Explore the details that keep Magewire expressive while staying at home in Magento.</p>
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+                <a href="#compiler" class="inline-flex items-center gap-2 rounded-full bg-mw-50 px-4 py-2 text-sm font-semibold text-mw-700 ring-1 ring-inset ring-mw-200 transition-colors hover:bg-mw-100">
                     <span class="h-2 w-2 rounded-full bg-mw-500"></span>
                     01 Compiler
-                </span>
-                <span class="rounded-full bg-[#f5f3f0] px-4 py-2 text-sm font-medium text-[#9ca3af]">02 Coming next</span>
+                </a>
+                <a href="#fragments" class="inline-flex items-center gap-2 rounded-full bg-[#f3f4f6] px-4 py-2 text-sm font-semibold text-[#3f3f46] ring-1 ring-inset ring-[#e4e4e7] transition-colors hover:bg-[#e9eaed]">
+                    <span class="h-2 w-2 rounded-full bg-[#3f3f46]"></span>
+                    02 Fragments
+                </a>
+                <span class="rounded-full bg-[#f5f3f0] px-4 py-2 text-sm font-medium text-[#9ca3af]">03 Coming next</span>
             </div>
         </div>
     </section>
