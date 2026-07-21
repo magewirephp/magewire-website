@@ -965,7 +965,7 @@
                 Magewire in the wild.
             </h2>
             <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
-                From products powered by Magewire to projects shaped by its foundations.
+                Two Hyvä products. Two different relationships with Magewire.
             </p>
         </div>
 
@@ -973,67 +973,48 @@
 
             {{-- Hyvä Checkout --}}
             <a href="https://www.hyva.io/hyva-checkout.html" target="_blank" rel="noopener"
-               class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
-                <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
-                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" stroke-width="1.75"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.97-7.143a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/>
-                    </svg>
+               class="group overflow-hidden rounded-[28px] border border-[#e8e5e1] bg-white shadow-[0_18px_55px_-35px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_24px_65px_-35px_rgba(22,163,74,.4)]">
+                <div class="aspect-[3/2] overflow-hidden bg-[#fff9f4]">
+                    <img src="/images/hyva/checkout.webp"
+                         alt="Abstract checkout steps flowing into a completed order"
+                         width="1536" height="1024" loading="lazy"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]">
                 </div>
 
-                <div>
-                    <p class="text-xl font-bold text-[#1d1d1f]">Hyvä Checkout</p>
-                    <p class="mt-1.5 inline-flex items-center gap-1.5 text-sm font-medium text-green-600">
-                        <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
-                        Powered by Magewire
-                    </p>
-                    <p class="mt-3 text-sm leading-relaxed text-[#71717a]">Magewire brings the reactive checkout experience to life.</p>
-                    <div class="mt-4 flex flex-wrap items-center justify-center gap-2" aria-label="Compatible with Magewire versions 1 and 3">
-                        <span class="text-xs font-medium text-[#9ca3af]">Compatible with</span>
-                        <span class="rounded-full bg-mw-50 px-2.5 py-1 text-xs font-semibold text-mw-700 ring-1 ring-inset ring-mw-200">Magewire V1</span>
-                        <span class="rounded-full bg-mw-50 px-2.5 py-1 text-xs font-semibold text-mw-700 ring-1 ring-inset ring-mw-200">Magewire V3</span>
+                <div class="flex items-center justify-between gap-5 p-6 sm:p-7">
+                    <div>
+                        <h3 class="text-xl font-bold tracking-tight text-[#1d1d1f]">Hyvä Checkout</h3>
+                        <p class="mt-1.5 text-sm font-medium text-green-700">Powered by Magewire · V1 + V3</p>
                     </div>
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-green-50 text-green-700 transition-colors group-hover:bg-green-600 group-hover:text-white" aria-hidden="true">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                        </svg>
+                    </span>
                 </div>
-
-                <span class="mt-auto inline-flex items-center gap-1.5 text-green-600 font-semibold text-sm group-hover:gap-3 transition-all">
-                    Read more
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
-                    </svg>
-                </span>
             </a>
 
             {{-- Hyvä CMS --}}
             <a href="https://www.hyva.io/hyva-commerce.html" target="_blank" rel="noopener"
-               class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
-                <div class="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
-                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.75"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                              d="M6 3v12a3 3 0 0 0 3 3h9m0 0-3-3m3 3-3 3M6 8h5a3 3 0 0 1 3 3v1m0 0-2-2m2 2 2-2"/>
-                    </svg>
+               class="group overflow-hidden rounded-[28px] border border-[#e8e5e1] bg-white shadow-[0_18px_55px_-35px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-purple-300 hover:shadow-[0_24px_65px_-35px_rgba(126,34,206,.35)]">
+                <div class="aspect-[3/2] overflow-hidden bg-[#fbf8ff]">
+                    <img src="/images/hyva/cms.webp"
+                         alt="Abstract content blocks assembling into a storefront"
+                         width="1536" height="1024" loading="lazy"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]">
                 </div>
 
-                <div>
-                    <p class="text-xl font-bold text-[#1d1d1f]">Hyvä CMS with Liveview</p>
-                    <p class="mt-1.5 inline-flex items-center gap-1.5 text-sm font-medium text-purple-600">
-                        <svg class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 2v8a2 2 0 0 0 2 2h6m0 0-2-2m2 2-2 2M4 6h3a2 2 0 0 1 2 2v1"/>
+                <div class="flex items-center justify-between gap-5 p-6 sm:p-7">
+                    <div>
+                        <h3 class="text-xl font-bold tracking-tight text-[#1d1d1f]">Hyvä CMS with Liveview</h3>
+                        <p class="mt-1.5 text-sm font-medium text-purple-700">Built on a tailored Magewire fork</p>
+                    </div>
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-purple-50 text-purple-700 transition-colors group-hover:bg-purple-600 group-hover:text-white" aria-hidden="true">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
                         </svg>
-                        Adapted from Magewire
-                    </p>
-                    <p class="mt-3 text-sm leading-relaxed text-[#71717a]">A streamlined, tailored fork shaped around the needs of Hyvä Commerce.</p>
+                    </span>
                 </div>
-
-                <span class="mt-auto inline-flex items-center gap-1.5 text-purple-600 font-semibold text-sm group-hover:gap-3 transition-all">
-                    Read more
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
-                    </svg>
-                </span>
             </a>
 
         </div>
