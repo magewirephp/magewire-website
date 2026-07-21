@@ -355,28 +355,6 @@
             </a>
         </div>
 
-        {{-- Meta pills --}}
-        <div class="e5 mt-12 flex items-center justify-center flex-wrap gap-3">
-            <span class="inline-flex items-center gap-2.5 bg-white border border-[#e4e2de] rounded-full pl-2 pr-5 py-1.5 shadow-sm shadow-black/5">
-                <span class="w-7 h-7 rounded-full bg-mw-100 flex items-center justify-center shrink-0">
-                    <svg class="w-3.5 h-3.5 text-mw-600" fill="none" stroke="currentColor" stroke-width="2.5"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
-                    </svg>
-                </span>
-                <span class="text-sm font-semibold text-[#1d1d1f]">PHP 8.2+</span>
-            </span>
-            <span class="inline-flex items-center gap-2.5 bg-white border border-[#e4e2de] rounded-full pl-2 pr-5 py-1.5 shadow-sm shadow-black/5">
-                <span class="w-7 h-7 rounded-full bg-mw-100 flex items-center justify-center shrink-0">
-                    <svg class="w-3.5 h-3.5 text-mw-600" fill="none" stroke="currentColor" stroke-width="2.5"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
-                    </svg>
-                </span>
-                <span class="text-sm font-semibold text-[#1d1d1f]">Magento 2.4.4+</span>
-            </span>
-        </div>
-
         {{-- Code editor — bleeds into Features section below --}}
         <div class="mt-20 px-6 relative z-10 w-full max-w-5xl mx-auto text-left">
 
