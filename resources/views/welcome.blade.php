@@ -757,7 +757,7 @@
      THEME COMPATIBILITY
      ══════════════════════════════════ --}}
 <section id="compatibility" class="py-36 px-6 bg-white">
-    <div class="mx-auto max-w-4xl">
+    <div class="mx-auto max-w-6xl">
 
         <div class="reveal text-center mb-16">
             <span class="eyebrow">Theme Support</span>
@@ -765,59 +765,70 @@
                 Compatibility
             </h2>
         </div>
-        <div class="reveal grid grid-cols-2 sm:grid-cols-4 gap-6" style="transition-delay:.15s">
+        <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" style="transition-delay:.15s">
 
             <a href="https://github.com/magewirephp/magewire-admin" target="_blank" rel="noopener"
-               class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8 hover:border-mw-500 transition-colors">
-                <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
-                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2.5"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
-                    </svg>
+               class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_22px_55px_-34px_rgba(22,163,74,.35)]">
+                <div class="aspect-square overflow-hidden bg-[#fff9f4]">
+                    <img src="/images/compatibility/backend.webp"
+                         alt="Abstract supported administration dashboard"
+                         width="768" height="768" loading="lazy"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
                 </div>
-                <div>
-                    <p class="text-lg font-bold text-[#1d1d1f] group-hover:text-mw-600 transition-colors">Magento Backend</p>
-                    <p class="text-sm text-green-600 font-medium mt-1">Supported</p>
+                <div class="p-4 text-center sm:p-5">
+                    <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Magento Backend</h3>
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 sm:text-sm">
+                        <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Supported
+                    </p>
                 </div>
             </a>
 
-            <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
-                <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
-                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2.5"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
-                    </svg>
+            <div class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_22px_55px_-34px_rgba(22,163,74,.35)]">
+                <div class="aspect-square overflow-hidden bg-[#fff9f4]">
+                    <img src="/images/compatibility/hyva.webp"
+                         alt="Abstract fast storefront with a support check"
+                         width="768" height="768" loading="lazy"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
                 </div>
-                <div>
-                    <p class="text-lg font-bold text-[#1d1d1f]">Hyvä</p>
-                    <p class="text-sm text-green-600 font-medium mt-1">Supported</p>
-                </div>
-            </div>
-
-            <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
-                <div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center shrink-0">
-                    <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" stroke-width="2.5"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
-                    </svg>
-                </div>
-                <div>
-                    <p class="text-lg font-bold text-[#1d1d1f]">Breeze</p>
-                    <p class="text-sm text-amber-500 font-medium mt-1">In progress</p>
-                    <span class="inline-flex items-center mt-2 text-xs font-semibold text-mw-600 bg-mw-50 border border-mw-200 px-2.5 py-0.5 rounded-full">Community-driven</span>
+                <div class="p-4 text-center sm:p-5">
+                    <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Hyvä</h3>
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 sm:text-sm">
+                        <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Supported
+                    </p>
                 </div>
             </div>
 
-            <div class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
-                <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center shrink-0">
-                    <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" stroke-width="2.5"
-                         viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
-                    </svg>
+            <div class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-[0_22px_55px_-34px_rgba(217,119,6,.3)]">
+                <div class="aspect-square overflow-hidden bg-[#fffbf3]">
+                    <img src="/images/compatibility/breeze.webp"
+                         alt="Abstract storefront components moving through an incomplete progress loop"
+                         width="768" height="768" loading="lazy"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
                 </div>
-                <div>
-                    <p class="text-lg font-bold text-[#1d1d1f]">Luma</p>
-                    <p class="text-sm text-red-400 font-medium mt-1">No active plans</p>
+                <div class="p-4 text-center sm:p-5">
+                    <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Breeze</h3>
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-amber-600 sm:text-sm">
+                        <span class="h-1.5 w-1.5 rounded-full bg-amber-400" aria-hidden="true"></span>
+                        In progress · Community
+                    </p>
+                </div>
+            </div>
+
+            <div class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-[#d6d3d1] hover:shadow-[0_22px_55px_-34px_rgba(87,83,78,.3)]">
+                <div class="aspect-square overflow-hidden bg-[#faf8f5]">
+                    <img src="/images/compatibility/luma.webp"
+                         alt="Abstract storefront with a calm pause symbol and disconnected plug"
+                         width="768" height="768" loading="lazy"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
+                </div>
+                <div class="p-4 text-center sm:p-5">
+                    <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Luma</h3>
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-[#78716c] sm:text-sm">
+                        <span class="h-1.5 w-1.5 rounded-full bg-[#a8a29e]" aria-hidden="true"></span>
+                        No active plans
+                    </p>
                 </div>
             </div>
 

@@ -28,4 +28,16 @@ class ExampleTest extends TestCase
             ->assertDontSee('Magewire brings the reactive checkout experience to life.')
             ->assertDontSee('A streamlined, tailored fork shaped around the needs of Hyvä Commerce.');
     }
+
+    public function test_theme_compatibility_uses_visual_status_cards(): void
+    {
+        $this->get('/')
+            ->assertOk()
+            ->assertSee('/images/compatibility/backend.webp', false)
+            ->assertSee('/images/compatibility/hyva.webp', false)
+            ->assertSee('/images/compatibility/breeze.webp', false)
+            ->assertSee('/images/compatibility/luma.webp', false)
+            ->assertSee('In progress · Community')
+            ->assertSee('No active plans');
+    }
 }
