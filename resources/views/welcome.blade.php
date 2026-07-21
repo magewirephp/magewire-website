@@ -1005,7 +1005,7 @@
                 Magewire in the wild.
             </h2>
             <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
-                Powering products directly &mdash; and inspiring purpose-built forks.
+                From products powered by Magewire to projects shaped by its foundations.
             </p>
         </div>
 
@@ -1013,39 +1013,26 @@
 
             {{-- Hyvä Checkout --}}
             <a href="https://www.hyva.io/hyva-checkout.html" target="_blank" rel="noopener"
-               class="sponsor-card group relative overflow-hidden flex flex-col items-start text-left gap-6 bg-white border border-[#dce9df] rounded-2xl p-8">
-                <div class="absolute inset-x-0 top-0 h-1 bg-green-500" aria-hidden="true"></div>
-
-                <div class="flex flex-col items-start gap-3 w-full sm:flex-row sm:items-center">
-                    <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
-                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" stroke-width="1.75"
-                             viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.97-7.143a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/>
-                        </svg>
-                    </div>
-                    <span class="inline-flex items-center gap-2 rounded-full bg-green-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-green-700 ring-1 ring-inset ring-green-200 sm:ml-auto">
-                        <span class="h-2 w-2 rounded-full bg-green-500"></span>
-                        Powered by Magewire
-                    </span>
+               class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
+                <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" stroke-width="1.75"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.97-7.143a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/>
+                    </svg>
                 </div>
 
                 <div>
                     <p class="text-xl font-bold text-[#1d1d1f]">Hyvä Checkout</p>
-                    <p class="mt-2 text-sm leading-relaxed text-[#71717a]">Magewire powers the reactive checkout experience directly.</p>
-                </div>
-
-                <div class="w-full rounded-xl border border-green-100 bg-green-50/60 px-4 py-3" aria-label="Magewire directly powers Hyvä Checkout">
-                    <div class="flex flex-col items-center gap-2 text-xs font-semibold text-green-800 sm:flex-row">
-                        <span>Magewire</span>
-                        <svg class="h-4 w-4 shrink-0 rotate-90 text-green-400 sm:rotate-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                            <path stroke-linecap="round" d="M2 8h11m-3-3 3 3-3 3"/>
-                        </svg>
-                        <span class="rounded-md bg-white px-2 py-1 ring-1 ring-inset ring-green-200">powers</span>
-                        <svg class="h-4 w-4 shrink-0 rotate-90 text-green-400 sm:rotate-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                            <path stroke-linecap="round" d="M2 8h11m-3-3 3 3-3 3"/>
-                        </svg>
-                        <span>Hyvä Checkout</span>
+                    <p class="mt-1.5 inline-flex items-center gap-1.5 text-sm font-medium text-green-600">
+                        <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Powered by Magewire
+                    </p>
+                    <p class="mt-3 text-sm leading-relaxed text-[#71717a]">Magewire brings the reactive checkout experience to life.</p>
+                    <div class="mt-4 flex flex-wrap items-center justify-center gap-2" aria-label="Compatible with Magewire versions 1 and 3">
+                        <span class="text-xs font-medium text-[#9ca3af]">Compatible with</span>
+                        <span class="rounded-full bg-mw-50 px-2.5 py-1 text-xs font-semibold text-mw-700 ring-1 ring-inset ring-mw-200">Magewire V1</span>
+                        <span class="rounded-full bg-mw-50 px-2.5 py-1 text-xs font-semibold text-mw-700 ring-1 ring-inset ring-mw-200">Magewire V3</span>
                     </div>
                 </div>
 
@@ -1060,42 +1047,24 @@
 
             {{-- Hyvä CMS --}}
             <a href="https://www.hyva.io/hyva-commerce.html" target="_blank" rel="noopener"
-               class="sponsor-card group relative overflow-hidden flex flex-col items-start text-left gap-6 bg-white border border-[#e7ddf0] rounded-2xl p-8">
-                <div class="absolute inset-x-0 top-0 h-1 bg-purple-500" aria-hidden="true"></div>
-
-                <div class="flex flex-col items-start gap-3 w-full sm:flex-row sm:items-center">
-                    <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center shrink-0">
-                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.75"
-                             viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M6 3v12a3 3 0 0 0 3 3h9m0 0-3-3m3 3-3 3M6 8h5a3 3 0 0 1 3 3v1m0 0-2-2m2 2 2-2"/>
-                        </svg>
-                    </div>
-                    <span class="inline-flex items-center gap-2 rounded-full bg-purple-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-purple-700 ring-1 ring-inset ring-purple-200 sm:ml-auto">
-                        <svg class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 2v8a2 2 0 0 0 2 2h6m0 0-2-2m2 2-2 2M4 6h3a2 2 0 0 1 2 2v1"/>
-                        </svg>
-                        Based on a fork
-                    </span>
+               class="sponsor-card group flex flex-col items-center text-center gap-5 bg-white border border-[#e8e5e1] rounded-2xl p-8">
+                <div class="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.75"
+                         viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M6 3v12a3 3 0 0 0 3 3h9m0 0-3-3m3 3-3 3M6 8h5a3 3 0 0 1 3 3v1m0 0-2-2m2 2 2-2"/>
+                    </svg>
                 </div>
 
                 <div>
                     <p class="text-xl font-bold text-[#1d1d1f]">Hyvä CMS with Liveview</p>
-                    <p class="mt-2 text-sm leading-relaxed text-[#71717a]">Runs on a stripped and modified Magewire fork &mdash; related by lineage, not powered by Magewire.</p>
-                </div>
-
-                <div class="w-full rounded-xl border border-purple-100 bg-purple-50/60 px-4 py-3" aria-label="Magewire was forked and modified for Hyvä CMS">
-                    <div class="flex flex-col items-center gap-2 text-xs font-semibold text-purple-800 sm:flex-row">
-                        <span>Magewire</span>
-                        <svg class="h-4 w-4 shrink-0 rotate-90 text-purple-400 sm:rotate-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                            <path stroke-linecap="round" d="M2 8h11m-3-3 3 3-3 3"/>
+                    <p class="mt-1.5 inline-flex items-center gap-1.5 text-sm font-medium text-purple-600">
+                        <svg class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 2v8a2 2 0 0 0 2 2h6m0 0-2-2m2 2-2 2M4 6h3a2 2 0 0 1 2 2v1"/>
                         </svg>
-                        <span class="rounded-md bg-white px-2 py-1 ring-1 ring-inset ring-purple-200">stripped + modified</span>
-                        <svg class="h-4 w-4 shrink-0 rotate-90 text-purple-400 sm:rotate-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                            <path stroke-linecap="round" d="M2 8h11m-3-3 3 3-3 3"/>
-                        </svg>
-                        <span>Hyvä CMS</span>
-                    </div>
+                        Adapted from Magewire
+                    </p>
+                    <p class="mt-3 text-sm leading-relaxed text-[#71717a]">A streamlined, tailored fork shaped around the needs of Hyvä Commerce.</p>
                 </div>
 
                 <span class="mt-auto inline-flex items-center gap-1.5 text-purple-600 font-semibold text-sm group-hover:gap-3 transition-all">
