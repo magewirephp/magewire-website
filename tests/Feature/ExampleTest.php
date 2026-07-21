@@ -35,6 +35,7 @@ class ExampleTest extends TestCase
             ->assertOk()
             ->assertSee('/images/compatibility/backend.webp', false)
             ->assertSee('/images/compatibility/hyva.webp', false)
+            ->assertSee('href="https://github.com/magewirephp/magewire-hyva-theme"', false)
             ->assertSee('/images/compatibility/breeze.webp', false)
             ->assertSee('/images/compatibility/luma.webp', false)
             ->assertSee('In progress · Community')

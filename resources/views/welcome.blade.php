@@ -784,7 +784,7 @@
                 </div>
             </a>
 
-            <div class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_22px_55px_-34px_rgba(22,163,74,.35)]">
+            <a href="https://github.com/magewirephp/magewire-hyva-theme" target="_blank" rel="noopener" class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_22px_55px_-34px_rgba(22,163,74,.35)]">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
                     <img src="/images/compatibility/hyva.webp"
                          alt="Abstract fast storefront with a support check"
@@ -798,7 +798,7 @@
                         Supported
                     </p>
                 </div>
-            </div>
+            </a>
 
             <div class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-[0_22px_55px_-34px_rgba(217,119,6,.3)]">
                 <div class="aspect-square overflow-hidden bg-[#fffbf3]">
