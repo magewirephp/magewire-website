@@ -73,7 +73,6 @@
 
         <nav aria-label="Primary" class="hidden items-center gap-1 md:flex">
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Docs</a>
-            <a href="{{ route('features.compiler') }}" class="nav-link active" aria-current="page">Features</a>
             <a href="{{ url('/') }}#install" class="nav-link">Install</a>
             <a href="{{ url('/') }}#compatibility" class="nav-link">Compatibility</a>
             <a href="{{ url('/') }}#sponsors" class="nav-link">Sponsors</a>
@@ -99,7 +98,6 @@
     <nav id="feature-mobile-menu" x-show="menu" x-cloak x-transition.opacity aria-label="Mobile" class="border-t border-[#e8e5e1] bg-white/95 md:hidden">
         <div class="mx-auto flex max-w-6xl flex-col px-6 py-3">
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="border-b border-[#f0ece7] py-3 font-medium">Docs</a>
-            <a href="{{ route('features.compiler') }}" class="border-b border-[#f0ece7] py-3 font-semibold text-mw-600" aria-current="page">Features</a>
             <a href="{{ url('/') }}#install" class="border-b border-[#f0ece7] py-3 font-medium">Install</a>
             <a href="{{ url('/') }}#compatibility" class="border-b border-[#f0ece7] py-3 font-medium">Compatibility</a>
             <a href="{{ url('/') }}#sponsors" class="border-b border-[#f0ece7] py-3 font-medium">Sponsors</a>
@@ -141,7 +139,6 @@
         <a href="/" class="font-bold text-[#d1d5db] transition-colors hover:text-white">MagewirePHP</a>
         <nav aria-label="Footer" class="flex flex-wrap items-center justify-center gap-6">
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">Docs</a>
-            <a href="{{ route('features.compiler') }}" class="text-sm text-white">Features</a>
             <a href="https://github.com/magewirephp/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">GitHub</a>
             <a href="https://discord.gg/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">Discord</a>
         </nav>

@@ -6,6 +6,13 @@ use Tests\TestCase;
 
 class FeaturesPageTest extends TestCase
 {
+    public function test_the_homepage_does_not_present_features_as_a_catalog(): void
+    {
+        $this->get('/')
+            ->assertOk()
+            ->assertDontSee(route('features.index'), false);
+    }
+
     public function test_the_features_index_opens_the_compiler_page(): void
     {
         $this->get('/features')

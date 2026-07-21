@@ -176,7 +176,6 @@
         <nav aria-label="Primary" class="hidden md:flex items-center gap-1">
             <a href="https://docs.magewirephp.nl/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Docs</a>
-            <a href="{{ route('features.index') }}" class="nav-link">Features</a>
             <a href="#install"  class="nav-link">Install</a>
             <a href="#compatibility" class="nav-link">Compatibility</a>
             <a href="#sponsors" class="nav-link">Sponsors</a>
@@ -222,8 +221,6 @@
         <div class="mx-auto max-w-6xl px-6 py-4 flex flex-col">
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" @click="menu = false"
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Docs</a>
-            <a href="{{ route('features.index') }}" @click="menu = false"
-               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Features</a>
             <a href="#install" @click="menu = false"
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Install</a>
             <a href="#compatibility" @click="menu = false"
@@ -1073,8 +1070,6 @@
             <a href="https://docs.magewirephp.nl/?ref=main-website"
                target="_blank" rel="noopener"
                class="text-base text-[#9ca3af] hover:text-white transition-colors">Docs</a>
-            <a href="{{ route('features.index') }}"
-               class="text-base text-[#9ca3af] hover:text-white transition-colors">Features</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website"
                target="_blank" rel="noopener"
                class="text-base text-[#9ca3af] hover:text-white transition-colors">Blog</a>
