@@ -11,7 +11,7 @@ class FeaturesPageTest extends TestCase
         $this->get('/features')
             ->assertOk()
             ->assertSee('The Compiler')
-            ->assertSee('Magewire V3')
+            ->assertSee('Expressive directives. Still unmistakably Magento.')
             ->assertSee('magewire:compile:clear')
             ->assertSee('Read the compiler docs');
     }

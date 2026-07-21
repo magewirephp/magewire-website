@@ -130,19 +130,15 @@
         <div class="relative mx-auto max-w-6xl">
             <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-14 lg:gap-20 items-center">
                 <div>
-                    <div class="inline-flex items-center gap-2 rounded-full border border-mw-200 bg-white/80 px-3 py-1.5 text-xs font-bold uppercase tracking-[.14em] text-mw-700 shadow-sm">
-                        <span class="h-1.5 w-1.5 rounded-full bg-mw-500"></span>
-                        Handpicked feature 01
-                    </div>
-                    <h1 class="mt-7 text-5xl sm:text-6xl lg:text-7xl font-black tracking-[-.055em] leading-[.98] text-[#181817]">
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black tracking-[-.055em] leading-[.98] text-[#181817]">
                         The<br><span class="text-mw-500">Compiler.</span>
                     </h1>
                     <p class="mt-7 text-xl sm:text-2xl font-semibold tracking-tight text-[#343434]">
-                        A better way to write PHTML.
+                        Expressive directives. Still unmistakably Magento.
                     </p>
                     <p class="mt-4 max-w-xl text-lg leading-relaxed text-[#6e6e73]">
-                        Magewire V3 turns expressive directives and safe echo syntax into plain PHP before Magento renders your component.
-                        Cleaner templates for you. Familiar output for Magento.
+                        Use concise template directives without stepping outside Magento's PHTML conventions.
+                        Magewire compiles them into plain PHP before rendering, keeping your templates clean and Magento's familiar workflow intact.
                     </p>
 
                     <div class="mt-8 flex flex-col sm:flex-row gap-3">
