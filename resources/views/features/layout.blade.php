@@ -75,7 +75,7 @@
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Docs</a>
             <a href="{{ url('/') }}#install" class="nav-link">Install</a>
             <a href="{{ url('/') }}#compatibility" class="nav-link">Compatibility</a>
-            <a href="{{ route('about') }}" class="nav-link">About</a>
+            <a href="{{ route('why') }}" class="nav-link">Why</a>
             <a href="{{ url('/') }}#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Blog</a>
         </nav>
@@ -101,7 +101,7 @@
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="border-b border-[#f0ece7] py-3 font-medium">Docs</a>
             <a href="{{ url('/') }}#install" class="border-b border-[#f0ece7] py-3 font-medium">Install</a>
             <a href="{{ url('/') }}#compatibility" class="border-b border-[#f0ece7] py-3 font-medium">Compatibility</a>
-            <a href="{{ route('about') }}" class="border-b border-[#f0ece7] py-3 font-medium">About</a>
+            <a href="{{ route('why') }}" class="border-b border-[#f0ece7] py-3 font-medium">Why</a>
             <a href="{{ url('/') }}#sponsors" class="border-b border-[#f0ece7] py-3 font-medium">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" class="py-3 font-medium">Blog</a>
         </div>
@@ -142,7 +142,7 @@
         <nav aria-label="Footer" class="flex flex-wrap items-center justify-center gap-6">
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">Docs</a>
             <a href="https://github.com/magewirephp/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">GitHub</a>
-            <a href="{{ route('about') }}" class="text-sm text-[#9ca3af] hover:text-white">About</a>
+            <a href="{{ route('why') }}" class="text-sm text-[#9ca3af] hover:text-white">Why</a>
             <a href="https://discord.gg/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">Discord</a>
         </nav>
         <p class="text-sm text-[#73737a]">MIT License &middot; &copy; {{ date('Y') }}</p>

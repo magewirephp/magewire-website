@@ -6,8 +6,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/about', 'about')->name('about');
-Route::redirect('/why-magewire', '/about', 301);
+Route::view('/why', 'why')->name('why');
+Route::redirect('/about', '/why', 301);
+Route::redirect('/why-magewire', '/why', 301);
 
 Route::redirect('/features', '/features/compiler')->name('features.index');
 Route::view('/features/compiler', 'features.compiler')->name('features.compiler');

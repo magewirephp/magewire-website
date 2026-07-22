@@ -42,26 +42,34 @@ class ExampleTest extends TestCase
             ->assertSee('No active plans');
     }
 
-    public function test_about_page_tells_the_project_story(): void
+    public function test_why_page_tells_the_project_story(): void
     {
-        $this->get('/about')
+        $this->get('/why')
             ->assertOk()
             ->assertSee('Reactive Magento.')
+            ->assertSee('The wheel was already round.')
+            ->assertSee('Livewire had already proven')
+            ->assertSee('The goal was never to invent another frontend philosophy.')
             ->assertSee('Familiar does not mean identical.')
             ->assertSee('Yes, an HTTP request has a cost.')
             ->assertSee('Magewire V3 increasingly keeps state and behavior in the browser.')
             ->assertSee('a small, intentional request cost is often a good trade')
             ->assertSee('New ideas belong in Magento too.')
-            ->assertSee('https://github.com/sponsors/magewirephp', false)
+            ->assertSee('https://github.com/sponsors/wpoortman', false)
             ->assertDontSee('Dear builders')
             ->assertDontSee('open letter');
 
         $this->get('/')
             ->assertOk()
-            ->assertSee(route('about'), false)
-            ->assertSee('About');
+            ->assertSee(route('why'), false)
+            ->assertSee('Why')
+            ->assertSee('https://github.com/sponsors/wpoortman', false)
+            ->assertDontSee('https://github.com/sponsors/magewirephp', false);
 
         $this->get('/why-magewire')
-            ->assertRedirect('/about');
+            ->assertRedirect('/why');
+
+        $this->get('/about')
+            ->assertRedirect('/why');
     }
 }

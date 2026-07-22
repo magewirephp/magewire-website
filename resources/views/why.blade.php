@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Magewire | MagewirePHP</title>
-    <meta name="description" content="About Magewire: familiar reactive PHP for Magento, its Livewire roots, its performance tradeoffs, and its open-source purpose.">
+    <title>Why Magewire | MagewirePHP</title>
+    <meta name="description" content="Why Magewire brings Livewire's proven developer experience to Magento, including its familiar syntax, performance tradeoffs, and open-source purpose.">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -75,7 +75,7 @@
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Docs</a>
             <a href="{{ url('/') }}#install" class="nav-link">Install</a>
             <a href="{{ url('/') }}#compatibility" class="nav-link">Compatibility</a>
-            <a href="{{ route('about') }}" class="nav-link active" aria-current="page">About</a>
+            <a href="{{ route('why') }}" class="nav-link active" aria-current="page">Why</a>
             <a href="{{ url('/') }}#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Blog</a>
         </nav>
@@ -87,7 +87,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                 </svg>
             </a>
-            <button @click="menu = !menu" :aria-expanded="menu" aria-controls="about-mobile-menu"
+            <button @click="menu = !menu" :aria-expanded="menu" aria-controls="why-mobile-menu"
                     class="flex h-9 w-9 items-center justify-center rounded-full border border-[#d2d2d7] text-[#52525b] transition-colors hover:border-mw-500 hover:text-mw-600 md:hidden"
                     aria-label="Toggle navigation menu">
                 <svg x-show="!menu" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -96,12 +96,12 @@
         </div>
     </div>
 
-    <nav id="about-mobile-menu" x-show="menu" x-cloak x-transition.opacity aria-label="Mobile" class="border-t border-[#e8e5e1] bg-white/95 md:hidden">
+    <nav id="why-mobile-menu" x-show="menu" x-cloak x-transition.opacity aria-label="Mobile" class="border-t border-[#e8e5e1] bg-white/95 md:hidden">
         <div class="mx-auto flex max-w-6xl flex-col px-6 py-3">
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="border-b border-[#f0ece7] py-3 font-medium">Docs</a>
             <a href="{{ url('/') }}#install" class="border-b border-[#f0ece7] py-3 font-medium">Install</a>
             <a href="{{ url('/') }}#compatibility" class="border-b border-[#f0ece7] py-3 font-medium">Compatibility</a>
-            <a href="{{ route('about') }}" class="border-b border-[#f0ece7] py-3 font-semibold text-mw-600" aria-current="page">About</a>
+            <a href="{{ route('why') }}" class="border-b border-[#f0ece7] py-3 font-semibold text-mw-600" aria-current="page">Why</a>
             <a href="{{ url('/') }}#sponsors" class="border-b border-[#f0ece7] py-3 font-medium">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" class="py-3 font-medium">Blog</a>
         </div>
@@ -117,7 +117,7 @@
             <div class="max-w-4xl">
                 <span class="inline-flex items-center gap-2 rounded-full border border-mw-200 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[.14em] text-mw-700 shadow-sm">
                     <span class="h-1.5 w-1.5 rounded-full bg-mw-500" aria-hidden="true"></span>
-                    About Magewire
+                    Why Magewire
                 </span>
                 <h1 class="mt-8 text-5xl font-black leading-[.98] tracking-[-.055em] text-[#181817] sm:text-7xl lg:text-[5.5rem]">
                     Reactive Magento.<br>
@@ -133,15 +133,15 @@
     <section class="px-6 py-20 sm:py-24">
         <div class="mx-auto grid max-w-5xl gap-10 md:grid-cols-[.7fr_1.3fr] md:gap-16">
             <div>
-                <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">The objective</span>
-                <h2 class="mt-4 text-3xl font-bold tracking-[-.04em] text-[#1d1d1f] sm:text-4xl">Freshen up how Magento gets built.</h2>
+                <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Why it started</span>
+                <h2 class="mt-4 text-3xl font-bold tracking-[-.04em] text-[#1d1d1f] sm:text-4xl">The wheel was already round.</h2>
             </div>
             <div class="space-y-5 text-lg leading-relaxed text-[#626267]">
                 <p>
-                    Laravel demonstrated that developer experience can be a serious technical advantage: direct APIs, approachable concepts, and tools that make everyday work easier to reason about. Magewire applies that lesson to Magento without trying to turn Magento into Laravel.
+                    Magewire started because Livewire had already proven that server-driven components can make reactive interfaces simpler to build. That proof was the reason the port was worth starting in the first place. The goal was never to invent another frontend philosophy.
                 </p>
                 <p>
-                    The goal is practical: reduce frontend ceremony, keep business behavior close to PHP, and give Magento developers a modern option for reactive interfaces. It also shows developers outside the ecosystem that Magento still has people testing new ideas and improving the craft.
+                    This is why the names, syntax, and mental model stay familiar. Developers get less to learn, teams get less to explain, and Magento keeps its own architecture. Sometimes the friendliest new idea is knowing which parts do not need reinventing.
                 </p>
             </div>
         </div>
@@ -292,7 +292,7 @@
                     <a href="https://vendic.nl" target="_blank" rel="noopener sponsored" class="rounded-xl border border-[#e7e3de] bg-white px-5 py-4 font-bold transition-colors hover:border-mw-300 hover:text-mw-600">Vendic</a>
                     <a href="https://zero1.co.uk" target="_blank" rel="noopener sponsored" class="rounded-xl border border-[#e7e3de] bg-white px-5 py-4 font-bold transition-colors hover:border-mw-300 hover:text-mw-600">Zero 1</a>
                 </div>
-                <a href="https://github.com/sponsors/magewirephp" target="_blank" rel="noopener"
+                <a href="https://github.com/sponsors/wpoortman" target="_blank" rel="noopener"
                    class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-mw-600 transition-colors hover:text-mw-700">
                     Sponsor Magewire
                     <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M3 8h10m-3-3 3 3-3 3"/></svg>
@@ -316,7 +316,7 @@
     <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-7 md:flex-row">
         <a href="/" class="font-bold text-[#d1d5db] transition-colors hover:text-white">MagewirePHP</a>
         <nav aria-label="Footer" class="flex flex-wrap items-center justify-center gap-6">
-            <a href="{{ route('about') }}" class="text-sm text-white">About</a>
+            <a href="{{ route('why') }}" class="text-sm text-white">Why</a>
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">Docs</a>
             <a href="https://github.com/magewirephp/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">GitHub</a>
             <a href="https://discord.gg/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">Discord</a>

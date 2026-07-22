@@ -178,7 +178,7 @@
                target="_blank" rel="noopener" class="nav-link">Docs</a>
             <a href="#install"  class="nav-link">Install</a>
             <a href="#compatibility" class="nav-link">Compatibility</a>
-            <a href="{{ route('about') }}" class="nav-link">About</a>
+            <a href="{{ route('why') }}" class="nav-link">Why</a>
             <a href="#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Blog</a>
@@ -226,8 +226,8 @@
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Install</a>
             <a href="#compatibility" @click="menu = false"
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Compatibility</a>
-            <a href="{{ route('about') }}" @click="menu = false"
-               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">About</a>
+            <a href="{{ route('why') }}" @click="menu = false"
+               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Why</a>
             <a href="#sponsors" @click="menu = false"
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" @click="menu = false"
@@ -882,7 +882,7 @@
             <div>
                 <p class="text-lg font-semibold text-[#1a1a1a]">Become a sponsor</p>
             </div>
-            <a href="https://github.com/sponsors/magewirephp"
+            <a href="https://github.com/sponsors/wpoortman"
                target="_blank" rel="noopener"
                class="shrink-0 inline-flex items-center gap-2 bg-mw-500 hover:bg-mw-600
                       text-white font-semibold text-sm px-6 py-3 rounded-full
@@ -1071,9 +1071,9 @@
             <a href="https://github.com/magewirephp/magewire"
                target="_blank" rel="noopener"
                class="text-base text-[#9ca3af] hover:text-white transition-colors">GitHub</a>
-            <a href="{{ route('about') }}"
-               class="text-base text-[#9ca3af] hover:text-white transition-colors">About</a>
-            <a href="https://github.com/sponsors/magewirephp"
+            <a href="{{ route('why') }}"
+               class="text-base text-[#9ca3af] hover:text-white transition-colors">Why</a>
+            <a href="https://github.com/sponsors/wpoortman"
                target="_blank" rel="noopener"
                class="text-base text-[#9ca3af] hover:text-white transition-colors">Sponsors</a>
             <a href="https://discord.gg/magewire"
