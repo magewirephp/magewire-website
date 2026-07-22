@@ -78,9 +78,9 @@
 
         <nav aria-label="Primary" class="hidden items-center gap-1 md:flex">
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Docs</a>
+            <a href="{{ route('why') }}" class="nav-link active" aria-current="page">Why</a>
             <a href="{{ url('/') }}#install" class="nav-link">Install</a>
             <a href="{{ url('/') }}#compatibility" class="nav-link">Compatibility</a>
-            <a href="{{ route('why') }}" class="nav-link active" aria-current="page">Why</a>
             <a href="{{ url('/') }}#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Blog</a>
         </nav>
@@ -110,9 +110,9 @@
     <nav id="mobile-menu" x-show="menu" x-cloak x-transition.opacity aria-label="Mobile" class="border-t border-[#e8e5e1] bg-white/90 backdrop-blur-xl md:hidden">
         <div class="mx-auto flex max-w-6xl flex-col px-6 py-4">
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" @click="menu = false" class="border-b border-[#f0ece7] py-3 text-base font-medium text-[#1d1d1f] transition-colors hover:text-mw-600">Docs</a>
+            <a href="{{ route('why') }}" @click="menu = false" class="border-b border-[#f0ece7] py-3 text-base font-medium text-mw-600 transition-colors" aria-current="page">Why</a>
             <a href="{{ url('/') }}#install" @click="menu = false" class="border-b border-[#f0ece7] py-3 text-base font-medium text-[#1d1d1f] transition-colors hover:text-mw-600">Install</a>
             <a href="{{ url('/') }}#compatibility" @click="menu = false" class="border-b border-[#f0ece7] py-3 text-base font-medium text-[#1d1d1f] transition-colors hover:text-mw-600">Compatibility</a>
-            <a href="{{ route('why') }}" @click="menu = false" class="border-b border-[#f0ece7] py-3 text-base font-medium text-mw-600 transition-colors" aria-current="page">Why</a>
             <a href="{{ url('/') }}#sponsors" @click="menu = false" class="border-b border-[#f0ece7] py-3 text-base font-medium text-[#1d1d1f] transition-colors hover:text-mw-600">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" @click="menu = false" class="py-3 text-base font-medium text-[#1d1d1f] transition-colors hover:text-mw-600">Blog</a>
         </div>

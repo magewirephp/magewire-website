@@ -73,9 +73,9 @@
 
         <nav aria-label="Primary" class="hidden items-center gap-1 md:flex">
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Docs</a>
+            <a href="{{ route('why') }}" class="nav-link">Why</a>
             <a href="{{ url('/') }}#install" class="nav-link">Install</a>
             <a href="{{ url('/') }}#compatibility" class="nav-link">Compatibility</a>
-            <a href="{{ route('why') }}" class="nav-link">Why</a>
             <a href="{{ url('/') }}#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Blog</a>
         </nav>
@@ -99,9 +99,9 @@
     <nav id="feature-mobile-menu" x-show="menu" x-cloak x-transition.opacity aria-label="Mobile" class="border-t border-[#e8e5e1] bg-white/95 md:hidden">
         <div class="mx-auto flex max-w-6xl flex-col px-6 py-3">
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="border-b border-[#f0ece7] py-3 font-medium">Docs</a>
+            <a href="{{ route('why') }}" class="border-b border-[#f0ece7] py-3 font-medium">Why</a>
             <a href="{{ url('/') }}#install" class="border-b border-[#f0ece7] py-3 font-medium">Install</a>
             <a href="{{ url('/') }}#compatibility" class="border-b border-[#f0ece7] py-3 font-medium">Compatibility</a>
-            <a href="{{ route('why') }}" class="border-b border-[#f0ece7] py-3 font-medium">Why</a>
             <a href="{{ url('/') }}#sponsors" class="border-b border-[#f0ece7] py-3 font-medium">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" class="py-3 font-medium">Blog</a>
         </div>

@@ -75,6 +75,7 @@ class ExampleTest extends TestCase
             ->assertSee('id="site-nav"', false)
             ->assertSee('nav-glass fixed', false)
             ->assertSee('https://discord.gg/magewire', false)
+            ->assertSeeInOrder(['>Docs</a>', '>Why</a>', '>Install</a>'], false)
             ->assertDontSee('Dear builders')
             ->assertDontSee('open letter');
 
@@ -82,6 +83,7 @@ class ExampleTest extends TestCase
             ->assertOk()
             ->assertSee(route('why'), false)
             ->assertSee('Why')
+            ->assertSeeInOrder(['>Docs</a>', '>Why</a>', '>Install</a>'], false)
             ->assertSee('https://github.com/sponsors/wpoortman', false)
             ->assertDontSee('https://github.com/sponsors/magewirephp', false);
 
