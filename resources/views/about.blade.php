@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Why Magewire Exists — MagewirePHP</title>
+    <title>About Magewire — MagewirePHP</title>
     <meta name="description" content="A note about why Magewire exists: to bring a fresh, thoughtful developer experience to Magento and give something useful back to its community.">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -76,7 +76,7 @@
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Docs</a>
             <a href="{{ url('/') }}#install" class="nav-link">Install</a>
             <a href="{{ url('/') }}#compatibility" class="nav-link">Compatibility</a>
-            <a href="{{ route('why-magewire') }}" class="nav-link active" aria-current="page">Our why</a>
+            <a href="{{ route('about') }}" class="nav-link active" aria-current="page">About</a>
             <a href="{{ url('/') }}#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" class="nav-link">Blog</a>
         </nav>
@@ -102,7 +102,7 @@
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="border-b border-[#f0ece7] py-3 font-medium">Docs</a>
             <a href="{{ url('/') }}#install" class="border-b border-[#f0ece7] py-3 font-medium">Install</a>
             <a href="{{ url('/') }}#compatibility" class="border-b border-[#f0ece7] py-3 font-medium">Compatibility</a>
-            <a href="{{ route('why-magewire') }}" class="border-b border-[#f0ece7] py-3 font-semibold text-mw-600" aria-current="page">Our why</a>
+            <a href="{{ route('about') }}" class="border-b border-[#f0ece7] py-3 font-semibold text-mw-600" aria-current="page">About</a>
             <a href="{{ url('/') }}#sponsors" class="border-b border-[#f0ece7] py-3 font-medium">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" class="py-3 font-medium">Blog</a>
         </div>
@@ -336,7 +336,7 @@
     <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-7 md:flex-row">
         <a href="/" class="font-bold text-[#d1d5db] transition-colors hover:text-white">MagewirePHP</a>
         <nav aria-label="Footer" class="flex flex-wrap items-center justify-center gap-6">
-            <a href="{{ route('why-magewire') }}" class="text-sm text-white">Our why</a>
+            <a href="{{ route('about') }}" class="text-sm text-white">About</a>
             <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">Docs</a>
             <a href="https://github.com/magewirephp/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">GitHub</a>
             <a href="https://discord.gg/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">Discord</a>

@@ -42,9 +42,9 @@ class ExampleTest extends TestCase
             ->assertSee('No active plans');
     }
 
-    public function test_why_magewire_page_tells_the_project_story(): void
+    public function test_about_page_tells_the_project_story(): void
     {
-        $this->get('/why-magewire')
+        $this->get('/about')
             ->assertOk()
             ->assertSee('A better way to build')
             ->assertSee('Familiar does not mean identical.')
@@ -54,7 +54,10 @@ class ExampleTest extends TestCase
 
         $this->get('/')
             ->assertOk()
-            ->assertSee(route('why-magewire'), false)
-            ->assertSee('Our why');
+            ->assertSee(route('about'), false)
+            ->assertSee('About');
+
+        $this->get('/why-magewire')
+            ->assertRedirect('/about');
     }
 }

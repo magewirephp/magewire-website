@@ -178,7 +178,7 @@
                target="_blank" rel="noopener" class="nav-link">Docs</a>
             <a href="#install"  class="nav-link">Install</a>
             <a href="#compatibility" class="nav-link">Compatibility</a>
-            <a href="{{ route('why-magewire') }}" class="nav-link">Our why</a>
+            <a href="{{ route('about') }}" class="nav-link">About</a>
             <a href="#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Blog</a>
@@ -226,8 +226,8 @@
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Install</a>
             <a href="#compatibility" @click="menu = false"
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Compatibility</a>
-            <a href="{{ route('why-magewire') }}" @click="menu = false"
-               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Our why</a>
+            <a href="{{ route('about') }}" @click="menu = false"
+               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">About</a>
             <a href="#sponsors" @click="menu = false"
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" @click="menu = false"
@@ -1071,8 +1071,8 @@
             <a href="https://github.com/magewirephp/magewire"
                target="_blank" rel="noopener"
                class="text-base text-[#9ca3af] hover:text-white transition-colors">GitHub</a>
-            <a href="{{ route('why-magewire') }}"
-               class="text-base text-[#9ca3af] hover:text-white transition-colors">Our why</a>
+            <a href="{{ route('about') }}"
+               class="text-base text-[#9ca3af] hover:text-white transition-colors">About</a>
             <a href="https://github.com/sponsors/magewirephp"
                target="_blank" rel="noopener"
                class="text-base text-[#9ca3af] hover:text-white transition-colors">Sponsors</a>
