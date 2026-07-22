@@ -41,4 +41,20 @@ class ExampleTest extends TestCase
             ->assertSee('In progress · Community')
             ->assertSee('No active plans');
     }
+
+    public function test_why_magewire_page_tells_the_project_story(): void
+    {
+        $this->get('/why-magewire')
+            ->assertOk()
+            ->assertSee('A better way to build')
+            ->assertSee('Familiar does not mean identical.')
+            ->assertSee('Open source rarely balances the ledger.')
+            ->assertSee('Useful over impressive.')
+            ->assertSee('https://github.com/sponsors/magewirephp', false);
+
+        $this->get('/')
+            ->assertOk()
+            ->assertSee(route('why-magewire'), false)
+            ->assertSee('Our why');
+    }
 }

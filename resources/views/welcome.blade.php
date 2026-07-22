@@ -178,6 +178,7 @@
                target="_blank" rel="noopener" class="nav-link">Docs</a>
             <a href="#install"  class="nav-link">Install</a>
             <a href="#compatibility" class="nav-link">Compatibility</a>
+            <a href="{{ route('why-magewire') }}" class="nav-link">Our why</a>
             <a href="#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Blog</a>
@@ -225,6 +226,8 @@
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Install</a>
             <a href="#compatibility" @click="menu = false"
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Compatibility</a>
+            <a href="{{ route('why-magewire') }}" @click="menu = false"
+               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Our why</a>
             <a href="#sponsors" @click="menu = false"
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" @click="menu = false"
@@ -551,7 +554,7 @@
                 <span class="grad">You already know Magewire.</span>
             </h2>
             <p class="mt-5 text-lg text-[#6e6e73] max-w-2xl mx-auto leading-relaxed">
-                A faithful port of Laravel Livewire for Magento&nbsp;2. Same component model. Same <code class="font-mono text-mw-500">wire:</code> directives. Same mental model. If you know Livewire, you're already productive.
+                Inspired by Laravel Livewire and intentionally familiar. Magewire brings its component model and <code class="font-mono text-mw-500">wire:</code> directives to Magento&nbsp;2, while adapting them to a different platform with different edges.
             </p>
         </div>
 
@@ -626,7 +629,7 @@
             <span class="w-16 h-px bg-[#e8e5e1]"></span>
             <span class="inline-flex items-center gap-2 bg-white border border-[#e8e5e1] rounded-full px-4 py-1.5 text-[#6e6e73]">
                 <span class="w-2 h-2 rounded-full bg-mw-500 shrink-0"></span>
-                Two lines changed. Zero new concepts.
+                A familiar shape, adapted for Magento.
             </span>
             <span class="w-16 h-px bg-[#e8e5e1]"></span>
         </div>
@@ -678,7 +681,7 @@
             <span class="w-16 h-px bg-[#e8e5e1]"></span>
             <span class="inline-flex items-center gap-2 bg-white border border-[#e8e5e1] rounded-full px-4 py-1.5 text-[#6e6e73]">
                 <span class="w-2 h-2 rounded-full bg-mw-500 shrink-0"></span>
-                Same wire: directives. Different template engine. That's it.
+                Familiar wire: directives, rendered in PHTML.
             </span>
             <span class="w-16 h-px bg-[#e8e5e1]"></span>
         </div>
@@ -718,7 +721,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-[#1d1d1f] mb-1">Hit the ground running</p>
-                    <p class="text-sm text-[#6e6e73] leading-relaxed">Any Livewire developer can ship Magewire code from day one. No ramp-up. No custom docs. They already know how.</p>
+                    <p class="text-sm text-[#6e6e73] leading-relaxed">Livewire developers will recognize the component model and core directives immediately, leaving them to focus on Magento’s own conventions.</p>
                 </div>
             </div>
 
@@ -731,7 +734,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-[#1d1d1f] mb-1">No invented abstractions</p>
-                    <p class="text-sm text-[#6e6e73] leading-relaxed">Nothing to unlearn. No custom APIs. No proprietary directives. Everything maps 1-to-1 with Livewire, on purpose.</p>
+                    <p class="text-sm text-[#6e6e73] leading-relaxed">The familiar pieces stay familiar on purpose, while Magento-specific behavior remains explicit where the platforms differ.</p>
                 </div>
             </div>
 
@@ -744,7 +747,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-[#1d1d1f] mb-1">AI-ready, out of the box</p>
-                    <p class="text-sm text-[#6e6e73] leading-relaxed">ChatGPT, Copilot, Claude: they all know Livewire inside out. That means they know Magewire too. Ask. Apply. Ship.</p>
+                    <p class="text-sm text-[#6e6e73] leading-relaxed">AI tools already understand many Livewire patterns, giving them useful context for Magewire while its Magento-specific docs remain the source of truth.</p>
                 </div>
             </div>
 
@@ -1068,6 +1071,8 @@
             <a href="https://github.com/magewirephp/magewire"
                target="_blank" rel="noopener"
                class="text-base text-[#9ca3af] hover:text-white transition-colors">GitHub</a>
+            <a href="{{ route('why-magewire') }}"
+               class="text-base text-[#9ca3af] hover:text-white transition-colors">Our why</a>
             <a href="https://github.com/sponsors/magewirephp"
                target="_blank" rel="noopener"
                class="text-base text-[#9ca3af] hover:text-white transition-colors">Sponsors</a>
