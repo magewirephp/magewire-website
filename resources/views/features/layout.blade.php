@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title') — Magewire Features</title>
+    <title>@yield('title') | Magewire Features</title>
     <meta name="description" content="@yield('description')">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -145,7 +145,7 @@
             <a href="{{ route('about') }}" class="text-sm text-[#9ca3af] hover:text-white">About</a>
             <a href="https://discord.gg/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">Discord</a>
         </nav>
-        <p class="text-sm text-[#73737a]">MIT License &mdash; &copy; {{ date('Y') }}</p>
+        <p class="text-sm text-[#73737a]">MIT License &middot; &copy; {{ date('Y') }}</p>
     </div>
 </footer>
 

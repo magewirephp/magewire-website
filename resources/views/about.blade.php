@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Magewire — MagewirePHP</title>
+    <title>About Magewire | MagewirePHP</title>
     <meta name="description" content="About Magewire: familiar reactive PHP for Magento, its Livewire roots, its performance tradeoffs, and its open-source purpose.">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -124,7 +124,7 @@
                     <span class="text-mw-500">Familiar by design.</span>
                 </h1>
                 <p class="mt-8 max-w-3xl text-xl font-medium leading-relaxed text-[#55555b] sm:text-2xl">
-                    Magewire brings the component-driven developer experience popularized by Laravel Livewire to Magento—adapted to the platform, honest about its differences, and focused on keeping interactive work understandable.
+                    Magewire brings the component-driven developer experience popularized by Laravel Livewire to Magento. It is adapted to the platform, honest about its differences, and focused on keeping interactive work understandable.
                 </p>
             </div>
         </div>
@@ -156,7 +156,7 @@
                         Livewire familiarity is deliberate.
                     </h2>
                     <p class="mt-6 text-lg leading-relaxed text-[#6e6e73]">
-                        Magewire is strongly inspired by Laravel Livewire. Its component model made server-driven interfaces feel natural in PHP, and that familiarity is useful—not something to rename or disguise.
+                        Magewire is strongly inspired by Laravel Livewire. Its component model made server-driven interfaces feel natural in PHP, and that familiarity is useful, not something to rename or disguise.
                     </p>
                     <p class="mt-5 text-lg leading-relaxed text-[#6e6e73]">
                         Public state, component actions, lifecycle ideas, and <code class="rounded bg-mw-50 px-1.5 py-0.5 font-mono text-sm text-mw-700">wire:</code> directives follow the same mental model. Livewire developers should recognize Magewire quickly.
@@ -321,7 +321,7 @@
             <a href="https://github.com/magewirephp/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">GitHub</a>
             <a href="https://discord.gg/magewire" target="_blank" rel="noopener" class="text-sm text-[#9ca3af] hover:text-white">Discord</a>
         </nav>
-        <p class="text-sm text-[#73737a]">MIT License &mdash; &copy; {{ date('Y') }}</p>
+        <p class="text-sm text-[#73737a]">MIT License &middot; &copy; {{ date('Y') }}</p>
     </div>
 </footer>
 

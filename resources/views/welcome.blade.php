@@ -239,7 +239,7 @@
 <main id="main">
 
 {{-- ══════════════════════════════════
-     HERO  — wave background
+     HERO: wave background
      ══════════════════════════════════ --}}
 <section class="relative z-10 min-h-[100svh] flex flex-col items-center justify-center
                 pt-24 pb-32 px-6 overflow-hidden">
@@ -276,7 +276,7 @@
                 <span class="absolute animate-ping inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                 <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500"></span>
             </span>
-            Magewire <strong class="font-bold">V3</strong> &mdash; Now Available
+            Magewire <strong class="font-bold">V3</strong>: Now Available
         </div>
 
         {{-- Headline --}}
@@ -355,7 +355,7 @@
             </a>
         </div>
 
-        {{-- Code editor — bleeds into Features section below --}}
+        {{-- Code editor: bleeds into Features section below --}}
         <div class="mt-20 px-6 relative z-10 w-full max-w-5xl mx-auto text-left">
 
 
@@ -902,7 +902,7 @@
                 Contributors
             </h2>
             <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
-                Every commit, fix, and bright idea traces back to these people &mdash; and the teams who champion Magewire as their own.
+                Every commit, fix, and bright idea traces back to these people and the teams who champion Magewire as their own.
             </p>
         </div>
 
@@ -1081,7 +1081,7 @@
                class="text-base text-[#9ca3af] hover:text-white transition-colors">Discord</a>
         </nav>
         <p class="text-sm text-[#9ca3af]">
-            MIT License &mdash; &copy; {{ date('Y') }} MagewirePHP
+            MIT License &middot; &copy; {{ date('Y') }} MagewirePHP
         </p>
     </div>
 </footer>

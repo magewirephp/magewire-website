@@ -151,7 +151,7 @@
         <div>
             <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-300">Useful when developing</span>
             <h2 class="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Generated views normally manage themselves.</h2>
-            <p class="mt-3 max-w-2xl leading-relaxed text-[#a9a9ad]">When you do need a clean slate, clear every compiled Magewire view—or target one Magento area—from the CLI.</p>
+            <p class="mt-3 max-w-2xl leading-relaxed text-[#a9a9ad]">When you do need a clean slate, clear every compiled Magewire view, or target one Magento area from the CLI.</p>
         </div>
         <code class="block overflow-x-auto rounded-xl border border-white/10 bg-black/25 px-5 py-4 font-mono text-sm text-[#e5e7eb]">bin/magento <span class="text-mw-300">magewire:compile:clear</span></code>
     </div>
