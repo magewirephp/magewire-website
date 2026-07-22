@@ -46,11 +46,15 @@ class ExampleTest extends TestCase
     {
         $this->get('/about')
             ->assertOk()
-            ->assertSee('A better way to build')
+            ->assertSee('Reactive Magento.')
             ->assertSee('Familiar does not mean identical.')
-            ->assertSee('Open source rarely balances the ledger.')
-            ->assertSee('Useful over impressive.')
-            ->assertSee('https://github.com/sponsors/magewirephp', false);
+            ->assertSee('Yes, an HTTP request has a cost.')
+            ->assertSee('Magewire V3 increasingly keeps state and behavior in the browser.')
+            ->assertSee('a small, intentional request cost is often a good trade')
+            ->assertSee('New ideas belong in Magento too.')
+            ->assertSee('https://github.com/sponsors/magewirephp', false)
+            ->assertDontSee('Dear builders')
+            ->assertDontSee('open letter');
 
         $this->get('/')
             ->assertOk()
