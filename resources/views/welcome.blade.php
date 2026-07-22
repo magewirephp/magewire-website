@@ -782,12 +782,11 @@
         <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" style="transition-delay:.12s">
             <a href="https://mage-os.org/product/releases/" target="_blank" rel="noopener"
                class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-mw-300 hover:shadow-[0_22px_55px_-34px_rgba(242,99,34,.32)]">
-                <div class="relative flex h-28 items-center justify-center overflow-hidden bg-gradient-to-br from-[#fff4ee] to-[#ffe2cf] sm:h-32">
-                    <span class="absolute -right-6 -top-8 h-24 w-24 rounded-full border-[18px] border-white/70" aria-hidden="true"></span>
-                    <svg class="relative h-12 w-12 text-mw-600 sm:h-14 sm:w-14" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                        <path stroke-linejoin="round" d="m32 8 20 11v26L32 56 12 45V19L32 8Z"/>
-                        <path stroke-linejoin="round" d="m12 19 20 12 20-12M32 31v25"/>
-                    </svg>
+                <div class="aspect-square overflow-hidden bg-[#fff9f4]">
+                    <img src="/images/compatibility/mage-os.webp"
+                         alt="Abstract modular commerce foundation connected to a storefront and dashboard"
+                         width="768" height="768" loading="lazy"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Mage-OS</h4>
@@ -801,11 +800,11 @@
 
             <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/magento-open-source/overview" target="_blank" rel="noopener"
                class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-mw-300 hover:shadow-[0_22px_55px_-34px_rgba(242,99,34,.32)]">
-                <div class="relative flex h-28 items-center justify-center overflow-hidden bg-gradient-to-br from-[#fff8f3] to-[#ffd9bd] sm:h-32">
-                    <span class="absolute -bottom-10 -left-8 h-28 w-28 rounded-full bg-white/50" aria-hidden="true"></span>
-                    <svg class="relative h-12 w-12 text-[#e04e0f] sm:h-14 sm:w-14" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 48V22l20-12 20 12v26M22 52V27l10-6 10 6v25M7 52h50"/>
-                    </svg>
+                <div class="aspect-square overflow-hidden bg-[#fff9f4]">
+                    <img src="/images/compatibility/magento-open-source.webp"
+                         alt="Abstract open commerce blueprint becoming a storefront"
+                         width="768" height="768" loading="lazy"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Magento Open Source</h4>
@@ -819,11 +818,11 @@
 
             <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/overview" target="_blank" rel="noopener"
                class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-purple-300 hover:shadow-[0_22px_55px_-34px_rgba(126,34,206,.28)]">
-                <div class="relative flex h-28 items-center justify-center overflow-hidden bg-gradient-to-br from-[#fbf5ff] to-[#ead8ff] sm:h-32">
-                    <span class="absolute -right-7 -bottom-8 h-24 w-24 rotate-12 rounded-3xl border-[16px] border-white/60" aria-hidden="true"></span>
-                    <svg class="relative h-12 w-12 text-purple-700 sm:h-14 sm:w-14" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 49h44M16 49V19h32v30M24 19v-7h16v7M24 29h4m8 0h4m-16 9h4m8 0h4"/>
-                    </svg>
+                <div class="aspect-square overflow-hidden bg-[#fff9f4]">
+                    <img src="/images/compatibility/adobe-commerce.webp"
+                         alt="Abstract connected multi-store commerce platform"
+                         width="768" height="768" loading="lazy"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Adobe Commerce</h4>
@@ -838,9 +837,11 @@
 
             <a href="https://packagist.org/packages/magewirephp/magewire" target="_blank" rel="noopener"
                class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-[0_22px_55px_-34px_rgba(79,70,229,.28)]">
-                <div class="relative flex h-28 items-center justify-center overflow-hidden bg-gradient-to-br from-[#f4f5ff] to-[#dfe3ff] sm:h-32">
-                    <span class="absolute -left-5 -top-8 h-24 w-24 rounded-full border-[18px] border-white/65" aria-hidden="true"></span>
-                    <span class="relative font-mono text-4xl font-black tracking-[-.08em] text-indigo-700 sm:text-5xl" aria-hidden="true">PHP</span>
+                <div class="aspect-square overflow-hidden bg-[#fff9f4]">
+                    <img src="/images/compatibility/php.webp"
+                         alt="Abstract PHP runtime connecting server logic to a storefront"
+                         width="768" height="768" loading="lazy"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">PHP</h4>
@@ -854,7 +855,7 @@
         </div>
 
         <div class="reveal mt-16 mb-5 border-t border-[#eeeae6] pt-12" style="transition-delay:.14s">
-            <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Themes &amp; areas</span>
+            <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Themes</span>
         </div>
 
         <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" style="transition-delay:.15s">
