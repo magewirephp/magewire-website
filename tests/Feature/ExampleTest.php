@@ -42,6 +42,8 @@ class ExampleTest extends TestCase
             ->assertSee('2.4.6 to 2.4.9')
             ->assertSee('8.2 to 8.5')
             ->assertSee('Themes &amp; areas', false)
+            ->assertDontSee('Where Magewire runs')
+            ->assertDontSee('How Magewire meets the frontend')
             ->assertSee('/images/compatibility/backend.webp', false)
             ->assertSee('/images/compatibility/hyva.webp', false)
             ->assertSee('href="https://github.com/magewirephp/magewire-hyva-theme"', false)

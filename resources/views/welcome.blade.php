@@ -775,7 +775,6 @@
         <div class="reveal flex items-end justify-between gap-6 mb-5" style="transition-delay:.08s">
             <div>
                 <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Platforms &amp; runtime</span>
-                <h3 class="mt-2 text-2xl font-bold tracking-tight text-[#1d1d1f]">Where Magewire runs</h3>
             </div>
             <p class="hidden text-sm text-[#8a8a90] sm:block">Minimum to current release</p>
         </div>
@@ -856,7 +855,6 @@
 
         <div class="reveal mt-16 mb-5 border-t border-[#eeeae6] pt-12" style="transition-delay:.14s">
             <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Themes &amp; areas</span>
-            <h3 class="mt-2 text-2xl font-bold tracking-tight text-[#1d1d1f]">How Magewire meets the frontend</h3>
         </div>
 
         <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" style="transition-delay:.15s">
