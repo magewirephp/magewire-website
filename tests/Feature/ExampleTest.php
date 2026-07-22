@@ -56,6 +56,9 @@ class ExampleTest extends TestCase
             ->assertSee('a small, intentional request cost is often a good trade')
             ->assertSee('New ideas belong in Magento too.')
             ->assertSee('https://github.com/sponsors/wpoortman', false)
+            ->assertSee('id="site-nav"', false)
+            ->assertSee('nav-glass fixed', false)
+            ->assertSee('https://discord.gg/magewire', false)
             ->assertDontSee('Dear builders')
             ->assertDontSee('open letter');
 
