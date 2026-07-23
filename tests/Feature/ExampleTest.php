@@ -81,14 +81,15 @@ class ExampleTest extends TestCase
             ->assertSee('href="#tools"', false)
             ->assertSee('Useful with Magewire')
             ->assertSee('Tools')
-            ->assertSee('make building with Magewire easier')
+            ->assertSee('make building with Magewire even more fun')
             ->assertSee('Magento Bricklayer')
             ->assertSee('/images/tools/bricklayer.webp', false)
             ->assertSee('href="https://github.com/Inchoo/magento-bricklayer"', false)
             ->assertSee('href="https://inchoo.net/"', false)
             ->assertSee('Made by')
             ->assertSee('Useful for Magewire development')
-            ->assertSee('runtime context that source files cannot show');
+            ->assertSee('runtime context that source files cannot show')
+            ->assertSee('Compatible with Magewire V1 + V3');
     }
 
     public function test_why_page_tells_the_project_story(): void

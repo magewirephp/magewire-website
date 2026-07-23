@@ -1005,7 +1005,7 @@
                 Tools
             </h2>
             <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-[#aaa39c]">
-                Handy projects from across the Magento ecosystem that make building with Magewire easier.
+                Handy projects from across the Magento ecosystem that make building with Magewire even more fun.
             </p>
         </div>
 
@@ -1038,6 +1038,11 @@
                 <p class="mt-5 text-base leading-relaxed text-[#6e6760]">
                     Useful for Magewire development because it gives AI coding agents Magento runtime context that source files cannot show,
                     including dependency injection, plugin chains, EAV, configuration, and diagnostics.
+                </p>
+
+                <p class="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-mw-50 px-3 py-1.5 text-sm font-semibold text-mw-700">
+                    <span class="h-1.5 w-1.5 rounded-full bg-mw-500" aria-hidden="true"></span>
+                    Compatible with Magewire V1 + V3
                 </p>
 
                 <a href="https://github.com/Inchoo/magento-bricklayer" target="_blank" rel="noopener"
