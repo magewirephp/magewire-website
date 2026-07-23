@@ -772,14 +772,11 @@
             </p>
         </div>
 
-        <div class="reveal flex items-end justify-between gap-6 mb-5" style="transition-delay:.08s">
-            <div>
-                <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Platforms &amp; runtime</span>
-            </div>
-            <p class="hidden text-sm text-[#8a8a90] sm:block">Minimum to current release</p>
+        <div class="reveal mb-5" style="transition-delay:.08s">
+            <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Platforms</span>
         </div>
 
-        <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" style="transition-delay:.12s">
+        <div class="reveal grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6" style="transition-delay:.12s">
             <a href="https://mage-os.org/product/releases/" target="_blank" rel="noopener"
                class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-mw-300 hover:shadow-[0_22px_55px_-34px_rgba(242,99,34,.32)]">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
@@ -831,22 +828,6 @@
                 </div>
             </a>
 
-            <a href="https://packagist.org/packages/magewirephp/magewire" target="_blank" rel="noopener"
-               class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-[0_22px_55px_-34px_rgba(79,70,229,.28)]">
-                <div class="aspect-square overflow-hidden bg-[#fff9f4]">
-                    <img src="/images/compatibility/php.webp"
-                         alt="Abstract PHP runtime connecting server logic to a storefront"
-                         width="768" height="768" loading="lazy"
-                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
-                </div>
-                <div class="p-4 sm:p-5">
-                    <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">PHP 8.2 - 8.5</h4>
-                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
-                        <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
-                        Supported
-                    </p>
-                </div>
-            </a>
         </div>
 
         <div class="reveal mt-8 overflow-hidden rounded-3xl border border-[#e8e5e1] bg-[#fafaf8] shadow-[0_20px_60px_-48px_rgba(31,41,55,.4)]" style="transition-delay:.13s">
