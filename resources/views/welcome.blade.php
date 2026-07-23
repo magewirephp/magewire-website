@@ -831,14 +831,6 @@
         </div>
 
         <div class="reveal mt-8 overflow-hidden rounded-3xl border border-[#e8e5e1] bg-[#fafaf8] shadow-[0_20px_60px_-48px_rgba(31,41,55,.4)]" style="transition-delay:.13s">
-            <div class="flex flex-col gap-3 border-b border-[#e8e5e1] px-5 py-5 sm:flex-row sm:items-end sm:justify-between sm:px-7">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Compatibility matrix</span>
-                    <p class="mt-1 text-sm text-[#71717a]">Supported Magewire V3 combinations</p>
-                </div>
-                <span class="text-xs font-semibold text-[#8a8a90]">7 combinations</span>
-            </div>
-
             <div class="overflow-x-auto">
                 <table class="w-full min-w-[780px] border-collapse text-left">
                     <thead>
