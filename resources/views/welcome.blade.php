@@ -790,7 +790,7 @@
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Mage-OS</h4>
-                    <p class="mt-2 font-mono text-xs font-semibold text-[#6e6e73] sm:text-sm">1.0.5 to 3.2.x</p>
+                    <p class="mt-2 font-mono text-xs font-semibold text-[#6e6e73] sm:text-sm">1.3.1 to 3.2.0</p>
                     <p class="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
                         <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
                         Supported
@@ -808,7 +808,7 @@
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Magento Open Source</h4>
-                    <p class="mt-2 font-mono text-xs font-semibold text-[#6e6e73] sm:text-sm">2.4.6 to 2.4.9</p>
+                    <p class="mt-2 font-mono text-xs font-semibold text-[#6e6e73] sm:text-sm">2.4.6-p15 to 2.4.9</p>
                     <p class="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
                         <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
                         Supported
@@ -852,6 +852,94 @@
                     </p>
                 </div>
             </a>
+        </div>
+
+        <div class="reveal mt-8 overflow-hidden rounded-3xl border border-[#e8e5e1] bg-[#fafaf8] shadow-[0_20px_60px_-48px_rgba(31,41,55,.4)]" style="transition-delay:.13s">
+            <div class="flex flex-col gap-3 border-b border-[#e8e5e1] px-5 py-5 sm:flex-row sm:items-end sm:justify-between sm:px-7">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Compatibility matrix</span>
+                    <p class="mt-1 text-sm text-[#71717a]">Supported Magewire V3 combinations</p>
+                </div>
+                <span class="text-xs font-semibold text-[#8a8a90]">7 combinations</span>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full min-w-[780px] border-collapse text-left">
+                    <thead>
+                    <tr class="border-b border-[#e8e5e1] bg-white/70 text-xs font-bold uppercase tracking-[.12em] text-[#8a8a90]">
+                        <th scope="col" class="px-7 py-4">Distribution</th>
+                        <th scope="col" class="px-5 py-4">Version</th>
+                        <th scope="col" class="px-5 py-4">PHP</th>
+                        <th scope="col" class="px-7 py-4">Magento base / purpose</th>
+                    </tr>
+                    </thead>
+                    <tbody class="divide-y divide-[#ece8e3] bg-white text-sm text-[#55555b]">
+                    <tr>
+                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
+                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-sm bg-[#f26322]" aria-hidden="true"></span>
+                            Magento Open Source
+                        </th>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">2.4.6-p15</td>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.2</td>
+                        <td class="px-7 py-4">Oldest Magento line compatible with Magewire's PHP &ge;8.2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
+                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-sm bg-[#f26322]" aria-hidden="true"></span>
+                            Magento Open Source
+                        </th>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">2.4.7-p10</td>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.3</td>
+                        <td class="px-7 py-4">Current 2.4.7 patch line</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
+                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-sm bg-[#f26322]" aria-hidden="true"></span>
+                            Magento Open Source
+                        </th>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">2.4.8-p5</td>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.4</td>
+                        <td class="px-7 py-4">Current 2.4.8 patch line</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
+                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-sm bg-[#f26322]" aria-hidden="true"></span>
+                            Magento Open Source
+                        </th>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">2.4.9</td>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.5</td>
+                        <td class="px-7 py-4">Latest Magento with latest PHP</td>
+                    </tr>
+                    <tr class="border-t-2 border-t-[#ded8d1]">
+                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
+                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-full bg-[#ff9234] ring-2 ring-[#ffe0c7]" aria-hidden="true"></span>
+                            Mage-OS
+                        </th>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">1.3.1</td>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.2</td>
+                        <td class="px-7 py-4">Magento 2.4.8-p2 base; Magewire PHP floor</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
+                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-full bg-[#ff9234] ring-2 ring-[#ffe0c7]" aria-hidden="true"></span>
+                            Mage-OS
+                        </th>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">2.3.0</td>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.4</td>
+                        <td class="px-7 py-4">Magento 2.4.8-p5 base</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
+                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-full bg-[#ff9234] ring-2 ring-[#ffe0c7]" aria-hidden="true"></span>
+                            Mage-OS
+                        </th>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">3.2.0</td>
+                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.5</td>
+                        <td class="px-7 py-4">Magento 2.4.9 base; latest/latest</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="reveal mt-16 mb-5 border-t border-[#eeeae6] pt-12" style="transition-delay:.14s">
