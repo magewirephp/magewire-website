@@ -179,6 +179,7 @@
             <a href="{{ route('why') }}" class="nav-link">Why</a>
             <a href="#install"  class="nav-link">Install</a>
             <a href="#compatibility" class="nav-link">Compatibility</a>
+            <a href="#tools" class="nav-link">Tools</a>
             <a href="#sponsors" class="nav-link">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website"
                target="_blank" rel="noopener" class="nav-link">Blog</a>
@@ -228,6 +229,8 @@
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Install</a>
             <a href="#compatibility" @click="menu = false"
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Compatibility</a>
+            <a href="#tools" @click="menu = false"
+               class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Tools</a>
             <a href="#sponsors" @click="menu = false"
                class="py-3 text-base font-medium text-[#1d1d1f] hover:text-mw-600 transition-colors border-b border-[#f0ece7]">Sponsors</a>
             <a href="https://docs.magewirephp.nl/blogs/?ref=main-website" target="_blank" rel="noopener" @click="menu = false"
@@ -997,12 +1000,12 @@
     <div class="relative mx-auto max-w-5xl">
 
         <div class="reveal mb-16 text-center">
-            <span class="eyebrow !text-mw-400">Found in the wild</span>
+            <span class="eyebrow !text-mw-400">Useful with Magewire</span>
             <h2 class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
                 Tools
             </h2>
             <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-[#aaa39c]">
-                Useful projects from across the Magento ecosystem, collected as they surface.
+                Handy projects from across the Magento ecosystem that make building with Magewire easier.
             </p>
         </div>
 
@@ -1033,7 +1036,7 @@
                 </h3>
 
                 <p class="mt-5 text-base leading-relaxed text-[#6e6760]">
-                    Gives AI coding agents the Magento runtime context source files cannot show,
+                    Useful for Magewire development because it gives AI coding agents Magento runtime context that source files cannot show,
                     including dependency injection, plugin chains, EAV, configuration, and diagnostics.
                 </p>
 
