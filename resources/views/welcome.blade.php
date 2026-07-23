@@ -790,8 +790,7 @@
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Mage-OS</h4>
-                    <p class="mt-2 font-mono text-xs font-semibold text-[#6e6e73] sm:text-sm">1.3.1 to 3.2.0</p>
-                    <p class="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
                         <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
                         Supported
                     </p>
@@ -808,8 +807,7 @@
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Magento Open Source</h4>
-                    <p class="mt-2 font-mono text-xs font-semibold text-[#6e6e73] sm:text-sm">2.4.6-p15 to 2.4.9</p>
-                    <p class="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
                         <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
                         Supported
                     </p>
@@ -826,9 +824,7 @@
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Adobe Commerce</h4>
-                    <p class="mt-1 text-xs text-[#8a8a90]">Magento Commerce</p>
-                    <p class="mt-2 font-mono text-xs font-semibold text-[#6e6e73] sm:text-sm">2.4.6 to 2.4.9</p>
-                    <p class="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
                         <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
                         Supported
                     </p>
@@ -844,9 +840,8 @@
                          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
                 </div>
                 <div class="p-4 sm:p-5">
-                    <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">PHP</h4>
-                    <p class="mt-2 font-mono text-xs font-semibold text-[#6e6e73] sm:text-sm">8.2 to 8.5</p>
-                    <p class="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
+                    <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">PHP 8.2 - 8.5</h4>
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
                         <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
                         Supported
                     </p>
