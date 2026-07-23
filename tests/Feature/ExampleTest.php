@@ -73,6 +73,21 @@ class ExampleTest extends TestCase
             ->assertSee('No active plans');
     }
 
+    public function test_tools_section_highlights_external_magento_tools(): void
+    {
+        $this->get('/')
+            ->assertOk()
+            ->assertSee('id="tools"', false)
+            ->assertSee('Found in the wild')
+            ->assertSee('Tools')
+            ->assertSee('Magento Bricklayer')
+            ->assertSee('/images/tools/bricklayer.webp', false)
+            ->assertSee('href="https://github.com/Inchoo/magento-bricklayer"', false)
+            ->assertSee('href="https://inchoo.net/"', false)
+            ->assertSee('Made by')
+            ->assertSee('runtime context source files cannot show');
+    }
+
     public function test_why_page_tells_the_project_story(): void
     {
         $this->get('/why')

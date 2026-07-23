@@ -988,6 +988,72 @@
 
 
 {{-- ══════════════════════════════════
+     TOOLS
+     ══════════════════════════════════ --}}
+<section id="tools" class="relative overflow-hidden bg-[#171513] px-6 py-36">
+    <div class="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-mw-500/10 blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-[#e52628]/10 blur-3xl" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-5xl">
+
+        <div class="reveal mb-16 text-center">
+            <span class="eyebrow !text-mw-400">Found in the wild</span>
+            <h2 class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
+                Tools
+            </h2>
+            <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-[#aaa39c]">
+                Useful projects from across the Magento ecosystem, collected as they surface.
+            </p>
+        </div>
+
+        <article class="reveal group grid overflow-hidden rounded-[2rem] border border-white/10 bg-[#fffaf5] shadow-[0_32px_100px_-42px_rgba(0,0,0,.75)] lg:grid-cols-[1.18fr_.82fr]"
+                 style="transition-delay:.15s">
+            <a href="https://github.com/Inchoo/magento-bricklayer" target="_blank" rel="noopener"
+               aria-label="View Magento Bricklayer on GitHub"
+               class="relative min-h-[320px] overflow-hidden bg-[#f8eee5] lg:min-h-[470px]">
+                <img src="/images/tools/bricklayer.webp"
+                     alt="A robotic bricklayer inspecting Magento runtime connections inside transparent building blocks"
+                     width="1200" height="800" loading="lazy"
+                     class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]">
+                <span class="absolute inset-y-0 right-0 hidden w-px bg-black/5 lg:block" aria-hidden="true"></span>
+            </a>
+
+            <div class="flex flex-col justify-center p-8 sm:p-12">
+                <p class="text-sm font-semibold tracking-wide text-[#6e6760]">
+                    Made by
+                    <a href="https://inchoo.net/" target="_blank" rel="noopener"
+                       class="text-[#d9272e] transition-colors hover:text-[#a90e15]">Inchoo</a>
+                </p>
+
+                <h3 class="mt-5 text-3xl font-bold tracking-tight text-[#1d1d1f] sm:text-4xl">
+                    <a href="https://github.com/Inchoo/magento-bricklayer" target="_blank" rel="noopener"
+                       class="transition-colors hover:text-mw-600">
+                        Magento Bricklayer
+                    </a>
+                </h3>
+
+                <p class="mt-5 text-base leading-relaxed text-[#6e6760]">
+                    Gives AI coding agents the Magento runtime context source files cannot show,
+                    including dependency injection, plugin chains, EAV, configuration, and diagnostics.
+                </p>
+
+                <a href="https://github.com/Inchoo/magento-bricklayer" target="_blank" rel="noopener"
+                   class="mt-9 inline-flex w-fit items-center gap-2 font-semibold text-[#1d1d1f] transition-colors hover:text-mw-600">
+                    View on GitHub
+                    <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                         viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                        <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.75"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+{{-- ══════════════════════════════════
      SPONSORS
      ══════════════════════════════════ --}}
 <section id="sponsors" class="py-36 px-6 bg-[#fafaf8]">
