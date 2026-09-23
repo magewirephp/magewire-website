@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Magewire: Reactive Magento, PHP-first</title>
-    <meta name="description" content="MagewirePHP brings reactive, server-driven UI development to Magento 2. Build dynamic interfaces without writing JavaScript. V3 available now.">
+    <meta name="description" content="Build interactive Magento 2 interfaces with PHP components and PHTML. Magewire handles browser updates while you keep using Magento layouts and services.">
 
     {{-- Favicon --}}
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -279,18 +279,18 @@
                 <span class="absolute animate-ping inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                 <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500"></span>
             </span>
-            Magewire <strong class="font-bold">V3</strong>: Now Available
+            Magewire <strong class="font-bold">V3</strong> for Magento 2
         </div>
 
         {{-- Headline --}}
         <h1 class="e2 text-[2rem] sm:text-5xl md:text-7xl lg:text-[5.5rem]
                    font-black tracking-tight leading-[1.08] sm:leading-[1.05] text-[#1a1a1a]">
             Reactive Magento<br>
-            <span class="grad">without the JavaScript</span>
+            <span class="grad">written in PHP</span>
         </h1>
 
         <p class="e3 mt-6 text-lg sm:text-xl text-[#71717a] max-w-xl mx-auto leading-relaxed font-normal">
-            Ship reactive Magento&nbsp;2 UIs in pure PHP. No JavaScript. No context switching. Just you and your code.
+            Build interactive interfaces with PHP components and PHTML. Magewire handles browser updates; add JavaScript when your feature needs it.
         </p>
 
         {{-- CTAs --}}
@@ -376,7 +376,7 @@
                             :class="tab === 'xml' ? 'active' : ''"
                             class="tab-btn text-sm font-mono font-medium
                                    text-[#9ca3af] hover:text-white px-5 py-3.5">
-                        default.xml
+                        cms_index_index.xml
                     </button>
                     <button @click="tab = 'phtml'"
                             :class="tab === 'phtml' ? 'active' : ''"
@@ -397,7 +397,7 @@
 
 <span style="color:#818cf8">namespace</span> <span style="color:#e2e8f0">Vendor\Module\Magewire;</span>
 
-<span style="color:#818cf8">use</span> <span style="color:#67e8f9">Magewire\Component;</span>
+<span style="color:#818cf8">use</span> <span style="color:#67e8f9">Magewirephp\Magewire\Component;</span>
 
 <span style="color:#818cf8">class</span> <span style="color:#fcd34d">Counter</span> <span style="color:#818cf8">extends</span> <span style="color:#67e8f9">Component</span>
 <span style="color:#9ca3af">{</span>
@@ -424,12 +424,13 @@
     <span style="color:#67e8f9">&lt;body&gt;</span>
         <span style="color:#67e8f9">&lt;referenceContainer</span> <span style="color:#86efac">name</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"content"</span><span style="color:#67e8f9">&gt;</span>
             <span style="color:#67e8f9">&lt;block</span>
-                <span style="color:#86efac">name</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"counter"</span>
+                <span style="color:#86efac">name</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"vendor.module.counter"</span>
                 <span style="color:#86efac">template</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"Vendor_Module::magewire/counter.phtml"</span><span style="color:#67e8f9">&gt;</span>
                 <span style="color:#67e8f9">&lt;arguments&gt;</span>
                     <span style="color:#67e8f9">&lt;argument</span>
                         <span style="color:#86efac">name</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"magewire"</span>
-                        <span style="color:#86efac">xsi:type</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"object"</span><span style="color:#67e8f9">&gt;</span>
+                        <span style="color:#86efac">xsi:type</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"object"</span>
+                        <span style="color:#86efac">shared</span><span style="color:#9ca3af">=</span><span style="color:#fcd34d">"false"</span><span style="color:#67e8f9">&gt;</span>
                         <span style="color:#e2e8f0">Vendor\Module\Magewire\Counter</span>
                     <span style="color:#67e8f9">&lt;/argument&gt;</span>
                 <span style="color:#67e8f9">&lt;/arguments&gt;</span>
@@ -461,9 +462,10 @@
 
         {{-- Below-editor note --}}
         <p class="mt-8 text-center text-sm text-[#71717a] max-w-lg mx-auto leading-relaxed">
-            This is just a counter. Magewire handles forms, modals, search, pagination, real-time validation, and much more.
-            <a href="https://docs.magewirephp.nl/?ref=main-website" target="_blank" rel="noopener"
-               class="text-mw-600 font-semibold hover:underline">Explore the docs</a>, get inspired, and ship something great.
+            The <code>&#123;&#123; &#125;&#125;</code> expression is Magewire's escaped PHTML syntax; ordinary PHP echo works too.
+            Use the same component pattern for forms, filters, pagination, and checkout steps.
+            <a href="https://docs.magewirephp.nl/pages/features/magewire-template-directives.html?ref=main-website" target="_blank" rel="noopener"
+               class="text-mw-600 font-semibold hover:underline">See template directives</a>.
         </p>
 
     </div>
@@ -483,7 +485,7 @@
                 Install
             </h2>
             <p class="mt-6 text-lg text-[#71717a] max-w-xl mx-auto leading-relaxed">
-                Three commands. You're up and running.
+                Install the core, then add the integration for your storefront or admin area.
             </p>
         </div>
 
@@ -526,17 +528,17 @@
                 </div>
                 <div class="flex items-start gap-3 mt-4">
                     <span class="text-green-500 select-none shrink-0">&#10003;</span>
-                    <span class="text-[#6b7280]">Magewire is ready. Happy building!</span>
+                    <span class="text-[#6b7280]">Core installed. Choose your integration next.</span>
                 </div>
             </div>
 
         </div>
 
-        <p class="mt-8 text-center text-[#6e6e73] text-lg">
-            Need more? Everything else is in the
-            <a href="https://docs.magewirephp.nl/?ref=main-website"
-               class="text-mw-500 font-semibold hover:underline" target="_blank" rel="noopener">
-                documentation</a>.
+        <p class="mt-8 text-center text-[#6e6e73] text-lg leading-relaxed">
+            Using <a href="https://docs.magewirephp.nl/pages/theming/index.html?ref=main-website#hyva-storefront" class="text-mw-500 font-semibold hover:underline" target="_blank" rel="noopener">Hyvä</a>,
+            <a href="https://docs.magewirephp.nl/pages/theming/breeze.html?ref=main-website" class="text-mw-500 font-semibold hover:underline" target="_blank" rel="noopener">Breeze</a>, or
+            <a href="https://docs.magewirephp.nl/pages/admin/installation.html?ref=main-website" class="text-mw-500 font-semibold hover:underline" target="_blank" rel="noopener">Magento Admin</a>?
+            Add its companion package before building your first component.
         </p>
 
     </div>
@@ -554,7 +556,7 @@
             <span class="eyebrow">Familiar by Design</span>
             <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a] mt-2">
                 Know Livewire?<br>
-                <span class="grad">You already know Magewire.</span>
+                <span class="grad">Magewire will feel familiar.</span>
             </h2>
             <p class="mt-5 text-lg text-[#6e6e73] max-w-2xl mx-auto leading-relaxed">
                 Inspired by Laravel Livewire and intentionally familiar. Magewire brings its component model and <code class="font-mono text-mw-500">wire:</code> directives to Magento&nbsp;2, while adapting them to a different platform with different edges.
@@ -607,7 +609,7 @@
 
 <span style="color:#818cf8">namespace</span> <span style="background:rgba(242,99,34,0.18);border-radius:3px;padding:1px 4px"><span style="color:#e2e8f0">Vendor\Module\Magewire;</span></span>
 
-<span style="color:#818cf8">use</span> <span style="background:rgba(242,99,34,0.18);border-radius:3px;padding:1px 4px"><span style="color:#67e8f9">Magewire\Component;</span></span>
+<span style="color:#818cf8">use</span> <span style="background:rgba(242,99,34,0.18);border-radius:3px;padding:1px 4px"><span style="color:#67e8f9">Magewirephp\Magewire\Component;</span></span>
 
 <span style="color:#818cf8">class</span> <span style="color:#fcd34d">Counter</span> <span style="color:#818cf8">extends</span> <span style="color:#67e8f9">Component</span>
 <span style="color:#9ca3af">{</span>
@@ -698,15 +700,12 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="font-bold text-[#1d1d1f] text-base mb-2">Alpine.js under the hood. Hyvä developers already know it.</p>
+                    <p class="font-bold text-[#1d1d1f] text-base mb-2">Alpine.js under the hood</p>
                     <p class="text-sm text-[#52525b] leading-relaxed">
-                        Magewire's reactive layer runs on <a href="https://alpinejs.dev" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Alpine.js</a>, the same engine that powers <a href="https://hyva.io" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Hyvä Theme</a>. If you've built on Hyvä, you already speak Alpine.
-                        <code class="font-mono text-mw-600 text-xs">x-data</code>,
-                        <code class="font-mono text-mw-600 text-xs">x-on</code>,
-                        <code class="font-mono text-mw-600 text-xs">@click</code>, all second nature. You're ahead before you write a line.
+                        Magewire bundles <a href="https://alpinejs.dev" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Alpine.js</a>. Use it for small browser-only interactions and Magewire actions when PHP or Magento services need to run.
                     </p>
                     <p class="text-sm text-[#52525b] leading-relaxed mt-3">
-                        <a href="https://alpinejs.dev" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Alpine.js</a> and <a href="https://livewire.laravel.com" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">Livewire</a> share the same creator: <strong class="text-[#1d1d1f] font-semibold">Caleb Porzio</strong>. They don't just work well together; they were built for each other.
+                        On Hyvä storefronts, the <a href="https://docs.magewirephp.nl/pages/theming/alpine-loading.html?ref=main-website" target="_blank" rel="noopener" class="text-[#1d1d1f] font-semibold hover:text-mw-600 transition-colors">theme integration</a> coordinates Alpine loading so a component page starts one runtime.
                     </p>
                 </div>
             </div>
@@ -736,8 +735,8 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="font-semibold text-[#1d1d1f] mb-1">No invented abstractions</p>
-                    <p class="text-sm text-[#6e6e73] leading-relaxed">The familiar pieces stay familiar on purpose, while Magento-specific behavior remains explicit where the platforms differ.</p>
+                    <p class="font-semibold text-[#1d1d1f] mb-1">Magento stays in charge</p>
+                    <p class="text-sm text-[#6e6e73] leading-relaxed">Place components with layout XML, resolve services through Magento DI, and render familiar PHTML templates.</p>
                 </div>
             </div>
 
@@ -749,8 +748,8 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="font-semibold text-[#1d1d1f] mb-1">AI-ready, out of the box</p>
-                    <p class="text-sm text-[#6e6e73] leading-relaxed">AI tools already understand many Livewire patterns, giving them useful context for Magewire while its Magento-specific docs remain the source of truth.</p>
+                    <p class="font-semibold text-[#1d1d1f] mb-1">Reuse your business logic</p>
+                    <p class="text-sm text-[#6e6e73] leading-relaxed">Keep business rules in Magento services so storefront and admin components can share them.</p>
                 </div>
             </div>
 
@@ -771,7 +770,7 @@
                 Compatibility
             </h2>
             <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
-                Supported platforms, runtimes, storefronts, and Magento areas for Magewire V3.
+                Choose a tested platform combination and the integration package for your theme or admin area.
             </p>
         </div>
 
@@ -792,7 +791,7 @@
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Mage-OS</h4>
                     <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
                         <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
-                        Supported
+                        Tested in the build matrix
                     </p>
                 </div>
             </a>
@@ -809,7 +808,7 @@
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Magento Open Source</h4>
                     <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
                         <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
-                        Supported
+                        Tested in the build matrix
                     </p>
                 </div>
             </a>
@@ -824,97 +823,25 @@
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Adobe Commerce</h4>
-                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700">
-                        <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
-                        Supported
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-amber-700">
+                        <span class="h-1.5 w-1.5 rounded-full bg-amber-500" aria-hidden="true"></span>
+                        Verify in your project
                     </p>
                 </div>
             </a>
 
         </div>
 
-        <div class="reveal mt-8 overflow-hidden rounded-3xl border border-[#e8e5e1] bg-[#fafaf8] shadow-[0_20px_60px_-48px_rgba(31,41,55,.4)]" style="transition-delay:.13s">
-            <div class="overflow-x-auto">
-                <table class="w-full min-w-[780px] border-collapse text-left">
-                    <thead>
-                    <tr class="border-b border-[#e8e5e1] bg-white/70 text-xs font-bold uppercase tracking-[.12em] text-[#8a8a90]">
-                        <th scope="col" class="px-7 py-4">Distribution</th>
-                        <th scope="col" class="px-5 py-4">Version</th>
-                        <th scope="col" class="px-5 py-4">PHP</th>
-                        <th scope="col" class="px-7 py-4">Magento base / purpose</th>
-                    </tr>
-                    </thead>
-                    <tbody class="divide-y divide-[#ece8e3] bg-white text-sm text-[#55555b]">
-                    <tr>
-                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
-                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-sm bg-[#f26322]" aria-hidden="true"></span>
-                            Magento Open Source
-                        </th>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">2.4.6-p15</td>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.2</td>
-                        <td class="px-7 py-4">Oldest Magento line compatible with Magewire's PHP &ge;8.2</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
-                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-sm bg-[#f26322]" aria-hidden="true"></span>
-                            Magento Open Source
-                        </th>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">2.4.7-p10</td>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.3</td>
-                        <td class="px-7 py-4">Current 2.4.7 patch line</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
-                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-sm bg-[#f26322]" aria-hidden="true"></span>
-                            Magento Open Source
-                        </th>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">2.4.8-p5</td>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.4</td>
-                        <td class="px-7 py-4">Current 2.4.8 patch line</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
-                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-sm bg-[#f26322]" aria-hidden="true"></span>
-                            Magento Open Source
-                        </th>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">2.4.9</td>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.5</td>
-                        <td class="px-7 py-4">Latest Magento with latest PHP</td>
-                    </tr>
-                    <tr class="border-t-2 border-t-[#ded8d1]">
-                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
-                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-full bg-[#ff9234] ring-2 ring-[#ffe0c7]" aria-hidden="true"></span>
-                            Mage-OS
-                        </th>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">1.3.1</td>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.2</td>
-                        <td class="px-7 py-4">Magento 2.4.8-p2 base; Magewire PHP floor</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
-                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-full bg-[#ff9234] ring-2 ring-[#ffe0c7]" aria-hidden="true"></span>
-                            Mage-OS
-                        </th>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">2.3.0</td>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.4</td>
-                        <td class="px-7 py-4">Magento 2.4.8-p5 base</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="whitespace-nowrap px-7 py-4 font-semibold text-[#1d1d1f]">
-                            <span class="mr-2 inline-block h-2.5 w-2.5 rounded-full bg-[#ff9234] ring-2 ring-[#ffe0c7]" aria-hidden="true"></span>
-                            Mage-OS
-                        </th>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">3.2.0</td>
-                        <td class="whitespace-nowrap px-5 py-4 font-mono font-semibold text-[#343438]">8.5</td>
-                        <td class="px-7 py-4">Magento 2.4.9 base; latest/latest</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="reveal mt-8 rounded-3xl border border-[#e8e5e1] bg-[#fafaf8] p-7 shadow-[0_20px_60px_-48px_rgba(31,41,55,.4)] sm:p-9" style="transition-delay:.13s">
+            <h3 class="text-xl font-bold text-[#1d1d1f]">Check the versions you deploy</h3>
+            <p class="mt-3 max-w-3xl leading-relaxed text-[#626267]">
+                Magewire V3 requires PHP 8.2 or newer. Magento Open Source and Mage-OS version combinations are exercised in the project's production-build workflow. Check that matrix, your Magento distribution, and your theme integration before upgrading a store.
+            </p>
+            <a href="https://github.com/magewirephp/magewire/blob/main/.github/workflows/production-build.yml" target="_blank" rel="noopener" class="mt-5 inline-flex font-semibold text-mw-600 hover:underline">See the tested build matrix &rarr;</a>
         </div>
 
         <div class="reveal mt-16 mb-5 border-t border-[#eeeae6] pt-12" style="transition-delay:.14s">
-            <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Themes</span>
+            <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Themes and areas</span>
         </div>
 
         <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" style="transition-delay:.15s">
@@ -928,10 +855,10 @@
                          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
                 </div>
                 <div class="p-4 text-center sm:p-5">
-                    <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Magento Backend</h3>
+                    <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Magento Admin</h3>
                     <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 sm:text-sm">
                         <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
-                        Supported
+                        Companion package
                     </p>
                 </div>
             </a>
@@ -947,28 +874,28 @@
                     <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Hyvä</h3>
                     <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 sm:text-sm">
                         <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
-                        Supported
+                        Companion package
                     </p>
                 </div>
             </a>
 
-            <div class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-[0_22px_55px_-34px_rgba(217,119,6,.3)]">
+            <a href="https://docs.magewirephp.nl/pages/theming/breeze.html?ref=main-website" target="_blank" rel="noopener" class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_22px_55px_-34px_rgba(22,163,74,.35)]">
                 <div class="aspect-square overflow-hidden bg-[#fffbf3]">
                     <img src="/images/compatibility/breeze.webp"
-                         alt="Abstract storefront components moving through an incomplete progress loop"
+                         alt="Abstract storefront components connected by a circular flow"
                          width="768" height="768" loading="lazy"
                          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
                 </div>
                 <div class="p-4 text-center sm:p-5">
                     <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Breeze</h3>
-                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-amber-600 sm:text-sm">
-                        <span class="h-1.5 w-1.5 rounded-full bg-amber-400" aria-hidden="true"></span>
-                        In progress · Community
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 sm:text-sm">
+                        <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Community integration
                     </p>
                 </div>
-            </div>
+            </a>
 
-            <div class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-[#d6d3d1] hover:shadow-[0_22px_55px_-34px_rgba(87,83,78,.3)]">
+            <a href="https://docs.magewirephp.nl/pages/theming/compatibility-module.html?ref=main-website" target="_blank" rel="noopener" class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-[#d6d3d1] hover:shadow-[0_22px_55px_-34px_rgba(87,83,78,.3)]">
                 <div class="aspect-square overflow-hidden bg-[#faf8f5]">
                     <img src="/images/compatibility/luma.webp"
                          alt="Abstract storefront with a calm pause symbol and disconnected plug"
@@ -979,10 +906,10 @@
                     <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Luma</h3>
                     <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-[#78716c] sm:text-sm">
                         <span class="h-1.5 w-1.5 rounded-full bg-[#a8a29e]" aria-hidden="true"></span>
-                        No active plans
+                        Build a theme integration
                     </p>
                 </div>
-            </div>
+            </a>
 
         </div>
 
@@ -1218,7 +1145,7 @@
                 <div class="flex items-center justify-between gap-5 p-6 sm:p-7">
                     <div>
                         <h3 class="text-xl font-bold tracking-tight text-[#1d1d1f]">Hyvä Checkout</h3>
-                        <p class="mt-1.5 text-sm font-medium text-green-700">Powered by Magewire · V1 + V3</p>
+                        <p class="mt-1.5 text-sm font-medium text-green-700">Built with Magewire</p>
                     </div>
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-green-50 text-green-700 transition-colors group-hover:bg-green-600 group-hover:text-white" aria-hidden="true">
                         <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">

@@ -1,59 +1,49 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Magewire website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository contains the public [Magewire website](https://magewirephp.nl/).
+It is a Laravel application with Blade pages for the homepage, project story,
+and feature highlights. The [Magewire documentation](https://docs.magewirephp.nl/)
+is maintained separately in [`magewirephp/magewire-docs`](https://github.com/magewirephp/magewire-docs).
 
-## About Laravel
+## Work locally
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The application requires PHP 8.2 or newer and Composer. Its dependencies
+include Flux Pro from `composer.fluxui.dev`, so Composer needs access to that
+repository before installation.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+```shell
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan serve
+```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Open the URL printed by `artisan serve`. The site's CSS and Alpine.js load
+from CDNs; an internet connection is needed to inspect their appearance and
+browser behavior locally.
 
-## Learning Laravel
+## Edit the content
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- `resources/views/welcome.blade.php` contains the homepage, install steps,
+  examples, and compatibility cards.
+- `resources/views/why.blade.php` explains the project's purpose and tradeoffs.
+- `resources/views/features/` contains the Compiler and Fragments pages.
+- `routes/web.php` defines public URLs and redirects.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Keep code examples aligned with the current
+[Magewire V3 guides](https://docs.magewirephp.nl/) and
+[core source](https://github.com/magewirephp/magewire). Link changing platform
+version details to the
+[production-build matrix](https://github.com/magewirephp/magewire/blob/main/.github/workflows/production-build.yml)
+instead of copying a snapshot into website copy.
 
-## Laravel Sponsors
+## Check changes
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```shell
+php artisan view:cache
+php artisan test
+```
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Feature tests cover public pages, links, and key compatibility copy. Review
+the rendered pages at desktop and mobile sizes when changing layout or code
+examples.

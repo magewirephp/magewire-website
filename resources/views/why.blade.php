@@ -202,7 +202,7 @@
                                 <span class="h-2 w-2 rounded-full bg-mw-400"></span>
                                 Magewire
                             </div>
-<pre class="code-scroll overflow-x-auto font-mono text-[13px] leading-7 text-[#d7dae0]"><code><span class="text-[#c792ea]">use</span> <span class="text-[#89ddff]">Magewire\Component</span>;
+<pre class="code-scroll overflow-x-auto font-mono text-[13px] leading-7 text-[#d7dae0]"><code><span class="text-[#c792ea]">use</span> <span class="text-[#89ddff]">Magewirephp\Magewire\Component</span>;
 
 <span class="text-[#c792ea]">class</span> <span class="text-[#ffcb6b]">Counter</span> <span class="text-[#c792ea]">extends</span> Component
 {
@@ -254,10 +254,10 @@
                     </p>
                 </article>
                 <article class="rounded-3xl border border-mw-200 bg-mw-50 p-8">
-                    <span class="font-mono text-xs font-bold text-mw-700">THE V3 DIRECTION</span>
-                    <h3 class="mt-5 text-2xl font-bold">Keep more on the client</h3>
+                    <span class="font-mono text-xs font-bold text-mw-700">THE V3 APPROACH</span>
+                    <h3 class="mt-5 text-2xl font-bold">Make requests intentional</h3>
                     <p class="mt-3 leading-relaxed text-[#6f625b]">
-                        Magewire V3 increasingly keeps state and behavior in the browser. It tends to contact the server only when PHP, authoritative data, or Magento services are actually needed.
+                        A plain <code>wire:model</code> waits for the next action rather than sending every keystroke. Use Alpine for transient browser state; call a Magewire action when PHP or Magento services need to run.
                     </p>
                 </article>
             </div>
