@@ -89,12 +89,12 @@
     </div>
 </section>
 
-<section class="border-y border-[#e9e5e0] bg-white px-6 py-24 sm:py-28">
+<section class="painted-section painted-section--paper px-6 py-24 sm:py-28">
     <div class="mx-auto max-w-6xl">
         <div class="grid items-center gap-8 lg:grid-cols-[1.15fr_.85fr]">
             <div class="max-w-2xl">
                 <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Why it exists</span>
-                <h2 class="mt-4 text-4xl font-bold tracking-[-.04em] sm:text-5xl">Less template ceremony.<br>Not a new template world.</h2>
+                <h2 class="painted-title mt-4 text-4xl font-bold tracking-[-.04em] sm:text-5xl">Less template ceremony.<br>Not a new template world.</h2>
                 <p class="mt-5 text-lg leading-relaxed text-[#71717a]">The compiler improves the part developers type without replacing the part Magento runs.</p>
             </div>
             <figure class="mx-auto w-full max-w-[280px] lg:max-w-[360px]">
@@ -105,17 +105,17 @@
         </div>
 
         <div class="mt-12 grid gap-5 md:grid-cols-3">
-            <article class="rounded-2xl border border-[#e7e3de] bg-[#fafaf8] p-7">
+            <article class="painted-card p-7">
                 <span class="font-mono text-xs font-bold text-mw-600">01</span>
                 <h3 class="mt-5 text-lg font-bold">Keep PHTML readable</h3>
                 <p class="mt-2 text-sm leading-relaxed text-[#71717a]">Use clear control flow and escaped echo syntax without filling a template with repetitive PHP tags.</p>
             </article>
-            <article class="rounded-2xl border border-[#e7e3de] bg-[#fafaf8] p-7">
+            <article class="painted-card p-7">
                 <span class="font-mono text-xs font-bold text-mw-600">02</span>
                 <h3 class="mt-5 text-lg font-bold">Keep Magento in control</h3>
                 <p class="mt-2 text-sm leading-relaxed text-[#71717a]">The result is stored as a real <code>.phtml</code> file and handed back to Magento's familiar PHP renderer.</p>
             </article>
-            <article class="rounded-2xl border border-[#e7e3de] bg-[#fafaf8] p-7">
+            <article class="painted-card p-7">
                 <span class="font-mono text-xs font-bold text-mw-600">03</span>
                 <h3 class="mt-5 text-lg font-bold">Shape it around your domain</h3>
                 <p class="mt-2 text-sm leading-relaxed text-[#71717a]">Register custom directive areas through Magento DI instead of patching Magewire or introducing template business logic.</p>
@@ -124,28 +124,28 @@
     </div>
 </section>
 
-<section class="px-6 py-24 sm:py-28">
+<section class="painted-section painted-section--canvas painted-section--after-paper px-6 py-24 sm:py-28">
     <div class="mx-auto max-w-6xl">
         <div class="max-w-2xl">
             <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">How it works</span>
-            <h2 class="mt-4 text-4xl font-bold tracking-[-.04em] sm:text-5xl">A quiet step before rendering.</h2>
+            <h2 class="painted-title mt-4 text-4xl font-bold tracking-[-.04em] sm:text-5xl">A quiet step before rendering.</h2>
             <p class="mt-5 text-lg leading-relaxed text-[#71717a]">Compilation happens only when the generated view is missing or its source template has changed.</p>
         </div>
 
         <ol class="mt-12 grid gap-4 md:grid-cols-4" aria-label="Compiler lifecycle">
-            <li class="rounded-2xl bg-white p-6 ring-1 ring-inset ring-[#e9e5e0]">
+            <li class="painted-card p-6">
                 <span class="font-mono text-xs font-bold text-mw-500">01 / READ</span>
                 <p class="mt-5 text-sm leading-relaxed text-[#52525b]">Magewire receives the component's regular source template.</p>
             </li>
-            <li class="rounded-2xl bg-white p-6 ring-1 ring-inset ring-[#e9e5e0]">
+            <li class="painted-card p-6">
                 <span class="font-mono text-xs font-bold text-mw-500">02 / COMPILE</span>
                 <p class="mt-5 text-sm leading-relaxed text-[#52525b]">Registered directives and echo syntax become minimal PHP.</p>
             </li>
-            <li class="rounded-2xl bg-white p-6 ring-1 ring-inset ring-[#e9e5e0]">
+            <li class="painted-card p-6">
                 <span class="font-mono text-xs font-bold text-mw-500">03 / STORE</span>
                 <p class="mt-5 text-sm leading-relaxed text-[#52525b]">The generated view is cached below <code>var/magewire/views</code>.</p>
             </li>
-            <li class="rounded-2xl bg-white p-6 ring-1 ring-inset ring-[#e9e5e0]">
+            <li class="painted-card p-6">
                 <span class="font-mono text-xs font-bold text-mw-500">04 / RENDER</span>
                 <p class="mt-5 text-sm leading-relaxed text-[#52525b]">Magento renders the compiled <code>.phtml</code> through PHP as usual.</p>
             </li>
@@ -153,11 +153,11 @@
     </div>
 </section>
 
-<section class="bg-[#171716] px-6 py-20 text-white">
+<section class="painted-section painted-section--ink px-6 py-20 text-white">
     <div class="mx-auto grid max-w-6xl items-center gap-8 md:grid-cols-[1fr_auto]">
         <div>
             <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-300">Useful when developing</span>
-            <h2 class="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Generated views normally manage themselves.</h2>
+            <h2 class="painted-title mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Generated views normally manage themselves.</h2>
             <p class="mt-3 max-w-2xl leading-relaxed text-[#a9a9ad]">When you do need a clean slate, clear every compiled Magewire view, or target one Magento area from the CLI.</p>
         </div>
         <code class="block overflow-x-auto rounded-xl border border-white/10 bg-black/25 px-5 py-4 font-mono text-sm text-[#e5e7eb]">bin/magento <span class="text-mw-300">magewire:compile:clear</span></code>

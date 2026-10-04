@@ -73,12 +73,12 @@
     </div>
 </section>
 
-<section class="border-y border-[#e9e5e0] bg-white px-6 py-24 sm:py-28">
+<section class="painted-section painted-section--paper px-6 py-24 sm:py-28">
     <div class="mx-auto max-w-6xl">
         <div class="grid items-center gap-8 lg:grid-cols-[1.15fr_.85fr]">
             <div class="max-w-2xl">
                 <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Why it exists</span>
-                <h2 class="mt-4 text-4xl font-bold tracking-[-.04em] sm:text-5xl">Some markup needs<br>more than an echo.</h2>
+                <h2 class="painted-title mt-4 text-4xl font-bold tracking-[-.04em] sm:text-5xl">Some markup needs<br>more than an echo.</h2>
                 <p class="mt-5 text-lg leading-relaxed text-[#71717a]">Fragments create one deliberate place for output-aware behavior without moving that complexity into the template.</p>
             </div>
             <figure class="mx-auto w-full max-w-[280px] lg:max-w-[360px]">
@@ -89,17 +89,17 @@
         </div>
 
         <div class="mt-12 grid gap-5 md:grid-cols-3">
-            <article class="rounded-2xl border border-[#e7e3de] bg-[#fafaf8] p-7">
+            <article class="painted-card p-7">
                 <span class="font-mono text-xs font-bold text-mw-600">01</span>
                 <h3 class="mt-5 text-lg font-bold">Give output a type</h3>
                 <p class="mt-2 text-sm leading-relaxed text-[#71717a]">Choose HTML, script, style, JavaScript, component, or a custom type with its own output contract.</p>
             </article>
-            <article class="rounded-2xl border border-[#e7e3de] bg-[#fafaf8] p-7">
+            <article class="painted-card p-7">
                 <span class="font-mono text-xs font-bold text-mw-600">02</span>
                 <h3 class="mt-5 text-lg font-bold">Enhance after rendering</h3>
                 <p class="mt-2 text-sm leading-relaxed text-[#71717a]">Add root attributes, developer annotations, or DI-registered modifiers once the complete markup is available.</p>
             </article>
-            <article class="rounded-2xl border border-[#e7e3de] bg-[#fafaf8] p-7">
+            <article class="painted-card p-7">
                 <span class="font-mono text-xs font-bold text-mw-600">03</span>
                 <h3 class="mt-5 text-lg font-bold">Work with Magento's context</h3>
                 <p class="mt-2 text-sm leading-relaxed text-[#71717a]">Let the same script use a nonce on an uncached request or register a hash when full-page cache is involved.</p>
@@ -108,28 +108,28 @@
     </div>
 </section>
 
-<section class="px-6 py-24 sm:py-28">
+<section class="painted-section painted-section--canvas painted-section--after-paper px-6 py-24 sm:py-28">
     <div class="mx-auto max-w-6xl">
         <div class="max-w-2xl">
             <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">How it works</span>
-            <h2 class="mt-4 text-4xl font-bold tracking-[-.04em] sm:text-5xl">A controlled pass over finished output.</h2>
+            <h2 class="painted-title mt-4 text-4xl font-bold tracking-[-.04em] sm:text-5xl">A controlled pass over finished output.</h2>
             <p class="mt-5 text-lg leading-relaxed text-[#71717a]">Magewire buffers only the marked region, then runs its type-specific pipeline in a predictable order.</p>
         </div>
 
         <ol class="mt-12 grid gap-4 md:grid-cols-4" aria-label="Fragment lifecycle">
-            <li class="rounded-2xl bg-white p-6 ring-1 ring-inset ring-[#e9e5e0]">
+            <li class="painted-card p-6">
                 <span class="font-mono text-xs font-bold text-mw-500">01 / START</span>
                 <p class="mt-5 text-sm leading-relaxed text-[#52525b]"><code>start()</code> opens a buffer around the selected template region.</p>
             </li>
-            <li class="rounded-2xl bg-white p-6 ring-1 ring-inset ring-[#e9e5e0]">
+            <li class="painted-card p-6">
                 <span class="font-mono text-xs font-bold text-mw-500">02 / CAPTURE</span>
                 <p class="mt-5 text-sm leading-relaxed text-[#52525b]"><code>end()</code> captures the ordinary markup emitted by PHTML.</p>
             </li>
-            <li class="rounded-2xl bg-white p-6 ring-1 ring-inset ring-[#e9e5e0]">
+            <li class="painted-card p-6">
                 <span class="font-mono text-xs font-bold text-mw-500">03 / PROCESS</span>
                 <p class="mt-5 text-sm leading-relaxed text-[#52525b]">Validators run first, followed by registered modifiers in sort order.</p>
             </li>
-            <li class="rounded-2xl bg-white p-6 ring-1 ring-inset ring-[#e9e5e0]">
+            <li class="painted-card p-6">
                 <span class="font-mono text-xs font-bold text-mw-500">04 / RENDER</span>
                 <p class="mt-5 text-sm leading-relaxed text-[#52525b]">The final output is written to the response with its enhancements applied.</p>
             </li>
@@ -137,16 +137,16 @@
     </div>
 </section>
 
-<section class="bg-[#171716] px-6 py-20 text-white">
+<section class="painted-section painted-section--ink px-6 py-20 text-white">
     <div class="mx-auto max-w-6xl">
         <div class="max-w-2xl">
             <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-300">Magento CSP integration</span>
-            <h2 class="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">One script fragment. Two correct outcomes.</h2>
+            <h2 class="painted-title mt-3 text-2xl font-bold tracking-tight sm:text-3xl">One script fragment. Two correct outcomes.</h2>
             <p class="mt-3 leading-relaxed text-[#a9a9ad]">The CSP modifier responds to Magento's caching context, so the template author does not need to branch.</p>
         </div>
 
         <div class="mt-10 grid gap-5 md:grid-cols-2">
-            <article class="rounded-2xl border border-white/10 bg-white/[.04] p-7">
+            <article class="painted-card painted-card--ink p-7">
                 <div class="flex items-center justify-between gap-4">
                     <h3 class="font-bold">Uncached request</h3>
                     <span class="rounded-full bg-green-400/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-green-300">Nonce</span>
@@ -154,7 +154,7 @@
                 <code class="mt-6 block overflow-x-auto font-mono text-xs text-[#cbd5e1]">&lt;script <span class="text-mw-300">nonce=&quot;...&quot;</span>&gt;</code>
                 <p class="mt-4 text-sm leading-relaxed text-[#a9a9b2]">A nonce attribute is applied to the rendered script element.</p>
             </article>
-            <article class="rounded-2xl border border-white/10 bg-white/[.04] p-7">
+            <article class="painted-card painted-card--ink p-7">
                 <div class="flex items-center justify-between gap-4">
                     <h3 class="font-bold">Full-page cache</h3>
                     <span class="rounded-full bg-sky-400/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-sky-300">Hash</span>

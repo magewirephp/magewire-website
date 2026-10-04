@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/app.css?v={{ filemtime(public_path('css/app.css')) }}">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/painted-ui.css?v={{ filemtime(public_path('css/painted-ui.css')) }}">
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800,900|jetbrains-mono:400,500&display=swap" rel="stylesheet">
@@ -63,7 +64,7 @@
         <div class="mx-auto grid max-w-5xl gap-10 md:grid-cols-[.7fr_1.3fr] md:gap-16">
             <div>
                 <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Why it started</span>
-                <h2 class="mt-4 text-3xl font-bold tracking-[-.04em] text-[#1d1d1f] sm:text-4xl">The wheel was already round.</h2>
+                <h2 class="painted-title mt-4 text-3xl font-bold tracking-[-.04em] text-[#1d1d1f] sm:text-4xl">The wheel was already round.</h2>
                 <figure class="mx-auto mt-6 w-full max-w-[280px] md:mx-0">
                     <img src="/images/sections/familiar-wheel.webp"
                          alt="A painted wooden wheel beside a matching frame and reusable component blocks"
@@ -81,12 +82,12 @@
         </div>
     </section>
 
-    <section class="border-y border-[#e9e5e0] bg-white px-6 py-20 sm:py-24">
+    <section class="painted-section painted-section--paper px-6 py-20 sm:py-24">
         <div class="mx-auto max-w-6xl">
             <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
                 <div>
                     <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Familiar on purpose</span>
-                    <h2 class="mt-5 text-4xl font-bold tracking-[-.045em] text-[#1d1d1f] sm:text-5xl">
+                    <h2 class="painted-title mt-5 text-4xl font-bold tracking-[-.045em] text-[#1d1d1f] sm:text-5xl">
                         Livewire familiarity is deliberate.
                     </h2>
                     <p class="mt-6 text-lg leading-relaxed text-[#6e6e73]">
@@ -144,7 +145,7 @@
                 </div>
             </div>
 
-            <div class="mt-12 rounded-2xl border border-amber-200 bg-amber-50/70 p-7 sm:flex sm:items-start sm:gap-5">
+            <div class="painted-card painted-card--warm mt-12 p-7 sm:flex sm:items-start sm:gap-5">
                 <span class="mb-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-amber-700 shadow-sm sm:mb-0" aria-hidden="true">≈</span>
                 <div>
                     <h3 class="font-bold text-[#282824]">Familiar does not mean identical.</h3>
@@ -156,11 +157,11 @@
         </div>
     </section>
 
-    <section class="px-6 py-20 sm:py-24">
+    <section class="painted-section painted-section--canvas painted-section--after-paper px-6 py-20 sm:py-24">
         <div class="mx-auto max-w-6xl">
             <div class="max-w-3xl">
                 <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">The performance question</span>
-                <h2 class="mt-5 text-4xl font-bold tracking-[-.045em] text-[#1d1d1f] sm:text-5xl">
+                <h2 class="painted-title mt-5 text-4xl font-bold tracking-[-.045em] text-[#1d1d1f] sm:text-5xl">
                     Yes, an HTTP request has a cost.
                 </h2>
                 <p class="mt-6 text-lg leading-relaxed text-[#6e6e73]">
@@ -169,14 +170,14 @@
             </div>
 
             <div class="mt-12 grid gap-5 md:grid-cols-2">
-                <article class="rounded-3xl border border-[#e7e3de] bg-white p-8">
+                <article class="painted-card p-8">
                     <span class="font-mono text-xs font-bold text-[#71717a]">THE CONCERN</span>
                     <h3 class="mt-5 text-2xl font-bold">Server work can be expensive</h3>
                     <p class="mt-3 leading-relaxed text-[#71717a]">
                         On a busy Magento store, unnecessary round trips add latency and load. Magewire does not make that concern disappear, and it should not be used as an excuse to stop thinking about architecture.
                     </p>
                 </article>
-                <article class="rounded-3xl border border-mw-200 bg-mw-50 p-8">
+                <article class="painted-card painted-card--warm p-8">
                     <span class="font-mono text-xs font-bold text-mw-700">THE V3 APPROACH</span>
                     <h3 class="mt-5 text-2xl font-bold">Make requests intentional</h3>
                     <p class="mt-3 leading-relaxed text-[#6f625b]">
@@ -185,7 +186,7 @@
                 </article>
             </div>
 
-            <div class="mt-6 rounded-3xl bg-[#171715] p-8 text-white sm:p-10">
+            <div class="painted-card painted-card--ink mt-6 p-8 text-white sm:p-10">
                 <div class="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-center">
                     <h3 class="text-3xl font-bold tracking-[-.035em] sm:text-4xl">
                         Where should the complexity live?
@@ -203,11 +204,11 @@
         </div>
     </section>
 
-    <section class="border-t border-[#e9e5e0] bg-white px-6 py-20 sm:py-24">
+    <section class="painted-section painted-section--paper px-6 py-20 sm:py-24">
         <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_.9fr] lg:gap-20">
             <div>
                 <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Open source and community</span>
-                <h2 class="mt-5 text-4xl font-bold tracking-[-.045em] text-[#1d1d1f] sm:text-5xl">
+                <h2 class="painted-title mt-5 text-4xl font-bold tracking-[-.045em] text-[#1d1d1f] sm:text-5xl">
                     New ideas belong in Magento too.
                 </h2>
                 <div class="mt-6 space-y-5 text-lg leading-relaxed text-[#6e6e73]">
@@ -220,7 +221,7 @@
                 </div>
             </div>
 
-            <aside class="rounded-3xl border border-[#e7e3de] bg-[#fafaf8] p-8 sm:p-10">
+            <aside class="painted-card p-8 sm:p-10">
                 <h3 class="text-xl font-bold">Supported by</h3>
                 <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
                     <a href="https://vendic.nl" target="_blank" rel="noopener sponsored" class="rounded-xl border border-[#e7e3de] bg-white px-5 py-4 font-bold transition-colors hover:border-mw-300 hover:text-mw-600">Vendic</a>

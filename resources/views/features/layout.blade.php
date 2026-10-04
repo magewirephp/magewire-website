@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/app.css?v={{ filemtime(public_path('css/app.css')) }}">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/painted-ui.css?v={{ filemtime(public_path('css/painted-ui.css')) }}">
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800,900|jetbrains-mono:400,500&display=swap" rel="stylesheet">

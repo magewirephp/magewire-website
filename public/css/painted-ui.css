@@ -1,0 +1,92 @@
+:root {
+    --paint-canvas: #fafaf8;
+    --paint-paper: #fffdf7;
+    --paint-ink: #282820;
+    --paint-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 .48 0 0 0 0 .39 0 0 0 0 .27 0 0 0 .055 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+}
+
+/* A brush edge sits inside the section's existing padding. */
+.painted-section {
+    position: relative;
+    isolation: isolate;
+    --paint-edge-above: var(--paint-canvas);
+}
+
+.painted-section::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    inset-inline: 0;
+    height: clamp(16px, 2vw, 28px);
+    background: var(--paint-edge-above);
+    -webkit-mask: url('/images/ui/brush-edge.svg') center / 100% 100% no-repeat;
+    mask: url('/images/ui/brush-edge.svg') center / 100% 100% no-repeat;
+    pointer-events: none;
+}
+
+.painted-section--paper {
+    background-color: var(--paint-paper);
+    background-image: var(--paint-grain), radial-gradient(ellipse at 10% 35%, rgba(229, 199, 153, .08), transparent 65%);
+}
+.painted-section--canvas { background-color: var(--paint-canvas); }
+.painted-section--ink { background-color: var(--paint-ink); }
+.painted-section--after-paper { --paint-edge-above: var(--paint-paper); }
+.painted-section--after-ink { --paint-edge-above: var(--paint-ink); }
+
+/* A short, layered pigment stroke leaves the heading easy to scan. */
+.painted-title {
+    position: relative;
+    padding-bottom: .34em;
+    --paint-accent: #d2a065;
+}
+
+.painted-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 112px;
+    height: 12px;
+    background: var(--paint-accent);
+    -webkit-mask: url('/images/ui/brush-stroke.svg') center / 100% 100% no-repeat;
+    mask: url('/images/ui/brush-stroke.svg') center / 100% 100% no-repeat;
+    pointer-events: none;
+}
+
+.text-center .painted-title::after { left: 50%; transform: translateX(-50%); }
+.painted-section--ink .painted-title { --paint-accent: #dfbb7b; }
+
+/* Paper grain, pigment washes, and an uneven frame echo the illustrations. */
+.painted-card {
+    --paint-card-surface: #fffaf0;
+    --paint-card-line: #ded1bb;
+    --paint-card-wash: rgba(215, 168, 91, .13);
+    border: 1px solid var(--paint-card-line);
+    border-radius: 23px 27px 21px 26px / 25px 21px 28px 22px;
+    background-color: var(--paint-card-surface);
+    background-image: var(--paint-grain), radial-gradient(ellipse at 0 0, var(--paint-card-wash), transparent 66%), radial-gradient(ellipse at 100% 100%, rgba(128, 145, 95, .045), transparent 60%);
+    box-shadow: 0 2px 3px rgba(103, 79, 43, .035), 0 15px 36px -27px rgba(103, 79, 43, .25), inset 0 0 0 1px rgba(255, 255, 255, .42);
+}
+
+.painted-card--warm { --paint-card-surface: #fff2dd; --paint-card-line: #e1cba9; }
+.painted-card--feature {
+    border-radius: 30px 35px 29px 34px / 33px 29px 36px 30px;
+    box-shadow: 0 20px 65px -38px rgba(13, 16, 8, .55), inset 0 0 0 1px rgba(255, 255, 255, .42);
+}
+.painted-card--ink {
+    --paint-card-surface: #303128;
+    --paint-card-line: #4e4e3e;
+    --paint-card-wash: rgba(215, 168, 91, .065);
+    box-shadow: 0 10px 30px -22px rgba(0, 0, 0, .3), inset 0 0 0 1px rgba(255, 255, 255, .025);
+}
+
+a.painted-card:hover,
+.painted-card.sponsor-card:hover {
+    border-color: #c7a16b;
+    box-shadow: 0 4px 7px rgba(103, 79, 43, .045), 0 20px 42px -26px rgba(103, 79, 43, .3), inset 0 0 0 1px rgba(255, 255, 255, .5);
+}
+
+@media (max-width: 479px) {
+    .painted-title::after { width: 88px; height: 10px; }
+}

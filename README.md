@@ -43,6 +43,8 @@ The stylesheet URL changes when the generated file is updated.
   examples, and compatibility cards.
 - `resources/views/why.blade.php` explains the project's purpose and tradeoffs.
 - `resources/views/features/` contains the Compiler and Fragments pages.
+- `public/css/painted-ui.css` defines the shared paper surfaces, card frames,
+  and heading accents, using the brush masks in `public/images/ui/`.
 - `routes/web.php` defines public URLs and redirects.
 
 Keep code examples aligned with the current

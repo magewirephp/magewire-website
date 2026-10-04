@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 40" preserveAspectRatio="none">
+    <defs>
+        <filter id="bristles" x="-1%" y="-30%" width="102%" height="160%">
+            <feTurbulence type="fractalNoise" baseFrequency=".035 .34" numOctaves="3" seed="8" result="grain"/>
+            <feDisplacementMap in="SourceGraphic" in2="grain" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </defs>
+    <g fill="#fff" filter="url(#bristles)">
+        <path opacity=".3" d="M-8-8H1448V28c-54 3-99-2-157 1s-107 3-169 0-98 2-159 1-103-2-162 0-108 2-172-1-108 3-172 1-109-2-166 0-108 2-165-1-76 2-126 0H-8Z"/>
+        <path d="M-8-8H1448V23c-49 2-92-2-140 1s-92-2-143 0-95 2-151-1-90 2-141 1-101-2-149 0-94 2-149-1-96 2-146 1-91-2-142 0-93 2-141-1-96 2-147 1H-8Z"/>
+        <path opacity=".2" d="M27 31q23-2 52 0-29 2-52 0Zm181 0q34-2 76 0-42 2-76 0Zm183 1q24-2 65 0-35 2-65 0Zm200 0q33-2 72 0-39 2-72 0Zm201 0q27-2 64 0-37 2-64 0Zm179 0q33-2 77 0-44 2-77 0Zm194-1q22-2 64 0-35 2-64 0Z"/>
+    </g>
+</svg>

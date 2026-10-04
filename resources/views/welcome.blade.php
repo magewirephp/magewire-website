@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/hero.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/painted-ui.css?v={{ filemtime(public_path('css/painted-ui.css')) }}">
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800,900|jetbrains-mono:400,500&display=swap" rel="stylesheet">
@@ -91,12 +92,9 @@
         /* ── Sponsor / feature card ── */
         .sponsor-card {
             transition: box-shadow .2s, transform .2s, border-color .2s;
-            box-shadow: 0 1px 4px rgba(0,0,0,.04);
         }
         .sponsor-card:hover {
             transform: translateY(-2px);
-            border-color: #f26322 !important;
-            box-shadow: 0 8px 32px -4px rgba(242,99,34,.15), 0 1px 4px rgba(0,0,0,.04);
         }
 
         /* ── A11y ── */
@@ -346,7 +344,7 @@
         <div class="reveal mb-16 grid items-center gap-6 text-center sm:grid-cols-[1.1fr_.9fr] sm:gap-8 sm:text-left">
             <div>
                 <span class="eyebrow">Get started</span>
-                <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
+                <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
                     Install
                 </h2>
                 <p class="mt-6 text-lg text-[#71717a] max-w-xl mx-auto leading-relaxed sm:mx-0">
@@ -425,7 +423,7 @@
         {{-- Header --}}
         <div class="reveal text-center mb-16">
             <span class="eyebrow">Familiar by Design</span>
-            <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a] mt-2">
+            <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a] mt-2">
                 Know Livewire?<br>
                 <span class="grad">Magewire will feel familiar.</span>
             </h2>
@@ -572,7 +570,7 @@
 
         {{-- Alpine.js / Hyvä callout --}}
         <div class="reveal mt-10" style="transition-delay:.35s">
-            <div class="sponsor-card rounded-2xl border border-mw-200 bg-mw-50 p-6 flex flex-col sm:flex-row items-start gap-5">
+            <div class="painted-card painted-card--warm sponsor-card p-6 flex flex-col sm:flex-row items-start gap-5">
                 <div class="shrink-0 w-11 h-11 rounded-xl border border-mw-200 bg-white flex items-center justify-center">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M3 20l5-8 4 5 3-4 6 7H3Z" stroke="#f26322" stroke-width="1.5" stroke-linejoin="round" fill="rgba(242,99,34,0.08)"/>
@@ -593,7 +591,7 @@
         {{-- Three advantages --}}
         <div class="reveal grid sm:grid-cols-3 gap-4 mt-8" style="transition-delay:.4s">
 
-            <div class="sponsor-card group flex flex-col gap-4 bg-white border border-[#e8e5e1] rounded-2xl p-6">
+            <div class="painted-card sponsor-card group flex flex-col gap-4 p-6">
                 <div class="w-10 h-10 rounded-xl bg-[#f5f3f0] border border-[#e8e5e1] flex items-center justify-center">
                     <svg class="w-5 h-5 text-mw-500" fill="none" stroke="currentColor" stroke-width="2"
                          viewBox="0 0 24 24" aria-hidden="true">
@@ -606,7 +604,7 @@
                 </div>
             </div>
 
-            <div class="sponsor-card group flex flex-col gap-4 bg-white border border-[#e8e5e1] rounded-2xl p-6">
+            <div class="painted-card sponsor-card group flex flex-col gap-4 p-6">
                 <div class="w-10 h-10 rounded-xl bg-[#f5f3f0] border border-[#e8e5e1] flex items-center justify-center">
                     <svg class="w-5 h-5 text-mw-500" fill="none" stroke="currentColor" stroke-width="2"
                          viewBox="0 0 24 24" aria-hidden="true">
@@ -619,7 +617,7 @@
                 </div>
             </div>
 
-            <div class="sponsor-card group flex flex-col gap-4 bg-white border border-[#e8e5e1] rounded-2xl p-6">
+            <div class="painted-card sponsor-card group flex flex-col gap-4 p-6">
                 <div class="w-10 h-10 rounded-xl bg-[#f5f3f0] border border-[#e8e5e1] flex items-center justify-center">
                     <svg class="w-5 h-5 text-mw-500" fill="none" stroke="currentColor" stroke-width="2"
                          viewBox="0 0 24 24" aria-hidden="true">
@@ -640,12 +638,12 @@
 {{-- ══════════════════════════════════
      COMPATIBILITY
      ══════════════════════════════════ --}}
-<section id="compatibility" class="py-36 px-6 bg-white">
+<section id="compatibility" class="painted-section painted-section--paper py-36 px-6">
     <div class="mx-auto max-w-6xl">
 
         <div class="reveal text-center mb-14">
             <span class="eyebrow">Platform &amp; theme support</span>
-            <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
+            <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
                 Compatibility
             </h2>
             <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
@@ -659,7 +657,7 @@
 
         <div class="reveal grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6" style="transition-delay:.12s">
             <a href="https://mage-os.org/product/releases/" target="_blank" rel="noopener"
-               class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-mw-300 hover:shadow-[0_22px_55px_-34px_rgba(242,99,34,.32)]">
+               class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
                     <img src="/images/compatibility/mage-os.webp"
                          alt="Abstract modular commerce foundation connected to a storefront and dashboard"
@@ -676,7 +674,7 @@
             </a>
 
             <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/magento-open-source/overview" target="_blank" rel="noopener"
-               class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-mw-300 hover:shadow-[0_22px_55px_-34px_rgba(242,99,34,.32)]">
+               class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
                     <img src="/images/compatibility/magento-open-source.webp"
                          alt="Abstract open commerce blueprint becoming a storefront"
@@ -693,7 +691,7 @@
             </a>
 
             <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/overview" target="_blank" rel="noopener"
-               class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-purple-300 hover:shadow-[0_22px_55px_-34px_rgba(126,34,206,.28)]">
+               class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
                     <img src="/images/compatibility/adobe-commerce.webp"
                          alt="Abstract connected multi-store commerce platform"
@@ -711,7 +709,7 @@
 
         </div>
 
-        <div class="reveal mt-8 rounded-3xl border border-[#e8e5e1] bg-[#fafaf8] p-7 shadow-[0_20px_60px_-48px_rgba(31,41,55,.4)] sm:p-9" style="transition-delay:.13s">
+        <div class="painted-card reveal mt-8 p-7 sm:p-9" style="transition-delay:.13s">
             <h3 class="text-xl font-bold text-[#1d1d1f]">Check the versions you deploy</h3>
             <p class="mt-3 max-w-3xl leading-relaxed text-[#626267]">
                 Magewire V3 requires PHP 8.2 or newer. Magento Open Source and Mage-OS version combinations are exercised in the project's production-build workflow. Check that matrix, your Magento distribution, and your theme integration before upgrading a store.
@@ -726,7 +724,7 @@
         <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" style="transition-delay:.15s">
 
             <a href="https://github.com/magewirephp/magewire-admin" target="_blank" rel="noopener"
-               class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_22px_55px_-34px_rgba(22,163,74,.35)]">
+               class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
                     <img src="/images/compatibility/backend.webp"
                          alt="Abstract supported administration dashboard"
@@ -742,7 +740,7 @@
                 </div>
             </a>
 
-            <a href="https://github.com/magewirephp/magewire-hyva-theme" target="_blank" rel="noopener" class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_22px_55px_-34px_rgba(22,163,74,.35)]">
+            <a href="https://github.com/magewirephp/magewire-hyva-theme" target="_blank" rel="noopener" class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
                     <img src="/images/compatibility/hyva.webp"
                          alt="Abstract fast storefront with a support check"
@@ -758,7 +756,7 @@
                 </div>
             </a>
 
-            <a href="https://docs.magewirephp.nl/pages/theming/breeze.html?ref=main-website" target="_blank" rel="noopener" class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_22px_55px_-34px_rgba(22,163,74,.35)]">
+            <a href="https://docs.magewirephp.nl/pages/theming/breeze.html?ref=main-website" target="_blank" rel="noopener" class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fffbf3]">
                     <img src="/images/compatibility/breeze.webp"
                          alt="Abstract storefront components connected by a circular flow"
@@ -774,7 +772,7 @@
                 </div>
             </a>
 
-            <a href="https://docs.magewirephp.nl/pages/theming/compatibility-module.html?ref=main-website" target="_blank" rel="noopener" class="group overflow-hidden rounded-2xl border border-[#e8e5e1] bg-white shadow-[0_16px_45px_-34px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-[#d6d3d1] hover:shadow-[0_22px_55px_-34px_rgba(87,83,78,.3)]">
+            <a href="https://docs.magewirephp.nl/pages/theming/compatibility-module.html?ref=main-website" target="_blank" rel="noopener" class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#faf8f5]">
                     <img src="/images/compatibility/luma.webp"
                          alt="Abstract storefront with a calm pause symbol and disconnected plug"
@@ -799,7 +797,7 @@
 {{-- ══════════════════════════════════
      TOOLS
      ══════════════════════════════════ --}}
-<section id="tools" class="relative overflow-hidden bg-[#171513] px-6 py-36">
+<section id="tools" class="painted-section painted-section--ink painted-section--after-paper relative overflow-hidden px-6 py-36">
     <div class="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-mw-500/10 blur-3xl" aria-hidden="true"></div>
     <div class="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-[#e52628]/10 blur-3xl" aria-hidden="true"></div>
 
@@ -807,7 +805,7 @@
 
         <div class="reveal mb-16 text-center">
             <span class="eyebrow !text-mw-400">Useful with Magewire</span>
-            <h2 class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
+            <h2 class="painted-title text-5xl font-bold tracking-tight text-white sm:text-6xl">
                 Tools
             </h2>
             <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-[#aaa39c]">
@@ -815,7 +813,7 @@
             </p>
         </div>
 
-        <article class="reveal group grid overflow-hidden rounded-[2rem] border border-white/10 bg-[#fffaf5] shadow-[0_32px_100px_-42px_rgba(0,0,0,.75)] lg:grid-cols-[1.18fr_.82fr]"
+        <article class="painted-card painted-card--feature reveal group grid overflow-hidden lg:grid-cols-[1.18fr_.82fr]"
                  style="transition-delay:.15s">
             <a href="https://github.com/Inchoo/magento-bricklayer" target="_blank" rel="noopener"
                aria-label="View Magento Bricklayer on GitHub"
@@ -870,12 +868,12 @@
 {{-- ══════════════════════════════════
      SPONSORS
      ══════════════════════════════════ --}}
-<section id="sponsors" class="py-36 px-6 bg-[#fafaf8]">
+<section id="sponsors" class="painted-section painted-section--canvas painted-section--after-ink py-36 px-6">
     <div class="mx-auto max-w-5xl">
 
         <div class="reveal text-center mb-16">
             <span class="eyebrow">Open Source</span>
-            <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
+            <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
                 Sponsors
             </h2>
             <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
@@ -886,16 +884,14 @@
         <div class="reveal grid sm:grid-cols-2 gap-6 mb-8" style="transition-delay:.15s">
 
             <a href="https://vendic.nl" target="_blank" rel="noopener sponsored"
-               class="sponsor-card group rounded-2xl border border-[#e8e5e1] bg-white
-                      p-8 flex flex-col items-center text-center gap-5">
+               class="painted-card sponsor-card group p-8 flex flex-col items-center text-center gap-5">
                 <img src="https://vendic.nl/img/logo.svg"
                      alt="Vendic" class="h-10 w-auto" loading="lazy">
                 <p class="text-base text-[#6e6e73]">Magento &amp; Hyvä agency from the Netherlands</p>
             </a>
 
             <a href="https://zero1.co.uk" target="_blank" rel="noopener sponsored"
-               class="sponsor-card group rounded-2xl border border-[#e8e5e1] bg-white
-                      p-8 flex flex-col items-center text-center gap-5">
+               class="painted-card sponsor-card group p-8 flex flex-col items-center text-center gap-5">
                 <img src="https://www.zero1.co.uk/static/version1769734989/frontend/z1/hyva/en_GB/images/logo.svg"
                      alt="Zero 1" class="h-10 w-auto" loading="lazy">
                 <p class="text-base text-[#6e6e73]">Ecommerce agency &amp; Magento specialists, UK</p>
@@ -903,8 +899,7 @@
 
         </div>
 
-        <div class="rounded-2xl border border-[#f0ece7] bg-[#fffaf7]
-                    p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="painted-card painted-card--warm p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
                 <p class="text-lg font-semibold text-[#1a1a1a]">Become a sponsor</p>
             </div>
@@ -924,7 +919,7 @@
         {{-- Contributors --}}
         <div class="reveal mt-24 text-center mb-12">
             <span class="eyebrow">Built by the community</span>
-            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-[#1a1a1a]">
+            <h2 class="painted-title text-4xl sm:text-5xl font-bold tracking-tight text-[#1a1a1a]">
                 Contributors
             </h2>
             <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
@@ -996,12 +991,12 @@
 {{-- ══════════════════════════════════
      MAGEWIRE IN THE WILD
      ══════════════════════════════════ --}}
-<section class="py-36 px-6 bg-white">
+<section class="painted-section painted-section--paper py-36 px-6">
     <div class="mx-auto max-w-5xl">
 
         <div class="reveal text-center mb-16">
             <span class="eyebrow">Real-world adoption</span>
-            <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
+            <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
                 Magewire in the wild.
             </h2>
             <p class="mt-4 text-lg text-[#71717a] max-w-2xl mx-auto leading-relaxed">
@@ -1013,7 +1008,7 @@
 
             {{-- Hyvä Checkout --}}
             <a href="https://www.hyva.io/hyva-checkout.html" target="_blank" rel="noopener"
-               class="group overflow-hidden rounded-[28px] border border-[#e8e5e1] bg-white shadow-[0_18px_55px_-35px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-[0_24px_65px_-35px_rgba(22,163,74,.4)]">
+               class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-[3/2] overflow-hidden bg-[#fff9f4]">
                     <img src="/images/hyva/checkout.webp"
                          alt="Abstract checkout steps flowing into a completed order"
@@ -1036,7 +1031,7 @@
 
             {{-- Hyvä CMS --}}
             <a href="https://www.hyva.io/hyva-commerce.html" target="_blank" rel="noopener"
-               class="group overflow-hidden rounded-[28px] border border-[#e8e5e1] bg-white shadow-[0_18px_55px_-35px_rgba(31,41,55,.35)] transition-all duration-300 hover:-translate-y-1 hover:border-purple-300 hover:shadow-[0_24px_65px_-35px_rgba(126,34,206,.35)]">
+               class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-[3/2] overflow-hidden bg-[#fbf8ff]">
                     <img src="/images/hyva/cms.webp"
                          alt="Abstract content blocks assembling into a storefront"
@@ -1061,7 +1056,7 @@
 
         {{-- Suggest a project callout --}}
         <div class="reveal mt-10" style="transition-delay:.3s">
-            <div class="sponsor-card rounded-2xl border border-mw-200 bg-mw-50 p-6 flex flex-col sm:flex-row items-start gap-5">
+            <div class="painted-card painted-card--warm sponsor-card p-6 flex flex-col sm:flex-row items-start gap-5">
                 <div class="shrink-0 w-11 h-11 rounded-xl border border-mw-200 bg-white flex items-center justify-center">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#f26322" stroke-width="1.6" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.183-.498c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/>
