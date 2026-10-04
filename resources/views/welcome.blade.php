@@ -525,7 +525,12 @@
         <div class="reveal mt-4 flex items-center justify-center gap-3 text-sm" style="transition-delay:.15s">
             <span class="w-16 h-px bg-[#e8e5e1]"></span>
             <span class="inline-flex items-center gap-2 bg-white border border-[#e8e5e1] rounded-full px-4 py-1.5 text-[#6e6e73]">
-                <span class="w-2 h-2 rounded-full bg-mw-500 shrink-0"></span>
+                <svg class="w-4 h-4 shrink-0 text-mw-500" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2M9 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22 22 0 0 1-4 2Z"/>
+                    <path d="M9 9H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M15 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                    <circle cx="16" cy="8" r="1.5"/>
+                </svg>
                 A familiar shape, adapted for Magento.
             </span>
             <span class="w-16 h-px bg-[#e8e5e1]"></span>
