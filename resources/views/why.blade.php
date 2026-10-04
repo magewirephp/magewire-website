@@ -10,25 +10,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#f26322">
-    <link rel="stylesheet" href="/css/app.css?v={{ filemtime(public_path('css/app.css')) }}">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/painted-ui.css?v={{ filemtime(public_path('css/painted-ui.css')) }}">
-
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800,900|jetbrains-mono:400,500&display=swap" rel="stylesheet">
-
-    <style>
-        [x-cloak] { display: none !important; }
-        :focus-visible { outline: 2px solid #f26322; outline-offset: 3px; border-radius: 4px; }
-        .paper-grid {
-            background-image: radial-gradient(circle, rgba(180, 161, 148, .52) 1.1px, transparent 1.1px);
-            background-size: 28px 28px;
-        }
-        .code-scroll::-webkit-scrollbar { height: 5px; }
-        .code-scroll::-webkit-scrollbar-track { background: transparent; }
-        .code-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,.16); border-radius: 99px; }
-    </style>
+    @include('partials.assets', ['hero' => false])
 </head>
 <body class="overflow-x-hidden bg-[#fafafa] font-sans text-[#1a1a1a] antialiased">
 
@@ -66,9 +48,9 @@
                 <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Why it started</span>
                 <h2 class="painted-title mt-4 text-3xl font-bold tracking-[-.04em] text-[#1d1d1f] sm:text-4xl">The wheel was already round.</h2>
                 <figure class="mx-auto mt-6 w-full max-w-[280px] md:mx-0">
-                    <img src="/images/sections/familiar-wheel.webp"
+                    <x-responsive-image src="/images/sections/familiar-wheel.webp"
                          alt="A painted wooden wheel beside a matching frame and reusable component blocks"
-                         width="960" height="640" loading="lazy" decoding="async" class="h-auto w-full">
+                         width="960" height="640" class="h-auto w-full" sizes="280px" />
                 </figure>
             </div>
             <div class="space-y-5 text-lg leading-relaxed text-[#626267]">
@@ -249,7 +231,6 @@
 
 @include('partials.footer')
 
-@livewireScripts
 
 </body>
 </html>

@@ -1,0 +1,65 @@
+:root {
+    --color-accent:             #f26322;
+    --color-accent-foreground:  #ffffff;
+    --color-accent-content:     #e04e0f;
+}
+
+/* ── Gradient text ── */
+.grad {
+    background: linear-gradient(135deg, #ff8c42 0%, #f26322 40%, #c94b0a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── Section eyebrow label ── */
+.eyebrow {
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #f26322;
+    margin-bottom: 1rem;
+}
+
+/* ── Code block scrollbar ── */
+.code-block { max-width: 100%; color: #e2e8f0; }
+.code-block::-webkit-scrollbar        { height: 5px; width: 5px; }
+.code-block::-webkit-scrollbar-track  { background: transparent; }
+.code-block::-webkit-scrollbar-thumb  { background: rgba(255,255,255,.15); border-radius: 99px; }
+
+/* ── Tab ── */
+.tab-btn {
+    transition: color .15s, border-color .15s;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+}
+.tab-btn.active {
+    border-bottom-color: white;
+    color: white;
+}
+
+/* ── Card hover ── */
+.card-lift { transition: transform .2s, box-shadow .2s; }
+.card-lift:hover { transform: translateY(-2px); box-shadow: 0 12px 40px -8px rgba(0,0,0,.10); }
+
+/* ── Sponsor / feature card ── */
+.sponsor-card {
+    transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.sponsor-card:hover {
+    transform: translateY(-2px);
+}
+
+/* ── A11y ── */
+:focus-visible { outline: 2px solid #f26322; outline-offset: 3px; border-radius: 4px; }
+[x-cloak] { display: none !important; }
+
+/* Shared feature-page backgrounds and code scrollbars. */
+.paper-grid { background-image: radial-gradient(circle, rgba(180, 161, 148, .52) 1.1px, transparent 1.1px); background-size: 28px 28px; }
+.dot-grid { background-image: radial-gradient(circle, rgba(180, 161, 148, .55) 1.2px, transparent 1.2px); background-size: 28px 28px; }
+.code-scroll::-webkit-scrollbar { height: 5px; }
+.code-scroll::-webkit-scrollbar-track { background: transparent; }
+.code-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,.16); border-radius: 99px; }
+picture { display: contents; }

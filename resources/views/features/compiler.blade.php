@@ -98,9 +98,9 @@
                 <p class="mt-5 text-lg leading-relaxed text-[#71717a]">The compiler improves the part developers type without replacing the part Magento runs.</p>
             </div>
             <figure class="mx-auto w-full max-w-[280px] lg:max-w-[360px]">
-                <img src="/images/sections/compiler-workshop.webp"
+                <x-responsive-image src="/images/sections/compiler-workshop.webp"
                      alt="A painted template workshop turning a directive document into a code document"
-                     width="960" height="640" loading="lazy" decoding="async" class="h-auto w-full">
+                     width="960" height="640" class="h-auto w-full" sizes="(max-width: 1023px) 280px, 360px" />
             </figure>
         </div>
 

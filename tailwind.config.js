@@ -1,5 +1,5 @@
 module.exports = {
-    content: ['./resources/views/**/*.blade.php', './public/js/**/*.js'],
+    content: ['./resources/views/**/*.blade.php', './resources/js/**/*.js', './public/js/painted-scenes.js'],
     theme: {
         fontFamily: {
             sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

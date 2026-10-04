@@ -82,9 +82,9 @@
                 <p class="mt-5 text-lg leading-relaxed text-[#71717a]">Fragments create one deliberate place for output-aware behavior without moving that complexity into the template.</p>
             </div>
             <figure class="mx-auto w-full max-w-[280px] lg:max-w-[360px]">
-                <img src="/images/sections/fragment-boundary.webp"
+                <x-responsive-image src="/images/sections/fragment-boundary.webp"
                      alt="Painted markup and style cards inside a highlighted browser region with a validation check"
-                     width="960" height="640" loading="lazy" decoding="async" class="h-auto w-full">
+                     width="960" height="640" class="h-auto w-full" sizes="(max-width: 1023px) 280px, 360px" />
             </figure>
         </div>
 

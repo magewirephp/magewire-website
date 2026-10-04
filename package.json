@@ -2,10 +2,15 @@
     "name": "magewire-website",
     "private": true,
     "scripts": {
-        "build": "tailwindcss -i ./resources/css/app.css -o ./public/css/app.css --minify",
-        "dev": "tailwindcss -i ./resources/css/app.css -o ./public/css/app.css --watch"
+        "build": "node scripts/build.mjs",
+        "dev": "node scripts/build.mjs --watch",
+        "images:build": "node scripts/build-images.mjs",
+        "images:refresh-identities": "node scripts/refresh-identity-images.mjs"
     },
     "devDependencies": {
+        "alpinejs": "3.17.4",
+        "esbuild": "0.28.2",
+        "sharp": "0.35.5",
         "tailwindcss": "3.4.19"
     }
 }

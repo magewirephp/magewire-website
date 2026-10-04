@@ -5,6 +5,19 @@
 
     RewriteEngine On
 
+    # Serve the build's precompressed bundles when the client accepts them.
+    <IfModule mod_headers.c>
+        RewriteCond %{HTTP:Accept-Encoding} \bbr\b [NC]
+        RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*br\s*;\s*q=0(\.0*)?\s*(,|$) [NC]
+        RewriteCond %{REQUEST_FILENAME}.br -f
+        RewriteRule ^((?:css|js)/app\.(?:css|js))$ $1.br [L]
+
+        RewriteCond %{HTTP:Accept-Encoding} \bgzip\b [NC]
+        RewriteCond %{HTTP:Accept-Encoding} !(^|,)\s*gzip\s*;\s*q=0(\.0*)?\s*(,|$) [NC]
+        RewriteCond %{REQUEST_FILENAME}.gz -f
+        RewriteRule ^((?:css|js)/app\.(?:css|js))$ $1.gz [L]
+    </IfModule>
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -22,4 +35,42 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "^app\.(css|js)\.(br|gz)$">
+        Header append Vary Accept-Encoding
+    </FilesMatch>
+    <FilesMatch "^app\.(css|js)\.br$">
+        Header set Content-Encoding br
+    </FilesMatch>
+    <FilesMatch "^app\.(css|js)\.gz$">
+        Header set Content-Encoding gzip
+    </FilesMatch>
+    <FilesMatch "^app\.(css|js)$">
+        Header append Vary Accept-Encoding
+    </FilesMatch>
+    <FilesMatch "^(app\.(css|js)(\.(br|gz))?|.*\.(avif|webp|woff2)|.*-[a-f0-9]{12}\.(png|jpg|svg)|brush-(edge|stroke)\.svg)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+<FilesMatch "^app\.css\.(br|gz)$">
+    ForceType text/css
+</FilesMatch>
+<FilesMatch "^app\.js\.(br|gz)$">
+    ForceType application/javascript
+</FilesMatch>
+<IfModule mod_setenvif.c>
+    SetEnvIf Request_URI "\.(br|gz)$" no-gzip no-brotli
+</IfModule>
+<IfModule mod_mime.c>
+    AddType image/avif avif
+    AddType image/webp webp
+    AddType font/woff2 woff2
+</IfModule>
+<IfModule mod_filter.c>
+    <IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+    </IfModule>
 </IfModule>

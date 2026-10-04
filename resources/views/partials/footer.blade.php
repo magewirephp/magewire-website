@@ -1,15 +1,15 @@
 <footer id="site-footer" class="painted-footer" data-painted-scene>
     <div class="painted-footer__scene" aria-hidden="true">
-        <img class="painted-footer__landscape" src="/images/footer/landscape.webp" alt=""
-             width="2172" height="724" loading="lazy" decoding="async">
-        <img class="painted-footer__cloud painted-footer__cloud--left" src="/images/footer/cloud.webp" alt="" data-scene-animated
-             width="1024" height="342" loading="lazy" decoding="async">
-        <img class="painted-footer__cloud painted-footer__cloud--right" src="/images/footer/cloud.webp" alt="" data-scene-animated
-             width="1024" height="342" loading="lazy" decoding="async">
-        <img class="painted-footer__grass painted-footer__grass--left" src="/images/footer/foliage.webp" alt=""
-             width="600" height="600" loading="lazy" decoding="async" data-scene-animated>
-        <img class="painted-footer__grass painted-footer__grass--right" src="/images/footer/foliage.webp" alt=""
-             width="600" height="600" loading="lazy" decoding="async" data-scene-animated>
+        <x-responsive-image class="painted-footer__landscape" src="/images/footer/landscape.webp" alt=""
+             width="2172" height="724" sizes="(max-width: 767px) 2172px, (max-width: 1440px) 1440px, 100vw" />
+        <x-responsive-image class="painted-footer__cloud painted-footer__cloud--left" src="/images/footer/cloud.webp" alt="" data-scene-animated
+             width="1024" height="342" sizes="(max-width: 684px) 260px, (max-width: 1684px) 38vw, 640px" />
+        <x-responsive-image class="painted-footer__cloud painted-footer__cloud--right" src="/images/footer/cloud.webp" alt="" data-scene-animated
+             width="1024" height="342" sizes="(max-width: 684px) 260px, (max-width: 1684px) 38vw, 640px" />
+        <x-responsive-image class="painted-footer__grass painted-footer__grass--left" src="/images/footer/foliage.webp" alt=""
+             width="600" height="600" data-scene-animated sizes="(max-width: 640px) 210px, (max-width: 857px) 180px, (max-width: 1571px) 21vw, 330px" />
+        <x-responsive-image class="painted-footer__grass painted-footer__grass--right" src="/images/footer/foliage.webp" alt=""
+             width="600" height="600" data-scene-animated sizes="(max-width: 640px) 210px, (max-width: 857px) 180px, (max-width: 1571px) 21vw, 330px" />
 
         @foreach ([
             ['left' => '12%', 'top' => '78%', 'duration' => '3.8s', 'delay' => '-1s'],
@@ -72,5 +72,3 @@
         <p>MIT License &middot; &copy; {{ date('Y') }} MagewirePHP</p>
     </div>
 </footer>
-
-<script src="/js/painted-scenes.js" defer></script>

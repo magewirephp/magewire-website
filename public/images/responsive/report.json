@@ -1,0 +1,569 @@
+[
+  {
+    "source": "/images/compatibility/adobe-commerce.webp",
+    "originalBytes": 66620,
+    "webp": [
+      {
+        "width": 384,
+        "url": "/images/responsive/compatibility-adobe-commerce-384-dd571f805c63.webp",
+        "bytes": 34802
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/compatibility-adobe-commerce-576-20a15cfc0350.webp",
+        "bytes": 52470
+      },
+      {
+        "width": 768,
+        "url": "/images/compatibility/adobe-commerce.webp?v=f5f58d0a1039",
+        "bytes": 66620
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/compatibility/backend.webp",
+    "originalBytes": 58636,
+    "webp": [
+      {
+        "width": 384,
+        "url": "/images/responsive/compatibility-backend-384-50ee159c30ae.webp",
+        "bytes": 31104
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/compatibility-backend-576-0d0839ee82d2.webp",
+        "bytes": 45170
+      },
+      {
+        "width": 768,
+        "url": "/images/compatibility/backend.webp?v=8098ce8a99e2",
+        "bytes": 58636
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/compatibility/breeze.webp",
+    "originalBytes": 51804,
+    "webp": [
+      {
+        "width": 384,
+        "url": "/images/responsive/compatibility-breeze-384-09a7c086c4b1.webp",
+        "bytes": 26814
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/compatibility-breeze-576-0b9840d7deda.webp",
+        "bytes": 39320
+      },
+      {
+        "width": 768,
+        "url": "/images/compatibility/breeze.webp?v=91c4eb666c62",
+        "bytes": 51804
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/compatibility/hyva.webp",
+    "originalBytes": 49096,
+    "webp": [
+      {
+        "width": 384,
+        "url": "/images/responsive/compatibility-hyva-384-0ceca89b2927.webp",
+        "bytes": 27816
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/compatibility-hyva-576-0c1376a16ce4.webp",
+        "bytes": 39998
+      },
+      {
+        "width": 768,
+        "url": "/images/compatibility/hyva.webp?v=7503068af0cd",
+        "bytes": 49096
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/compatibility/luma.webp",
+    "originalBytes": 46564,
+    "webp": [
+      {
+        "width": 384,
+        "url": "/images/responsive/compatibility-luma-384-db19cf4f3c4f.webp",
+        "bytes": 24362
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/compatibility-luma-576-428f1e90f7b6.webp",
+        "bytes": 37598
+      },
+      {
+        "width": 768,
+        "url": "/images/compatibility/luma.webp?v=1768f822d43a",
+        "bytes": 46564
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/compatibility/mage-os.webp",
+    "originalBytes": 56698,
+    "webp": [
+      {
+        "width": 384,
+        "url": "/images/responsive/compatibility-mage-os-384-1620466bf65b.webp",
+        "bytes": 29536
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/compatibility-mage-os-576-57a702f8c94b.webp",
+        "bytes": 44800
+      },
+      {
+        "width": 768,
+        "url": "/images/compatibility/mage-os.webp?v=b3941550550c",
+        "bytes": 56698
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/compatibility/magento-open-source.webp",
+    "originalBytes": 52948,
+    "webp": [
+      {
+        "width": 384,
+        "url": "/images/responsive/compatibility-magento-open-source-384-67a497e079f1.webp",
+        "bytes": 28780
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/compatibility-magento-open-source-576-0aa004c027eb.webp",
+        "bytes": 42490
+      },
+      {
+        "width": 768,
+        "url": "/images/compatibility/magento-open-source.webp?v=0272aa1a0872",
+        "bytes": 52948
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/footer/cloud.webp",
+    "originalBytes": 53724,
+    "webp": [
+      {
+        "width": 512,
+        "url": "/images/responsive/footer-cloud-512-1fae217bb3b6.webp",
+        "bytes": 18342
+      },
+      {
+        "width": 1024,
+        "url": "/images/footer/cloud.webp?v=3fce7560b433",
+        "bytes": 53724
+      }
+    ],
+    "avif": [
+      {
+        "width": 512,
+        "url": "/images/responsive/footer-cloud-512-feefb18c2f9f.avif",
+        "bytes": 13590
+      },
+      {
+        "width": 1024,
+        "url": "/images/responsive/footer-cloud-1024-bb399dac4072.avif",
+        "bytes": 32666
+      }
+    ]
+  },
+  {
+    "source": "/images/footer/foliage.webp",
+    "originalBytes": 156696,
+    "webp": [
+      {
+        "width": 300,
+        "url": "/images/responsive/footer-foliage-300-759b0cc8a4b1.webp",
+        "bytes": 53868
+      },
+      {
+        "width": 360,
+        "url": "/images/responsive/footer-foliage-360-639dd531ff9c.webp",
+        "bytes": 70598
+      },
+      {
+        "width": 480,
+        "url": "/images/responsive/footer-foliage-480-57e8f20ee4e8.webp",
+        "bytes": 110878
+      },
+      {
+        "width": 600,
+        "url": "/images/footer/foliage.webp?v=7399b65ba81d",
+        "bytes": 156696
+      }
+    ],
+    "avif": [
+      {
+        "width": 300,
+        "url": "/images/responsive/footer-foliage-300-ef92ac987bb2.avif",
+        "bytes": 50461
+      },
+      {
+        "width": 360,
+        "url": "/images/responsive/footer-foliage-360-c39a7ca7f082.avif",
+        "bytes": 60900
+      },
+      {
+        "width": 480,
+        "url": "/images/responsive/footer-foliage-480-5f089d2c8985.avif",
+        "bytes": 89977
+      },
+      {
+        "width": 600,
+        "url": "/images/responsive/footer-foliage-600-d54ebf0a6992.avif",
+        "bytes": 132382
+      }
+    ]
+  },
+  {
+    "source": "/images/footer/landscape.webp",
+    "originalBytes": 161452,
+    "webp": [
+      {
+        "width": 1440,
+        "url": "/images/responsive/footer-landscape-1440-f8949cb59a86.webp",
+        "bytes": 97870
+      },
+      {
+        "width": 2172,
+        "url": "/images/footer/landscape.webp?v=335e0fe964da",
+        "bytes": 161452
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/header/canopy.webp",
+    "originalBytes": 54602,
+    "webp": [
+      {
+        "width": 250,
+        "url": "/images/responsive/header-canopy-250-b1d902705c82.webp",
+        "bytes": 19308
+      },
+      {
+        "width": 420,
+        "url": "/images/responsive/header-canopy-420-95fcfc22f5cc.webp",
+        "bytes": 43364
+      },
+      {
+        "width": 500,
+        "url": "/images/header/canopy.webp?v=751ff2edcc7d",
+        "bytes": 54602
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/header/cloud.webp",
+    "originalBytes": 44506,
+    "webp": [
+      {
+        "width": 512,
+        "url": "/images/responsive/header-cloud-512-73879cf91219.webp",
+        "bytes": 15216
+      },
+      {
+        "width": 1024,
+        "url": "/images/header/cloud.webp?v=548aa77c87ee",
+        "bytes": 44506
+      }
+    ],
+    "avif": [
+      {
+        "width": 512,
+        "url": "/images/responsive/header-cloud-512-55e61cc74e85.avif",
+        "bytes": 11779
+      },
+      {
+        "width": 1024,
+        "url": "/images/responsive/header-cloud-1024-60e7a66735d1.avif",
+        "bytes": 27924
+      }
+    ]
+  },
+  {
+    "source": "/images/header/sky.webp",
+    "originalBytes": 42668,
+    "webp": [
+      {
+        "width": 1440,
+        "url": "/images/responsive/header-sky-1440-b7e4263ed855.webp",
+        "bytes": 33210
+      },
+      {
+        "width": 2172,
+        "url": "/images/header/sky.webp?v=5145c017549d",
+        "bytes": 42668
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/hyva/checkout.webp",
+    "originalBytes": 155972,
+    "webp": [
+      {
+        "width": 512,
+        "url": "/images/responsive/hyva-checkout-512-4a8bbc678900.webp",
+        "bytes": 38596
+      },
+      {
+        "width": 1024,
+        "url": "/images/responsive/hyva-checkout-1024-dfccf07df8cc.webp",
+        "bytes": 110346
+      },
+      {
+        "width": 1536,
+        "url": "/images/hyva/checkout.webp?v=59f27626d57d",
+        "bytes": 155972
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/hyva/cms.webp",
+    "originalBytes": 144992,
+    "webp": [
+      {
+        "width": 512,
+        "url": "/images/responsive/hyva-cms-512-060d0ffb55c9.webp",
+        "bytes": 34490
+      },
+      {
+        "width": 1024,
+        "url": "/images/responsive/hyva-cms-1024-8640270b8c4b.webp",
+        "bytes": 100788
+      },
+      {
+        "width": 1536,
+        "url": "/images/hyva/cms.webp?v=c74c4f0fdfd3",
+        "bytes": 144992
+      }
+    ],
+    "avif": []
+  },
+  {
+    "source": "/images/sections/compiler-workshop.webp",
+    "originalBytes": 79760,
+    "webp": [
+      {
+        "width": 360,
+        "url": "/images/responsive/sections-compiler-workshop-360-eaa96cf273e3.webp",
+        "bytes": 19884
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/sections-compiler-workshop-576-576085280acb.webp",
+        "bytes": 40088
+      },
+      {
+        "width": 720,
+        "url": "/images/responsive/sections-compiler-workshop-720-27327110e90c.webp",
+        "bytes": 56248
+      },
+      {
+        "width": 960,
+        "url": "/images/sections/compiler-workshop.webp?v=61939b486094",
+        "bytes": 79760
+      }
+    ],
+    "avif": [
+      {
+        "width": 360,
+        "url": "/images/responsive/sections-compiler-workshop-360-7473ba2a574b.avif",
+        "bytes": 17155
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/sections-compiler-workshop-576-fec339f60fb4.avif",
+        "bytes": 32929
+      },
+      {
+        "width": 720,
+        "url": "/images/responsive/sections-compiler-workshop-720-58a86a337b95.avif",
+        "bytes": 44722
+      },
+      {
+        "width": 960,
+        "url": "/images/responsive/sections-compiler-workshop-960-73e68e2b882f.avif",
+        "bytes": 67856
+      }
+    ]
+  },
+  {
+    "source": "/images/sections/familiar-wheel.webp",
+    "originalBytes": 118960,
+    "webp": [
+      {
+        "width": 360,
+        "url": "/images/responsive/sections-familiar-wheel-360-b70c84019750.webp",
+        "bytes": 29642
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/sections-familiar-wheel-576-d0ed8b75a585.webp",
+        "bytes": 61610
+      },
+      {
+        "width": 720,
+        "url": "/images/responsive/sections-familiar-wheel-720-a77b46a907ba.webp",
+        "bytes": 86526
+      },
+      {
+        "width": 960,
+        "url": "/images/sections/familiar-wheel.webp?v=83edcb6319b1",
+        "bytes": 118960
+      }
+    ],
+    "avif": [
+      {
+        "width": 360,
+        "url": "/images/responsive/sections-familiar-wheel-360-4f0f68af94e1.avif",
+        "bytes": 25217
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/sections-familiar-wheel-576-23e813ed38f8.avif",
+        "bytes": 49603
+      },
+      {
+        "width": 720,
+        "url": "/images/responsive/sections-familiar-wheel-720-f16ea8eb2b8c.avif",
+        "bytes": 68393
+      },
+      {
+        "width": 960,
+        "url": "/images/responsive/sections-familiar-wheel-960-33604e2ab09d.avif",
+        "bytes": 108365
+      }
+    ]
+  },
+  {
+    "source": "/images/sections/fragment-boundary.webp",
+    "originalBytes": 58918,
+    "webp": [
+      {
+        "width": 360,
+        "url": "/images/responsive/sections-fragment-boundary-360-ae81ad3b0855.webp",
+        "bytes": 15114
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/sections-fragment-boundary-576-d79d2938cc2b.webp",
+        "bytes": 31438
+      },
+      {
+        "width": 720,
+        "url": "/images/responsive/sections-fragment-boundary-720-db3c0bedd55e.webp",
+        "bytes": 41302
+      },
+      {
+        "width": 960,
+        "url": "/images/sections/fragment-boundary.webp?v=bbc41dd93e1b",
+        "bytes": 58918
+      }
+    ],
+    "avif": [
+      {
+        "width": 360,
+        "url": "/images/responsive/sections-fragment-boundary-360-0ec213327b75.avif",
+        "bytes": 11449
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/sections-fragment-boundary-576-b84d56ea3f59.avif",
+        "bytes": 23496
+      },
+      {
+        "width": 720,
+        "url": "/images/responsive/sections-fragment-boundary-720-369389e1417b.avif",
+        "bytes": 30574
+      },
+      {
+        "width": 960,
+        "url": "/images/responsive/sections-fragment-boundary-960-a06c438ebad5.avif",
+        "bytes": 48666
+      }
+    ]
+  },
+  {
+    "source": "/images/sections/install-toolkit.webp",
+    "originalBytes": 79578,
+    "webp": [
+      {
+        "width": 360,
+        "url": "/images/responsive/sections-install-toolkit-360-6ffc8fd4cfba.webp",
+        "bytes": 21090
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/sections-install-toolkit-576-cf755a8e7520.webp",
+        "bytes": 42754
+      },
+      {
+        "width": 720,
+        "url": "/images/responsive/sections-install-toolkit-720-053111319df9.webp",
+        "bytes": 57504
+      },
+      {
+        "width": 960,
+        "url": "/images/sections/install-toolkit.webp?v=a94557e44653",
+        "bytes": 79578
+      }
+    ],
+    "avif": [
+      {
+        "width": 360,
+        "url": "/images/responsive/sections-install-toolkit-360-70e144ffc373.avif",
+        "bytes": 17676
+      },
+      {
+        "width": 576,
+        "url": "/images/responsive/sections-install-toolkit-576-6ec306815799.avif",
+        "bytes": 34908
+      },
+      {
+        "width": 720,
+        "url": "/images/responsive/sections-install-toolkit-720-7b5525c8077a.avif",
+        "bytes": 46203
+      },
+      {
+        "width": 960,
+        "url": "/images/responsive/sections-install-toolkit-960-58683f4fd513.avif",
+        "bytes": 72083
+      }
+    ]
+  },
+  {
+    "source": "/images/tools/bricklayer.webp",
+    "originalBytes": 131600,
+    "webp": [
+      {
+        "width": 768,
+        "url": "/images/responsive/tools-bricklayer-768-decda9bb1541.webp",
+        "bytes": 88550
+      },
+      {
+        "width": 1200,
+        "url": "/images/tools/bricklayer.webp?v=86fd67cc6ee0",
+        "bytes": 131600
+      }
+    ],
+    "avif": []
+  }
+]

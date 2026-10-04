@@ -1,0 +1,142 @@
+{
+  "/images/compatibility/adobe-commerce.webp": {
+    "fallback": "/images/compatibility/adobe-commerce.webp?v=f5f58d0a1039",
+    "width": 768,
+    "height": 768,
+    "webp": "/images/responsive/compatibility-adobe-commerce-384-dd571f805c63.webp 384w, /images/responsive/compatibility-adobe-commerce-576-20a15cfc0350.webp 576w, /images/compatibility/adobe-commerce.webp?v=f5f58d0a1039 768w",
+    "avif": ""
+  },
+  "/images/compatibility/backend.webp": {
+    "fallback": "/images/compatibility/backend.webp?v=8098ce8a99e2",
+    "width": 768,
+    "height": 768,
+    "webp": "/images/responsive/compatibility-backend-384-50ee159c30ae.webp 384w, /images/responsive/compatibility-backend-576-0d0839ee82d2.webp 576w, /images/compatibility/backend.webp?v=8098ce8a99e2 768w",
+    "avif": ""
+  },
+  "/images/compatibility/breeze.webp": {
+    "fallback": "/images/compatibility/breeze.webp?v=91c4eb666c62",
+    "width": 768,
+    "height": 768,
+    "webp": "/images/responsive/compatibility-breeze-384-09a7c086c4b1.webp 384w, /images/responsive/compatibility-breeze-576-0b9840d7deda.webp 576w, /images/compatibility/breeze.webp?v=91c4eb666c62 768w",
+    "avif": ""
+  },
+  "/images/compatibility/hyva.webp": {
+    "fallback": "/images/compatibility/hyva.webp?v=7503068af0cd",
+    "width": 768,
+    "height": 768,
+    "webp": "/images/responsive/compatibility-hyva-384-0ceca89b2927.webp 384w, /images/responsive/compatibility-hyva-576-0c1376a16ce4.webp 576w, /images/compatibility/hyva.webp?v=7503068af0cd 768w",
+    "avif": ""
+  },
+  "/images/compatibility/luma.webp": {
+    "fallback": "/images/compatibility/luma.webp?v=1768f822d43a",
+    "width": 768,
+    "height": 768,
+    "webp": "/images/responsive/compatibility-luma-384-db19cf4f3c4f.webp 384w, /images/responsive/compatibility-luma-576-428f1e90f7b6.webp 576w, /images/compatibility/luma.webp?v=1768f822d43a 768w",
+    "avif": ""
+  },
+  "/images/compatibility/mage-os.webp": {
+    "fallback": "/images/compatibility/mage-os.webp?v=b3941550550c",
+    "width": 768,
+    "height": 768,
+    "webp": "/images/responsive/compatibility-mage-os-384-1620466bf65b.webp 384w, /images/responsive/compatibility-mage-os-576-57a702f8c94b.webp 576w, /images/compatibility/mage-os.webp?v=b3941550550c 768w",
+    "avif": ""
+  },
+  "/images/compatibility/magento-open-source.webp": {
+    "fallback": "/images/compatibility/magento-open-source.webp?v=0272aa1a0872",
+    "width": 768,
+    "height": 768,
+    "webp": "/images/responsive/compatibility-magento-open-source-384-67a497e079f1.webp 384w, /images/responsive/compatibility-magento-open-source-576-0aa004c027eb.webp 576w, /images/compatibility/magento-open-source.webp?v=0272aa1a0872 768w",
+    "avif": ""
+  },
+  "/images/footer/cloud.webp": {
+    "fallback": "/images/footer/cloud.webp?v=3fce7560b433",
+    "width": 1024,
+    "height": 342,
+    "webp": "/images/responsive/footer-cloud-512-1fae217bb3b6.webp 512w, /images/footer/cloud.webp?v=3fce7560b433 1024w",
+    "avif": "/images/responsive/footer-cloud-512-feefb18c2f9f.avif 512w, /images/responsive/footer-cloud-1024-bb399dac4072.avif 1024w"
+  },
+  "/images/footer/foliage.webp": {
+    "fallback": "/images/footer/foliage.webp?v=7399b65ba81d",
+    "width": 600,
+    "height": 600,
+    "webp": "/images/responsive/footer-foliage-300-759b0cc8a4b1.webp 300w, /images/responsive/footer-foliage-360-639dd531ff9c.webp 360w, /images/responsive/footer-foliage-480-57e8f20ee4e8.webp 480w, /images/footer/foliage.webp?v=7399b65ba81d 600w",
+    "avif": "/images/responsive/footer-foliage-300-ef92ac987bb2.avif 300w, /images/responsive/footer-foliage-360-c39a7ca7f082.avif 360w, /images/responsive/footer-foliage-480-5f089d2c8985.avif 480w, /images/responsive/footer-foliage-600-d54ebf0a6992.avif 600w"
+  },
+  "/images/footer/landscape.webp": {
+    "fallback": "/images/footer/landscape.webp?v=335e0fe964da",
+    "width": 2172,
+    "height": 724,
+    "webp": "/images/responsive/footer-landscape-1440-f8949cb59a86.webp 1440w, /images/footer/landscape.webp?v=335e0fe964da 2172w",
+    "avif": ""
+  },
+  "/images/header/canopy.webp": {
+    "fallback": "/images/header/canopy.webp?v=751ff2edcc7d",
+    "width": 500,
+    "height": 500,
+    "webp": "/images/responsive/header-canopy-250-b1d902705c82.webp 250w, /images/responsive/header-canopy-420-95fcfc22f5cc.webp 420w, /images/header/canopy.webp?v=751ff2edcc7d 500w",
+    "avif": ""
+  },
+  "/images/header/cloud.webp": {
+    "fallback": "/images/header/cloud.webp?v=548aa77c87ee",
+    "width": 1024,
+    "height": 342,
+    "webp": "/images/responsive/header-cloud-512-73879cf91219.webp 512w, /images/header/cloud.webp?v=548aa77c87ee 1024w",
+    "avif": "/images/responsive/header-cloud-512-55e61cc74e85.avif 512w, /images/responsive/header-cloud-1024-60e7a66735d1.avif 1024w"
+  },
+  "/images/header/sky.webp": {
+    "fallback": "/images/header/sky.webp?v=5145c017549d",
+    "width": 2172,
+    "height": 724,
+    "webp": "/images/responsive/header-sky-1440-b7e4263ed855.webp 1440w, /images/header/sky.webp?v=5145c017549d 2172w",
+    "avif": ""
+  },
+  "/images/hyva/checkout.webp": {
+    "fallback": "/images/hyva/checkout.webp?v=59f27626d57d",
+    "width": 1536,
+    "height": 1024,
+    "webp": "/images/responsive/hyva-checkout-512-4a8bbc678900.webp 512w, /images/responsive/hyva-checkout-1024-dfccf07df8cc.webp 1024w, /images/hyva/checkout.webp?v=59f27626d57d 1536w",
+    "avif": ""
+  },
+  "/images/hyva/cms.webp": {
+    "fallback": "/images/hyva/cms.webp?v=c74c4f0fdfd3",
+    "width": 1536,
+    "height": 1024,
+    "webp": "/images/responsive/hyva-cms-512-060d0ffb55c9.webp 512w, /images/responsive/hyva-cms-1024-8640270b8c4b.webp 1024w, /images/hyva/cms.webp?v=c74c4f0fdfd3 1536w",
+    "avif": ""
+  },
+  "/images/sections/compiler-workshop.webp": {
+    "fallback": "/images/sections/compiler-workshop.webp?v=61939b486094",
+    "width": 960,
+    "height": 640,
+    "webp": "/images/responsive/sections-compiler-workshop-360-eaa96cf273e3.webp 360w, /images/responsive/sections-compiler-workshop-576-576085280acb.webp 576w, /images/responsive/sections-compiler-workshop-720-27327110e90c.webp 720w, /images/sections/compiler-workshop.webp?v=61939b486094 960w",
+    "avif": "/images/responsive/sections-compiler-workshop-360-7473ba2a574b.avif 360w, /images/responsive/sections-compiler-workshop-576-fec339f60fb4.avif 576w, /images/responsive/sections-compiler-workshop-720-58a86a337b95.avif 720w, /images/responsive/sections-compiler-workshop-960-73e68e2b882f.avif 960w"
+  },
+  "/images/sections/familiar-wheel.webp": {
+    "fallback": "/images/sections/familiar-wheel.webp?v=83edcb6319b1",
+    "width": 960,
+    "height": 640,
+    "webp": "/images/responsive/sections-familiar-wheel-360-b70c84019750.webp 360w, /images/responsive/sections-familiar-wheel-576-d0ed8b75a585.webp 576w, /images/responsive/sections-familiar-wheel-720-a77b46a907ba.webp 720w, /images/sections/familiar-wheel.webp?v=83edcb6319b1 960w",
+    "avif": "/images/responsive/sections-familiar-wheel-360-4f0f68af94e1.avif 360w, /images/responsive/sections-familiar-wheel-576-23e813ed38f8.avif 576w, /images/responsive/sections-familiar-wheel-720-f16ea8eb2b8c.avif 720w, /images/responsive/sections-familiar-wheel-960-33604e2ab09d.avif 960w"
+  },
+  "/images/sections/fragment-boundary.webp": {
+    "fallback": "/images/sections/fragment-boundary.webp?v=bbc41dd93e1b",
+    "width": 960,
+    "height": 640,
+    "webp": "/images/responsive/sections-fragment-boundary-360-ae81ad3b0855.webp 360w, /images/responsive/sections-fragment-boundary-576-d79d2938cc2b.webp 576w, /images/responsive/sections-fragment-boundary-720-db3c0bedd55e.webp 720w, /images/sections/fragment-boundary.webp?v=bbc41dd93e1b 960w",
+    "avif": "/images/responsive/sections-fragment-boundary-360-0ec213327b75.avif 360w, /images/responsive/sections-fragment-boundary-576-b84d56ea3f59.avif 576w, /images/responsive/sections-fragment-boundary-720-369389e1417b.avif 720w, /images/responsive/sections-fragment-boundary-960-a06c438ebad5.avif 960w"
+  },
+  "/images/sections/install-toolkit.webp": {
+    "fallback": "/images/sections/install-toolkit.webp?v=a94557e44653",
+    "width": 960,
+    "height": 640,
+    "webp": "/images/responsive/sections-install-toolkit-360-6ffc8fd4cfba.webp 360w, /images/responsive/sections-install-toolkit-576-cf755a8e7520.webp 576w, /images/responsive/sections-install-toolkit-720-053111319df9.webp 720w, /images/sections/install-toolkit.webp?v=a94557e44653 960w",
+    "avif": "/images/responsive/sections-install-toolkit-360-70e144ffc373.avif 360w, /images/responsive/sections-install-toolkit-576-6ec306815799.avif 576w, /images/responsive/sections-install-toolkit-720-7b5525c8077a.avif 720w, /images/responsive/sections-install-toolkit-960-58683f4fd513.avif 960w"
+  },
+  "/images/tools/bricklayer.webp": {
+    "fallback": "/images/tools/bricklayer.webp?v=86fd67cc6ee0",
+    "width": 1200,
+    "height": 800,
+    "webp": "/images/responsive/tools-bricklayer-768-decda9bb1541.webp 768w, /images/tools/bricklayer.webp?v=86fd67cc6ee0 1200w",
+    "avif": ""
+  }
+}

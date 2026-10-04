@@ -11,96 +11,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#f26322">
-    <link rel="stylesheet" href="/css/app.css?v={{ filemtime(public_path('css/app.css')) }}">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/hero.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/painted-ui.css?v={{ filemtime(public_path('css/painted-ui.css')) }}">
-
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800,900|jetbrains-mono:400,500&display=swap" rel="stylesheet">
-
-    @fluxAppearance
-
-    <style>
-        :root {
-            --color-accent:             #f26322;
-            --color-accent-foreground:  #ffffff;
-            --color-accent-content:     #e04e0f;
-        }
-
-        /* ── Entrance animations ── */
-        @keyframes fade-up {
-            from { opacity: 0; transform: translateY(24px); }
-            to   { opacity: 1; transform: translateY(0);    }
-        }
-        .e1  { animation: fade-up .7s .00s ease both; }
-        .e2  { animation: fade-up .7s .10s ease both; }
-        .e3  { animation: fade-up .7s .22s ease both; }
-        .e4  { animation: fade-up .7s .34s ease both; }
-        .e4b { animation: fade-up .7s .46s ease both; }
-        .e5  { animation: fade-up .7s .58s ease both; }
-
-        /* ── Scroll-triggered reveal ── */
-        .reveal {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1);
-        }
-        .reveal.in-view { opacity: 1; transform: translateY(0); }
-
-        /* ── Gradient text ── */
-        .grad {
-            background: linear-gradient(135deg, #ff8c42 0%, #f26322 40%, #c94b0a 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* ── Section eyebrow label ── */
-        .eyebrow {
-            display: inline-block;
-            font-size: .75rem;
-            font-weight: 700;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-            color: #f26322;
-            margin-bottom: 1rem;
-        }
-
-        /* ── Code block scrollbar ── */
-        .code-block { max-width: 100%; color: #e2e8f0; }
-        .code-block::-webkit-scrollbar        { height: 5px; width: 5px; }
-        .code-block::-webkit-scrollbar-track  { background: transparent; }
-        .code-block::-webkit-scrollbar-thumb  { background: rgba(255,255,255,.15); border-radius: 99px; }
-
-        /* ── Tab ── */
-        .tab-btn {
-            transition: color .15s, border-color .15s;
-            border-bottom: 2px solid transparent;
-            margin-bottom: -1px;
-        }
-        .tab-btn.active {
-            border-bottom-color: white;
-            color: white;
-        }
-
-        /* ── Card hover ── */
-        .card-lift { transition: transform .2s, box-shadow .2s; }
-        .card-lift:hover { transform: translateY(-2px); box-shadow: 0 12px 40px -8px rgba(0,0,0,.10); }
-
-        /* ── Sponsor / feature card ── */
-        .sponsor-card {
-            transition: box-shadow .2s, transform .2s, border-color .2s;
-        }
-        .sponsor-card:hover {
-            transform: translateY(-2px);
-        }
-
-        /* ── A11y ── */
-        :focus-visible { outline: 2px solid #f26322; outline-offset: 3px; border-radius: 4px; }
-        [x-cloak] { display: none !important; }
-    </style>
+    @include('partials.assets', ['hero' => true])
 </head>
 <body class="bg-[#fafafa] text-[#1a1a1a] antialiased font-sans overflow-x-hidden">
 
@@ -127,17 +38,17 @@
 
     {{-- Painted sky behind the introduction --}}
     <div class="painted-hero__scene" aria-hidden="true">
-        <img class="painted-hero__sky" src="/images/header/sky.webp" alt=""
-             width="2172" height="724" decoding="async">
-        <img class="painted-hero__cloud painted-hero__cloud--left" src="/images/header/cloud.webp" alt=""
-             width="1024" height="342" decoding="async" data-scene-animated>
-        <img class="painted-hero__cloud painted-hero__cloud--right" src="/images/header/cloud.webp" alt=""
-             width="1024" height="342" decoding="async" data-scene-animated>
+        <x-responsive-image class="painted-hero__sky" src="/images/header/sky.webp" alt=""
+             width="2172" height="724" sizes="(max-width: 1380px) 1380px, 100vw" loading="eager" priority="high" />
+        <x-responsive-image class="painted-hero__cloud painted-hero__cloud--left" src="/images/header/cloud.webp" alt=""
+             width="1024" height="342" data-scene-animated sizes="(max-width: 850px) 280px, (max-width: 1515px) 33vw, 500px" loading="eager" />
+        <x-responsive-image class="painted-hero__cloud painted-hero__cloud--right" src="/images/header/cloud.webp" alt=""
+             width="1024" height="342" data-scene-animated sizes="(max-width: 850px) 280px, (max-width: 1515px) 33vw, 500px" loading="eager" />
         <div class="painted-hero__canopy painted-hero__canopy--left" data-scene-animated>
-            <img src="/images/header/canopy.webp" alt="" width="500" height="500" decoding="async">
+            <x-responsive-image src="/images/header/canopy.webp" alt="" width="500" height="500" sizes="(max-width: 640px) 240px, (max-width: 1037px) 280px, (max-width: 1556px) 27vw, 420px" loading="eager" />
         </div>
         <div class="painted-hero__canopy painted-hero__canopy--right" data-scene-animated>
-            <img src="/images/header/canopy.webp" alt="" width="500" height="500" decoding="async">
+            <x-responsive-image src="/images/header/canopy.webp" alt="" width="500" height="500" sizes="(max-width: 640px) 240px, (max-width: 1037px) 280px, (max-width: 1556px) 27vw, 420px" loading="eager" />
         </div>
     </div>
 
@@ -145,18 +56,18 @@
     <div class="relative z-10 w-full max-w-5xl mx-auto text-center">
 
         {{-- Headline --}}
-        <h1 class="e2 text-[2rem] sm:text-5xl md:text-7xl lg:text-[5.5rem]
+        <h1 class="text-[2rem] sm:text-5xl md:text-7xl lg:text-[5.5rem]
                    font-black tracking-tight leading-[1.08] sm:leading-[1.05] text-[#1a1a1a]">
             Reactive Magento<br>
             <span class="grad">written in PHP</span>
         </h1>
 
-        <p class="e3 mt-6 text-lg sm:text-xl text-[#71717a] max-w-xl mx-auto leading-relaxed font-normal">
+        <p class="mt-6 text-lg sm:text-xl text-[#71717a] max-w-xl mx-auto leading-relaxed font-normal">
             Build interactive interfaces with PHP components and PHTML. Magewire handles browser updates; add JavaScript when your feature needs it.
         </p>
 
         {{-- CTAs --}}
-        <div class="e4 mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://docs.magewirephp.nl/?ref=main-website"
                target="_blank" rel="noopener"
                class="inline-flex items-center gap-2 bg-mw-500 hover:bg-mw-600
@@ -177,26 +88,8 @@
         </div>
 
         {{-- Live stats --}}
-        <div x-data="{
-                stars: 254,
-                downloads: 1125229,
-                fmt(n) {
-                    if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
-                    if (n >= 1e3) return Math.round(n / 1e3) + 'K';
-                    return n;
-                },
-                async init() {
-                    try {
-                        const [gh, pkg] = await Promise.all([
-                            fetch('https://api.github.com/repos/magewirephp/magewire').then(r => r.json()),
-                            fetch('https://packagist.org/packages/magewirephp/magewire.json').then(r => r.json()),
-                        ]);
-                        if (gh.stargazers_count) this.stars = gh.stargazers_count;
-                        if (pkg.package?.downloads?.total) this.downloads = pkg.package.downloads.total;
-                    } catch(e) {}
-                }
-             }"
-             class="e4b mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+        <div x-data="siteStats"
+             class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
             <a href="https://github.com/magewirephp/magewire" target="_blank" rel="noopener"
                class="inline-flex items-center gap-2 text-[#6b7280] hover:text-[#1d1d1f] transition-colors">
                 {{-- GitHub mark --}}
@@ -341,7 +234,7 @@
          style="box-shadow: 0 -40px 80px 0 rgba(0,0,0,0.10)">
     <div class="mx-auto max-w-3xl">
 
-        <div class="reveal mb-16 grid items-center gap-6 text-center sm:grid-cols-[1.1fr_.9fr] sm:gap-8 sm:text-left">
+        <div class="mb-16 grid items-center gap-6 text-center sm:grid-cols-[1.1fr_.9fr] sm:gap-8 sm:text-left">
             <div>
                 <span class="eyebrow">Get started</span>
                 <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
@@ -352,15 +245,14 @@
                 </p>
             </div>
             <figure class="mx-auto w-full max-w-[240px] sm:max-w-[300px]">
-                <img src="/images/sections/install-toolkit.webp"
+                <x-responsive-image src="/images/sections/install-toolkit.webp"
                      alt="A painted developer toolkit with template cards, connected components, and a completion check"
-                     width="960" height="640" loading="lazy" decoding="async" class="h-auto w-full">
+                     width="960" height="640" class="h-auto w-full" sizes="(max-width: 639px) 240px, 300px" />
             </figure>
         </div>
 
         <div x-data="{ copied: false }"
-             class="reveal rounded-3xl overflow-hidden border border-[#3f3f46] shadow-2xl shadow-black/40"
-             style="transition-delay:.15s">
+             class="rounded-3xl overflow-hidden border border-[#3f3f46] shadow-2xl shadow-black/40">
 
             <div class="flex items-center justify-between bg-[#1c1c1e] px-6 py-4 border-b border-[#3f3f46]">
                 <div class="flex gap-2" aria-hidden="true">
@@ -421,7 +313,7 @@
     <div class="mx-auto max-w-5xl">
 
         {{-- Header --}}
-        <div class="reveal text-center mb-16">
+        <div class="text-center mb-16">
             <span class="eyebrow">Familiar by Design</span>
             <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a] mt-2">
                 Know Livewire?<br>
@@ -433,12 +325,12 @@
         </div>
 
         {{-- ── PHP COMPARISON ── --}}
-        <div class="reveal flex items-center gap-4 mb-4" style="transition-delay:.05s">
+        <div class="flex items-center gap-4 mb-4">
             <span class="text-xs font-mono font-medium text-[#9ca3af] uppercase tracking-widest">Component class</span>
             <span class="flex-1 h-px bg-[#e8e5e1]"></span>
         </div>
 
-        <div class="reveal grid md:grid-cols-2 gap-4 items-start" style="transition-delay:.1s">
+        <div class="grid md:grid-cols-2 gap-4 items-start">
 
             {{-- Laravel Livewire PHP --}}
             <div class="rounded-2xl overflow-hidden border border-[#e8e5e1] shadow-sm">
@@ -499,7 +391,7 @@
         </div>
 
         {{-- PHP diff callout --}}
-        <div class="reveal mt-4 flex items-center justify-center gap-3 text-sm" style="transition-delay:.15s">
+        <div class="mt-4 flex items-center justify-center gap-3 text-sm">
             <span class="w-16 h-px bg-[#e8e5e1]"></span>
             <span class="inline-flex items-center gap-2 bg-white border border-[#e8e5e1] rounded-full px-4 py-1.5 text-[#6e6e73]">
                 <svg class="w-4 h-4 shrink-0 text-mw-500" viewBox="0 0 24 24" fill="none"
@@ -514,12 +406,12 @@
         </div>
 
         {{-- ── TEMPLATE COMPARISON ── --}}
-        <div class="reveal flex items-center gap-4 mt-12 mb-4" style="transition-delay:.2s">
+        <div class="flex items-center gap-4 mt-12 mb-4">
             <span class="text-xs font-mono font-medium text-[#9ca3af] uppercase tracking-widest">Template</span>
             <span class="flex-1 h-px bg-[#e8e5e1]"></span>
         </div>
 
-        <div class="reveal grid md:grid-cols-2 gap-4 items-start" style="transition-delay:.25s">
+        <div class="grid md:grid-cols-2 gap-4 items-start">
 
             {{-- Blade template --}}
             <div class="rounded-2xl overflow-hidden border border-[#e8e5e1] shadow-sm">
@@ -556,7 +448,7 @@
         </div>
 
         {{-- Template diff callout --}}
-        <div class="reveal mt-4 flex items-center justify-center gap-3 text-sm" style="transition-delay:.3s">
+        <div class="mt-4 flex items-center justify-center gap-3 text-sm">
             <span class="w-16 h-px bg-[#e8e5e1]"></span>
             <span class="inline-flex items-center gap-2 bg-white border border-[#e8e5e1] rounded-full px-4 py-1.5 text-[#6e6e73]">
                 <svg class="w-4 h-4 shrink-0 text-mw-500" viewBox="0 0 24 24" fill="none"
@@ -569,7 +461,7 @@
         </div>
 
         {{-- Alpine.js / Hyvä callout --}}
-        <div class="reveal mt-10" style="transition-delay:.35s">
+        <div class="mt-10">
             <div class="painted-card painted-card--note sponsor-card p-6 flex flex-col sm:flex-row items-start gap-5">
                 <div class="shrink-0 w-11 h-11 rounded-xl border border-mw-200 bg-white flex items-center justify-center">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -589,7 +481,7 @@
         </div>
 
         {{-- Three advantages --}}
-        <div class="reveal grid sm:grid-cols-3 gap-4 mt-8" style="transition-delay:.4s">
+        <div class="grid sm:grid-cols-3 gap-4 mt-8">
 
             <div class="painted-card sponsor-card group flex flex-col gap-4 p-6">
                 <div class="w-10 h-10 rounded-xl bg-[#f5f3f0] border border-[#e8e5e1] flex items-center justify-center">
@@ -641,7 +533,7 @@
 <section id="compatibility" class="painted-section painted-section--paper py-36 px-6">
     <div class="mx-auto max-w-6xl">
 
-        <div class="reveal text-center mb-14">
+        <div class="text-center mb-14">
             <span class="eyebrow">Platform &amp; theme support</span>
             <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
                 Compatibility
@@ -651,18 +543,18 @@
             </p>
         </div>
 
-        <div class="reveal mb-5" style="transition-delay:.08s">
+        <div class="mb-5">
             <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Platforms</span>
         </div>
 
-        <div class="reveal grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6" style="transition-delay:.12s">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
             <a href="https://mage-os.org/product/releases/" target="_blank" rel="noopener"
                class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
-                    <img src="/images/compatibility/mage-os.webp"
+                    <x-responsive-image src="/images/compatibility/mage-os.webp"
                          alt="Abstract modular commerce foundation connected to a storefront and dashboard"
-                         width="768" height="768" loading="lazy"
-                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
+                         width="768" height="768"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]" sizes="(min-width: 1200px) 368px, (min-width: 640px) calc((100vw - 96px) / 3), calc(100vw - 48px)" />
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Mage-OS</h4>
@@ -676,10 +568,10 @@
             <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/magento-open-source/overview" target="_blank" rel="noopener"
                class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
-                    <img src="/images/compatibility/magento-open-source.webp"
+                    <x-responsive-image src="/images/compatibility/magento-open-source.webp"
                          alt="Abstract open commerce blueprint becoming a storefront"
-                         width="768" height="768" loading="lazy"
-                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
+                         width="768" height="768"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]" sizes="(min-width: 1200px) 368px, (min-width: 640px) calc((100vw - 96px) / 3), calc(100vw - 48px)" />
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Magento Open Source</h4>
@@ -693,10 +585,10 @@
             <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/overview" target="_blank" rel="noopener"
                class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
-                    <img src="/images/compatibility/adobe-commerce.webp"
+                    <x-responsive-image src="/images/compatibility/adobe-commerce.webp"
                          alt="Abstract connected multi-store commerce platform"
-                         width="768" height="768" loading="lazy"
-                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
+                         width="768" height="768"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]" sizes="(min-width: 1200px) 368px, (min-width: 640px) calc((100vw - 96px) / 3), calc(100vw - 48px)" />
                 </div>
                 <div class="p-4 sm:p-5">
                     <h4 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Adobe Commerce</h4>
@@ -709,7 +601,7 @@
 
         </div>
 
-        <div class="painted-card reveal mt-8 p-7 sm:p-9" style="transition-delay:.13s">
+        <div class="painted-card mt-8 p-7 sm:p-9">
             <h3 class="text-xl font-bold text-[#1d1d1f]">Check the versions you deploy</h3>
             <p class="mt-3 max-w-3xl leading-relaxed text-[#626267]">
                 Magewire V3 requires PHP 8.2 or newer. Magento Open Source and Mage-OS version combinations are exercised in the project's production-build workflow. Check that matrix, your Magento distribution, and your theme integration before upgrading a store.
@@ -717,19 +609,19 @@
             <a href="https://github.com/magewirephp/magewire/blob/main/.github/workflows/production-build.yml" target="_blank" rel="noopener" class="mt-5 inline-flex font-semibold text-mw-600 hover:underline">See the tested build matrix &rarr;</a>
         </div>
 
-        <div class="reveal mt-16 mb-5 border-t border-[#eeeae6] pt-12" style="transition-delay:.14s">
+        <div class="mt-16 mb-5 border-t border-[#eeeae6] pt-12">
             <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Themes and areas</span>
         </div>
 
-        <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" style="transition-delay:.15s">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
 
             <a href="https://github.com/magewirephp/magewire-admin" target="_blank" rel="noopener"
                class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
-                    <img src="/images/compatibility/backend.webp"
+                    <x-responsive-image src="/images/compatibility/backend.webp"
                          alt="Abstract supported administration dashboard"
-                         width="768" height="768" loading="lazy"
-                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
+                         width="768" height="768"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]" sizes="(min-width: 1200px) 270px, (min-width: 1024px) calc((100vw - 120px) / 4), calc((100vw - 64px) / 2)" />
                 </div>
                 <div class="p-4 text-center sm:p-5">
                     <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Magento Admin</h3>
@@ -742,10 +634,10 @@
 
             <a href="https://github.com/magewirephp/magewire-hyva-theme" target="_blank" rel="noopener" class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
-                    <img src="/images/compatibility/hyva.webp"
+                    <x-responsive-image src="/images/compatibility/hyva.webp"
                          alt="Abstract fast storefront with a support check"
-                         width="768" height="768" loading="lazy"
-                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
+                         width="768" height="768"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]" sizes="(min-width: 1200px) 270px, (min-width: 1024px) calc((100vw - 120px) / 4), calc((100vw - 64px) / 2)" />
                 </div>
                 <div class="p-4 text-center sm:p-5">
                     <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Hyvä</h3>
@@ -758,10 +650,10 @@
 
             <a href="https://docs.magewirephp.nl/pages/theming/breeze.html?ref=main-website" target="_blank" rel="noopener" class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fffbf3]">
-                    <img src="/images/compatibility/breeze.webp"
+                    <x-responsive-image src="/images/compatibility/breeze.webp"
                          alt="Abstract storefront components connected by a circular flow"
-                         width="768" height="768" loading="lazy"
-                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
+                         width="768" height="768"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]" sizes="(min-width: 1200px) 270px, (min-width: 1024px) calc((100vw - 120px) / 4), calc((100vw - 64px) / 2)" />
                 </div>
                 <div class="p-4 text-center sm:p-5">
                     <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Breeze</h3>
@@ -774,10 +666,10 @@
 
             <a href="https://docs.magewirephp.nl/pages/theming/compatibility-module.html?ref=main-website" target="_blank" rel="noopener" class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#faf8f5]">
-                    <img src="/images/compatibility/luma.webp"
+                    <x-responsive-image src="/images/compatibility/luma.webp"
                          alt="Abstract storefront with a calm pause symbol and disconnected plug"
-                         width="768" height="768" loading="lazy"
-                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]">
+                         width="768" height="768"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]" sizes="(min-width: 1200px) 270px, (min-width: 1024px) calc((100vw - 120px) / 4), calc((100vw - 64px) / 2)" />
                 </div>
                 <div class="p-4 text-center sm:p-5">
                     <h3 class="font-bold leading-tight text-[#1d1d1f] sm:text-lg">Luma</h3>
@@ -803,7 +695,7 @@
 
     <div class="relative mx-auto max-w-5xl">
 
-        <div class="reveal mb-16 text-center">
+        <div class="mb-16 text-center">
             <span class="eyebrow !text-mw-400">Useful with Magewire</span>
             <h2 class="painted-title text-5xl font-bold tracking-tight text-white sm:text-6xl">
                 Tools
@@ -813,15 +705,14 @@
             </p>
         </div>
 
-        <article class="painted-card painted-card--feature reveal group grid overflow-hidden lg:grid-cols-[1.18fr_.82fr]"
-                 style="transition-delay:.15s">
+        <article class="painted-card painted-card--feature group grid overflow-hidden lg:grid-cols-[1.18fr_.82fr]">
             <a href="https://github.com/Inchoo/magento-bricklayer" target="_blank" rel="noopener"
                aria-label="View Magento Bricklayer on GitHub"
                class="relative min-h-[320px] overflow-hidden bg-[#f8eee5] lg:min-h-[470px]">
-                <img src="/images/tools/bricklayer.webp"
+                <x-responsive-image src="/images/tools/bricklayer.webp"
                      alt="A robotic bricklayer inspecting Magento runtime connections inside transparent building blocks"
-                     width="1200" height="800" loading="lazy"
-                     class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]">
+                     width="1200" height="800"
+                     class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" sizes="(max-width: 528px) 480px, (max-width: 1023px) calc(100vw - 48px), 705px" />
                 <span class="absolute inset-y-0 right-0 hidden w-px bg-black/5 lg:block" aria-hidden="true"></span>
             </a>
 
@@ -871,7 +762,7 @@
 <section id="sponsors" class="painted-section painted-section--canvas painted-section--after-ink py-36 px-6">
     <div class="mx-auto max-w-5xl">
 
-        <div class="reveal text-center mb-16">
+        <div class="text-center mb-16">
             <span class="eyebrow">Open Source</span>
             <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
                 Sponsors
@@ -881,19 +772,19 @@
             </p>
         </div>
 
-        <div class="reveal grid sm:grid-cols-2 gap-6 mb-8" style="transition-delay:.15s">
+        <div class="grid sm:grid-cols-2 gap-6 mb-8">
 
             <a href="https://vendic.nl" target="_blank" rel="noopener sponsored"
                class="painted-card sponsor-card group p-8 flex flex-col items-center text-center gap-5">
-                <img src="https://vendic.nl/img/logo.svg"
-                     alt="Vendic" class="h-10 w-auto" loading="lazy">
+                <img src="{{ \App\Support\FrontendAssets::url('images/identity/organizations/vendic') }}"
+                     alt="Vendic" class="h-10 w-auto" loading="lazy" decoding="async" fetchpriority="low">
                 <p class="text-base text-[#6e6e73]">Magento &amp; Hyvä agency from the Netherlands</p>
             </a>
 
             <a href="https://zero1.co.uk" target="_blank" rel="noopener sponsored"
                class="painted-card sponsor-card group p-8 flex flex-col items-center text-center gap-5">
-                <img src="https://www.zero1.co.uk/static/version1769734989/frontend/z1/hyva/en_GB/images/logo.svg"
-                     alt="Zero 1" class="h-10 w-auto" loading="lazy">
+                <img src="{{ \App\Support\FrontendAssets::url('images/identity/organizations/zero1') }}"
+                     alt="Zero 1" class="h-10 w-auto" loading="lazy" decoding="async" fetchpriority="low">
                 <p class="text-base text-[#6e6e73]">Ecommerce agency &amp; Magento specialists, UK</p>
             </a>
 
@@ -917,7 +808,7 @@
         </div>
 
         {{-- Contributors --}}
-        <div class="reveal mt-24 text-center mb-12">
+        <div class="mt-24 text-center mb-12">
             <span class="eyebrow">Built by the community</span>
             <h2 class="painted-title text-4xl sm:text-5xl font-bold tracking-tight text-[#1a1a1a]">
                 Contributors
@@ -957,14 +848,14 @@
                 ['handle' => 'mvenghaus',      'name' => 'mvenghaus'],
             ];
         @endphp
-        <h3 class="reveal text-center text-sm font-semibold uppercase tracking-wide text-[#9ca3af] mb-6">People</h3>
-        <div class="reveal flex flex-wrap justify-center gap-6 mb-16" style="transition-delay:.15s">
+        <h3 class="text-center text-sm font-semibold uppercase tracking-wide text-[#9ca3af] mb-6">People</h3>
+        <div class="flex flex-wrap justify-center gap-6 mb-16">
             @foreach ($contributors as $c)
                 <a href="https://github.com/{{ $c['handle'] }}" target="_blank" rel="noopener"
                    class="group flex flex-col items-center gap-2 w-20"
                    title="{{ $c['name'] }} (@{{ $c['handle'] }})">
-                    <img src="https://github.com/{{ $c['handle'] }}.png?size=96"
-                         alt="{{ $c['name'] }}" loading="lazy"
+                    <img src="{{ \App\Support\FrontendAssets::url('images/identity/people/'.$c['handle']) }}"
+                         alt="{{ $c['name'] }}" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low"
                          class="h-14 w-14 rounded-full ring-2 ring-transparent group-hover:ring-mw-400 transition-all">
                     <span class="text-xs text-[#71717a] group-hover:text-mw-600 transition-colors truncate max-w-full">{{ $c['name'] }}</span>
                 </a>
@@ -972,13 +863,13 @@
         </div>
 
         {{-- Companies backing Magewire --}}
-        <h3 class="reveal text-center text-sm font-semibold uppercase tracking-wide text-[#9ca3af] mb-6">Organizations</h3>
-        <div class="reveal flex flex-wrap justify-center gap-6" style="transition-delay:.15s">
+        <h3 class="text-center text-sm font-semibold uppercase tracking-wide text-[#9ca3af] mb-6">Organizations</h3>
+        <div class="flex flex-wrap justify-center gap-6">
             <a href="https://hyva.io" target="_blank" rel="noopener"
                class="group flex flex-col items-center gap-2 w-20"
                title="Hyvä Themes">
-                <img src="https://www.hyva.io/media/favicon/stores/1/Favicon.png"
-                     alt="Hyvä Themes" loading="lazy"
+                <img src="{{ \App\Support\FrontendAssets::url('images/identity/organizations/hyva') }}"
+                     alt="Hyvä Themes" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low"
                      class="h-14 w-14 rounded-full ring-2 ring-transparent group-hover:ring-mw-400 transition-all">
                 <span class="text-xs text-[#71717a] group-hover:text-mw-600 transition-colors truncate max-w-full">Hyvä</span>
             </a>
@@ -994,7 +885,7 @@
 <section class="painted-section painted-section--paper py-36 px-6">
     <div class="mx-auto max-w-5xl">
 
-        <div class="reveal text-center mb-16">
+        <div class="text-center mb-16">
             <span class="eyebrow">Real-world adoption</span>
             <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
                 Magewire in the wild.
@@ -1004,16 +895,16 @@
             </p>
         </div>
 
-        <div class="reveal grid md:grid-cols-2 gap-6" style="transition-delay:.15s">
+        <div class="grid md:grid-cols-2 gap-6">
 
             {{-- Hyvä Checkout --}}
             <a href="https://www.hyva.io/hyva-checkout.html" target="_blank" rel="noopener"
                class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-[3/2] overflow-hidden bg-[#fff9f4]">
-                    <img src="/images/hyva/checkout.webp"
+                    <x-responsive-image src="/images/hyva/checkout.webp"
                          alt="Abstract checkout steps flowing into a completed order"
-                         width="1536" height="1024" loading="lazy"
-                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]">
+                         width="1536" height="1024"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" sizes="(min-width: 1072px) 500px, (min-width: 768px) calc((100vw - 72px) / 2), calc(100vw - 48px)" />
                 </div>
 
                 <div class="flex items-center justify-between gap-5 p-6 sm:p-7">
@@ -1033,10 +924,10 @@
             <a href="https://www.hyva.io/hyva-commerce.html" target="_blank" rel="noopener"
                class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-[3/2] overflow-hidden bg-[#fbf8ff]">
-                    <img src="/images/hyva/cms.webp"
+                    <x-responsive-image src="/images/hyva/cms.webp"
                          alt="Abstract content blocks assembling into a storefront"
-                         width="1536" height="1024" loading="lazy"
-                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]">
+                         width="1536" height="1024"
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" sizes="(min-width: 1072px) 500px, (min-width: 768px) calc((100vw - 72px) / 2), calc(100vw - 48px)" />
                 </div>
 
                 <div class="flex items-center justify-between gap-5 p-6 sm:p-7">
@@ -1055,7 +946,7 @@
         </div>
 
         {{-- Suggest a project callout --}}
-        <div class="reveal mt-10" style="transition-delay:.3s">
+        <div class="mt-10">
             <div class="painted-card painted-card--note sponsor-card p-6 flex flex-col sm:flex-row items-start gap-5">
                 <div class="shrink-0 w-11 h-11 rounded-xl border border-mw-200 bg-white flex items-center justify-center">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#f26322" stroke-width="1.6" aria-hidden="true">
@@ -1079,22 +970,6 @@
 </main>
 
 @include('partials.footer')
-
-@fluxScripts
-@livewireScripts
-
-<script>
-    // Scroll-triggered reveal
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-</script>
 
 </body>
 </html>
