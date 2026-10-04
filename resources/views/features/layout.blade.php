@@ -10,33 +10,12 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#f26322">
+    <link rel="stylesheet" href="/css/app.css?v={{ filemtime(public_path('css/app.css')) }}">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800,900|jetbrains-mono:400,500&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                fontFamily: {
-                    sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                    mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
-                },
-                extend: {
-                    colors: {
-                        mw: {
-                            50: '#fff4ee', 100: '#ffe6d3', 200: '#ffc9a6', 300: '#ffa36d',
-                            400: '#ff7232', 500: '#f26322', 600: '#e04e0f', 700: '#b83a0e',
-                            800: '#932f13', 900: '#772913',
-                        },
-                    },
-                },
-            },
-        }
-    </script>
 
     <style>
         [x-cloak] { display: none !important; }
@@ -87,6 +66,8 @@
 </main>
 
 @include('partials.footer')
+
+@livewireScripts
 
 </body>
 </html>

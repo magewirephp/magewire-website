@@ -18,9 +18,24 @@ php artisan key:generate
 php artisan serve
 ```
 
-Open the URL printed by `artisan serve`. The site's CSS and Alpine.js load
-from CDNs; an internet connection is needed to inspect their appearance and
-browser behavior locally.
+Open the URL printed by `artisan serve`. Tailwind CSS is compiled into
+`public/css/app.css`, and Livewire serves the site's single Alpine.js runtime
+locally. Fonts load from Bunny Fonts.
+
+## Build the styles
+
+Node.js and npm are needed when changing Tailwind utility classes or
+`tailwind.config.js`:
+
+```shell
+npm ci
+npm run build
+```
+
+Run `npm run dev` to rebuild styles as you edit. Commit the generated
+`public/css/app.css` with template and configuration changes so PHP-only
+deployments have the production stylesheet without running a Node.js build.
+The stylesheet URL changes when the generated file is updated.
 
 ## Edit the content
 
