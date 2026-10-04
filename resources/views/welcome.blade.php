@@ -582,7 +582,10 @@
         <div class="reveal mt-4 flex items-center justify-center gap-3 text-sm" style="transition-delay:.3s">
             <span class="w-16 h-px bg-[#e8e5e1]"></span>
             <span class="inline-flex items-center gap-2 bg-white border border-[#e8e5e1] rounded-full px-4 py-1.5 text-[#6e6e73]">
-                <span class="w-2 h-2 rounded-full bg-mw-500 shrink-0"></span>
+                <svg class="w-4 h-4 shrink-0 text-mw-500" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/>
+                </svg>
                 Familiar wire: directives, rendered in PHTML.
             </span>
             <span class="w-16 h-px bg-[#e8e5e1]"></span>
