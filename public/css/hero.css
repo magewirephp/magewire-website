@@ -1,0 +1,84 @@
+.painted-hero { background: #fafaf8; }
+.painted-hero__scene {
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 460px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.painted-hero__sky {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.painted-hero__cloud {
+    position: absolute;
+    width: clamp(280px, 33vw, 500px);
+    height: auto;
+    opacity: .7;
+    animation: hero-cloud 15s ease-in-out infinite alternate;
+}
+.painted-hero__cloud--left { top: 20%; left: -100px; animation-delay: -3s; }
+.painted-hero__cloud--right {
+    top: 31%;
+    right: -90px;
+    width: clamp(240px, 28vw, 420px);
+    animation-duration: 19s;
+    animation-delay: -12s;
+    animation-direction: alternate-reverse;
+}
+
+.painted-hero__canopy {
+    position: absolute;
+    top: -135px;
+    width: clamp(280px, 27vw, 420px);
+    opacity: .65;
+    animation: hero-canopy 4.5s ease-in-out infinite alternate;
+}
+.painted-hero__canopy img { width: 100%; height: auto; }
+.painted-hero__canopy--left { left: -135px; transform-origin: top left; }
+.painted-hero__canopy--left img { transform: scaleX(-1); }
+.painted-hero__canopy--right {
+    right: -135px;
+    transform-origin: top right;
+    animation-duration: 5.2s;
+    animation-delay: -2s;
+}
+
+.painted-hero [data-scene-animated] { animation-play-state: paused; }
+.painted-hero.is-animated [data-scene-animated] { animation-play-state: running; }
+.painted-hero__scene::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 30%, #fafaf8),
+                radial-gradient(ellipse 48% 60% at 50% 46%, rgba(250, 250, 248, .55), transparent);
+}
+
+@keyframes hero-cloud {
+    from { transform: translateX(-35px); }
+    to { transform: translateX(110px); }
+}
+@keyframes hero-canopy {
+    from { transform: rotate(-4deg); }
+    to { transform: rotate(5deg); }
+}
+
+@media (max-width: 640px) {
+    .painted-hero__cloud { width: 280px; opacity: .5; }
+    .painted-hero__cloud--left { left: -150px; top: 22%; }
+    .painted-hero__cloud--right { right: -170px; top: 34%; }
+    .painted-hero__canopy { width: 240px; top: -100px; opacity: .45; }
+    .painted-hero__canopy--left { left: -160px; }
+    .painted-hero__canopy--right { right: -160px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .painted-hero [data-scene-animated] { animation: none; }
+}
