@@ -30,7 +30,7 @@
         .code-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,.16); border-radius: 99px; }
     </style>
 </head>
-<body class="overflow-x-hidden bg-[#fafaf8] font-sans text-[#1a1a1a] antialiased">
+<body class="overflow-x-hidden bg-[#fafafa] font-sans text-[#1a1a1a] antialiased">
 
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[9999] focus:rounded-xl focus:bg-mw-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-white">
     Skip to main content
@@ -38,7 +38,7 @@
 
 @include('partials.header', ['sticky' => true])
 
-<nav aria-label="Feature pages" class="feature-nav sticky z-40 border-b border-[#e9e5e0] bg-[#fafaf8]/95 backdrop-blur-xl">
+<nav aria-label="Feature pages" class="feature-nav sticky z-40 border-b border-[#e9e5e0] bg-[#fafafa]/95 backdrop-blur-xl">
     <div class="mx-auto flex max-w-6xl items-center gap-2 overflow-x-auto px-6 py-3">
         <span class="mr-3 hidden text-xs font-bold uppercase tracking-[.14em] text-[#a1a1aa] sm:inline">Features</span>
         <a href="{{ route('features.compiler') }}"

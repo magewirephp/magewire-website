@@ -102,7 +102,7 @@
         [x-cloak] { display: none !important; }
     </style>
 </head>
-<body class="bg-[#fafaf8] text-[#1a1a1a] antialiased font-sans overflow-x-hidden">
+<body class="bg-[#fafafa] text-[#1a1a1a] antialiased font-sans overflow-x-hidden">
 
 {{-- Skip link --}}
 <a href="#main"
@@ -337,7 +337,7 @@
 {{-- ══════════════════════════════════
      INSTALLATION
      ══════════════════════════════════ --}}
-<section id="install" class="-mt-52 pt-[260px] pb-36 px-6 bg-[#fafaf8] relative z-0"
+<section id="install" class="-mt-52 pt-[260px] pb-36 px-6 bg-[#fafafa] relative z-0"
          style="box-shadow: 0 -40px 80px 0 rgba(0,0,0,0.10)">
     <div class="mx-auto max-w-3xl">
 
@@ -416,7 +416,7 @@
 {{-- ══════════════════════════════════
      LIVEWIRE PARITY
      ══════════════════════════════════ --}}
-<section class="py-36 px-6 bg-[#fafaf8]">
+<section class="py-36 px-6 bg-[#fafafa]">
 
     <div class="mx-auto max-w-5xl">
 
@@ -570,7 +570,7 @@
 
         {{-- Alpine.js / Hyvä callout --}}
         <div class="reveal mt-10" style="transition-delay:.35s">
-            <div class="painted-card painted-card--warm sponsor-card p-6 flex flex-col sm:flex-row items-start gap-5">
+            <div class="painted-card painted-card--note sponsor-card p-6 flex flex-col sm:flex-row items-start gap-5">
                 <div class="shrink-0 w-11 h-11 rounded-xl border border-mw-200 bg-white flex items-center justify-center">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M3 20l5-8 4 5 3-4 6 7H3Z" stroke="#f26322" stroke-width="1.5" stroke-linejoin="round" fill="rgba(242,99,34,0.08)"/>
@@ -899,7 +899,7 @@
 
         </div>
 
-        <div class="painted-card painted-card--warm p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="painted-card painted-card--note p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
                 <p class="text-lg font-semibold text-[#1a1a1a]">Become a sponsor</p>
             </div>
@@ -1056,7 +1056,7 @@
 
         {{-- Suggest a project callout --}}
         <div class="reveal mt-10" style="transition-delay:.3s">
-            <div class="painted-card painted-card--warm sponsor-card p-6 flex flex-col sm:flex-row items-start gap-5">
+            <div class="painted-card painted-card--note sponsor-card p-6 flex flex-col sm:flex-row items-start gap-5">
                 <div class="shrink-0 w-11 h-11 rounded-xl border border-mw-200 bg-white flex items-center justify-center">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#f26322" stroke-width="1.6" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.183-.498c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/>

@@ -30,7 +30,7 @@
         .code-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,.16); border-radius: 99px; }
     </style>
 </head>
-<body class="overflow-x-hidden bg-[#fafaf8] font-sans text-[#1a1a1a] antialiased">
+<body class="overflow-x-hidden bg-[#fafafa] font-sans text-[#1a1a1a] antialiased">
 
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[9999] focus:rounded-xl focus:bg-mw-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-white">
     Skip to main content
@@ -145,7 +145,7 @@
                 </div>
             </div>
 
-            <div class="painted-card painted-card--warm mt-12 p-7 sm:flex sm:items-start sm:gap-5">
+            <div class="painted-card painted-card--note mt-12 p-7 sm:flex sm:items-start sm:gap-5">
                 <span class="mb-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-amber-700 shadow-sm sm:mb-0" aria-hidden="true">≈</span>
                 <div>
                     <h3 class="font-bold text-[#282824]">Familiar does not mean identical.</h3>
@@ -177,7 +177,7 @@
                         On a busy Magento store, unnecessary round trips add latency and load. Magewire does not make that concern disappear, and it should not be used as an excuse to stop thinking about architecture.
                     </p>
                 </article>
-                <article class="painted-card painted-card--warm p-8">
+                <article class="painted-card painted-card--note p-8">
                     <span class="font-mono text-xs font-bold text-mw-700">THE V3 APPROACH</span>
                     <h3 class="mt-5 text-2xl font-bold">Make requests intentional</h3>
                     <p class="mt-3 leading-relaxed text-[#6f625b]">

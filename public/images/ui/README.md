@@ -5,5 +5,5 @@ These hand-authored SVGs add painted details to the UI without raster images.
 heading accents. Their transparency defines the masks, while
 `public/css/painted-ui.css` supplies the colors and sizes.
 
-The stylesheet also adds subtle SVG noise and pigment washes to paper surfaces.
+The stylesheet also adds subtle SVG noise to neutral paper surfaces.
 All these decorations are static and do not receive pointer events.

@@ -1,4 +1,4 @@
-.painted-hero { background: #fafaf8; }
+.painted-hero { background: #fafafa; }
 .painted-hero__scene {
     position: absolute;
     inset-inline: 0;
@@ -57,8 +57,8 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent 30%, #fafaf8),
-                radial-gradient(ellipse 48% 60% at 50% 46%, rgba(250, 250, 248, .55), transparent);
+    background: linear-gradient(to bottom, transparent 30%, #fafafa),
+                radial-gradient(ellipse 48% 60% at 50% 46%, rgba(250, 250, 250, .55), transparent);
 }
 
 @keyframes hero-cloud {

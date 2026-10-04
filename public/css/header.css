@@ -14,7 +14,7 @@ html { scroll-padding-top: calc(var(--site-header-height) + 24px); }
 
 .site-header.nav-solid,
 .site-header.sticky {
-    background: rgba(250, 250, 248, .94);
+    background: rgba(250, 250, 250, .94);
     border-bottom-color: #ece9e5;
     backdrop-filter: blur(14px);
 }
@@ -89,7 +89,7 @@ html { scroll-padding-top: calc(var(--site-header-height) + 24px); }
         max-height: calc(100dvh - var(--site-header-height));
         overflow-y: auto;
         border-top: 1px solid rgba(127, 95, 59, .14);
-        background: #fff7e9;
+        background: #ffffff;
     }
     .site-header__mobile-links {
         display: grid;
