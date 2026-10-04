@@ -371,14 +371,21 @@
          style="box-shadow: 0 -40px 80px 0 rgba(0,0,0,0.10)">
     <div class="mx-auto max-w-3xl">
 
-        <div class="reveal text-center mb-16">
-            <span class="eyebrow">Get started</span>
-            <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
-                Install
-            </h2>
-            <p class="mt-6 text-lg text-[#71717a] max-w-xl mx-auto leading-relaxed">
-                Install the core, then add the integration for your storefront or admin area.
-            </p>
+        <div class="reveal mb-16 grid items-center gap-6 text-center sm:grid-cols-[1.1fr_.9fr] sm:gap-8 sm:text-left">
+            <div>
+                <span class="eyebrow">Get started</span>
+                <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
+                    Install
+                </h2>
+                <p class="mt-6 text-lg text-[#71717a] max-w-xl mx-auto leading-relaxed sm:mx-0">
+                    Install the core, then add the integration for your storefront or admin area.
+                </p>
+            </div>
+            <figure class="mx-auto w-full max-w-[240px] sm:max-w-[300px]">
+                <img src="/images/sections/install-toolkit.webp"
+                     alt="A painted developer toolkit with template cards, connected components, and a completion check"
+                     width="960" height="640" loading="lazy" decoding="async" class="h-auto w-full">
+            </figure>
         </div>
 
         <div x-data="{ copied: false }"

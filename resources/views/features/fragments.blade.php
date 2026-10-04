@@ -75,10 +75,17 @@
 
 <section class="border-y border-[#e9e5e0] bg-white px-6 py-24 sm:py-28">
     <div class="mx-auto max-w-6xl">
-        <div class="max-w-2xl">
-            <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Why it exists</span>
-            <h2 class="mt-4 text-4xl font-bold tracking-[-.04em] sm:text-5xl">Some markup needs<br>more than an echo.</h2>
-            <p class="mt-5 text-lg leading-relaxed text-[#71717a]">Fragments create one deliberate place for output-aware behavior without moving that complexity into the template.</p>
+        <div class="grid items-center gap-8 lg:grid-cols-[1.15fr_.85fr]">
+            <div class="max-w-2xl">
+                <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Why it exists</span>
+                <h2 class="mt-4 text-4xl font-bold tracking-[-.04em] sm:text-5xl">Some markup needs<br>more than an echo.</h2>
+                <p class="mt-5 text-lg leading-relaxed text-[#71717a]">Fragments create one deliberate place for output-aware behavior without moving that complexity into the template.</p>
+            </div>
+            <figure class="mx-auto w-full max-w-[280px] lg:max-w-[360px]">
+                <img src="/images/sections/fragment-boundary.webp"
+                     alt="Painted markup and style cards inside a highlighted browser region with a validation check"
+                     width="960" height="640" loading="lazy" decoding="async" class="h-auto w-full">
+            </figure>
         </div>
 
         <div class="mt-12 grid gap-5 md:grid-cols-3">

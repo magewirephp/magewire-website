@@ -85,6 +85,11 @@
             <div>
                 <span class="text-xs font-bold uppercase tracking-[.14em] text-mw-600">Why it started</span>
                 <h2 class="mt-4 text-3xl font-bold tracking-[-.04em] text-[#1d1d1f] sm:text-4xl">The wheel was already round.</h2>
+                <figure class="mx-auto mt-6 w-full max-w-[280px] md:mx-0">
+                    <img src="/images/sections/familiar-wheel.webp"
+                         alt="A painted wooden wheel beside a matching frame and reusable component blocks"
+                         width="960" height="640" loading="lazy" decoding="async" class="h-auto w-full">
+                </figure>
             </div>
             <div class="space-y-5 text-lg leading-relaxed text-[#626267]">
                 <p>
