@@ -237,7 +237,7 @@
         <div class="mb-16 grid items-center gap-6 text-center sm:grid-cols-[1.1fr_.9fr] sm:gap-8 sm:text-left">
             <div>
                 <span class="eyebrow">Get started</span>
-                <h2 class="painted-title text-5xl sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
+                <h2 class="painted-title mx-auto w-fit text-5xl sm:mx-0 sm:text-6xl font-bold tracking-tight text-[#1a1a1a]">
                     Install
                 </h2>
                 <p class="mt-6 text-lg text-[#71717a] max-w-xl mx-auto leading-relaxed sm:mx-0">
