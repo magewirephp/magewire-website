@@ -41,5 +41,48 @@ Alpine.data('siteStats', () => ({
     },
 }));
 
+Alpine.data('contributorStats', () => ({
+    counts: {},
+    count(handle, fallback) {
+        return this.counts[handle.toLowerCase()] ?? fallback;
+    },
+    label(handle, fallback) {
+        const count = this.count(handle, fallback);
+        return `${count} ${count === 1 ? 'contribution' : 'contributions'} to Magewire`;
+    },
+    init() {
+        const key = 'magewire:contributors:v1';
+        const validCounts = counts => counts && typeof counts === 'object' && !Array.isArray(counts)
+            && Object.values(counts).every(count => Number.isInteger(count) && count >= 0);
+        try {
+            const saved = JSON.parse(localStorage.getItem(key));
+            if (saved && Date.now() - saved.savedAt < 3600000 && validCounts(saved.counts)) {
+                this.counts = saved.counts;
+                return;
+            }
+        } catch {}
+
+        const refresh = async () => {
+            try {
+                const response = await fetch('https://api.github.com/repos/magewirephp/magewire/contributors?per_page=100', { signal: AbortSignal.timeout?.(5000) });
+                if (!response.ok) return;
+                const contributors = await response.json();
+                if (!Array.isArray(contributors)) return;
+                const counts = Object.fromEntries(contributors
+                    .filter(person => typeof person.login === 'string' && Number.isInteger(person.contributions) && person.contributions >= 0)
+                    .map(person => [person.login.toLowerCase(), person.contributions]));
+                this.counts = counts;
+                try { localStorage.setItem(key, JSON.stringify({ counts, savedAt: Date.now() })); } catch {}
+            } catch {}
+        };
+        const schedule = () => {
+            if ('requestIdleCallback' in window) requestIdleCallback(refresh, { timeout: 2000 });
+            else setTimeout(refresh, 200);
+        };
+        if (document.readyState === 'complete') schedule();
+        else window.addEventListener('load', schedule, { once: true });
+    },
+}));
+
 window.Alpine = Alpine;
 Alpine.start();

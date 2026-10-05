@@ -77,9 +77,10 @@ files, and `brotli_static on` if the Brotli module is installed. Exclude PHP and
 HTML from the one-year cache policy. See the official [Nginx gzip static
 documentation](https://nginx.org/en/docs/http/ngx_http_gzip_static_module.html).
 
-Repository stars and download counts refresh after page load using a small
-Packagist stats endpoint, with a one-hour browser cache. Network failures retain
-the displayed fallback counts.
+Repository stars, contributor commit counts, and download counts refresh after
+page load using the GitHub and Packagist APIs, with a one-hour browser cache.
+Network failures retain the displayed fallback counts. Contributor fallbacks
+are maintained alongside the people listed in `resources/views/welcome.blade.php`.
 
 ## Edit the content
 

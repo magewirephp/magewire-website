@@ -820,59 +820,57 @@
 
         {{-- People --}}
         @php
+            // GitHub contribution counts provide a fallback when live stats are unavailable.
             $contributors = [
-                ['handle' => 'wpoortman',      'name' => 'Willem Poortman'],
-                ['handle' => 'Vinai',          'name' => 'Vinai Kopp'],
-                ['handle' => 'pykettk',        'name' => 'Kiel'],
-                ['handle' => 'Tjitse-E',       'name' => 'Tjitse'],
-                ['handle' => 'ryanhissey',     'name' => 'Ryan Hissey'],
-                ['handle' => 'adamzero1',      'name' => 'Adam'],
-                ['handle' => 'angelvilaplana', 'name' => 'Angel Vilaplana'],
-                ['handle' => 'speedupmate',    'name' => 'Anton Siniorg'],
-                ['handle' => 'alucardatem',    'name' => 'Dan-Andrei Rotariu'],
-                ['handle' => 'quanghien95',    'name' => 'Jacob'],
-                ['handle' => 'JeroenBoersma',  'name' => 'Jeroen Boersma'],
-                ['handle' => 'jeroennoten',    'name' => 'Jeroen Noten'],
-                ['handle' => 'jissereitsma',   'name' => 'Jisse Reitsma'],
-                ['handle' => 'KamilBalwierz',  'name' => 'Kamil Balwierz'],
-                ['handle' => 'ProxiBlue',      'name' => 'Lucas van Staden'],
-                ['handle' => 'markshust',      'name' => 'Mark Shust'],
-                ['handle' => 'MartinNguyen211','name' => 'Martin Nguyen'],
-                ['handle' => 'mehmetuygun',    'name' => 'Mehmet Uygun'],
-                ['handle' => 'psopacua',       'name' => 'Pascal Sopacua'],
-                ['handle' => 'peterjaap',      'name' => 'Peter Jaap Blaakmeer'],
-                ['handle' => 'hostep',         'name' => 'Pieter Hoste'],
-                ['handle' => 'rossmc',         'name' => 'Ross'],
-                ['handle' => 'Morgy93',        'name' => 'Thomas Hauschild'],
-                ['handle' => 'kolaente',       'name' => 'kolaente'],
-                ['handle' => 'mvenghaus',      'name' => 'mvenghaus'],
+                ['handle' => 'wpoortman',      'name' => 'Willem Poortman',    'contributions' => 185],
+                ['handle' => 'Vinai',          'name' => 'Vinai Kopp',         'contributions' => 13],
+                ['handle' => 'pykettk',        'name' => 'Kiel',               'contributions' => 6],
+                ['handle' => 'Tjitse-E',       'name' => 'Tjitse',             'contributions' => 4],
+                ['handle' => 'ryanhissey',     'name' => 'Ryan Hissey',        'contributions' => 7],
+                ['handle' => 'adamzero1',      'name' => 'Adam',               'contributions' => 2],
+                ['handle' => 'angelvilaplana', 'name' => 'Angel Vilaplana',    'contributions' => 1],
+                ['handle' => 'speedupmate',    'name' => 'Anton Siniorg',      'contributions' => 1],
+                ['handle' => 'alucardatem',    'name' => 'Dan-Andrei Rotariu', 'contributions' => 1],
+                ['handle' => 'quanghien95',    'name' => 'Jacob',              'contributions' => 1],
+                ['handle' => 'JeroenBoersma',  'name' => 'Jeroen Boersma',     'contributions' => 1],
+                ['handle' => 'jeroennoten',    'name' => 'Jeroen Noten',       'contributions' => 1],
+                ['handle' => 'jissereitsma',   'name' => 'Jisse Reitsma',       'contributions' => 1],
+                ['handle' => 'KamilBalwierz',  'name' => 'Kamil Balwierz',     'contributions' => 1],
+                ['handle' => 'ProxiBlue',      'name' => 'Lucas van Staden',   'contributions' => 1],
+                ['handle' => 'markshust',      'name' => 'Mark Shust',         'contributions' => 1],
+                ['handle' => 'MartinNguyen211','name' => 'Martin Nguyen',      'contributions' => 1],
+                ['handle' => 'mehmetuygun',    'name' => 'Mehmet Uygun',       'contributions' => 1],
+                ['handle' => 'psopacua',       'name' => 'Pascal Sopacua',     'contributions' => 1],
+                ['handle' => 'peterjaap',      'name' => 'Peter Jaap Blaakmeer','contributions' => 1],
+                ['handle' => 'hostep',         'name' => 'Pieter Hoste',       'contributions' => 1],
+                ['handle' => 'rossmc',         'name' => 'Ross',               'contributions' => 1],
+                ['handle' => 'Morgy93',        'name' => 'Thomas Hauschild',    'contributions' => 1],
+                ['handle' => 'kolaente',       'name' => 'kolaente',           'contributions' => 1],
+                ['handle' => 'mvenghaus',      'name' => 'mvenghaus',          'contributions' => 1],
             ];
         @endphp
         <h3 class="text-center text-sm font-semibold uppercase tracking-wide text-[#9ca3af] mb-6">People</h3>
-        <div class="flex flex-wrap justify-center gap-6 mb-16">
+        <div x-data="contributorStats" class="flex flex-wrap justify-center gap-6">
             @foreach ($contributors as $c)
+                @php($contributionLabel = $c['contributions'].' '.($c['contributions'] === 1 ? 'contribution' : 'contributions').' to Magewire')
                 <a href="https://github.com/{{ $c['handle'] }}" target="_blank" rel="noopener"
                    class="group flex flex-col items-center gap-2 w-20"
                    title="{{ $c['name'] }} (@{{ $c['handle'] }})">
-                    <img src="{{ \App\Support\FrontendAssets::url('images/identity/people/'.$c['handle']) }}"
-                         alt="{{ $c['name'] }}" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low"
-                         class="h-14 w-14 rounded-full ring-2 ring-transparent group-hover:ring-mw-400 transition-all">
+                    <span class="relative block h-14 w-14">
+                        <img src="{{ \App\Support\FrontendAssets::url('images/identity/people/'.$c['handle']) }}"
+                             alt="{{ $c['name'] }}" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low"
+                             class="h-14 w-14 rounded-full ring-2 ring-transparent group-hover:ring-mw-400 transition-all">
+                        <span class="absolute -bottom-1 -right-1 flex h-5 min-w-7 items-center justify-center rounded-md px-1.5
+                                     bg-mw-700 text-white text-[10px] font-bold leading-none tabular-nums ring-2 ring-[#fafafa] shadow-sm"
+                              title="{{ $contributionLabel }}"
+                              :title="label('{{ $c['handle'] }}', {{ $c['contributions'] }})">
+                            <span aria-hidden="true" x-text="count('{{ $c['handle'] }}', {{ $c['contributions'] }})">{{ $c['contributions'] }}</span>
+                            <span class="sr-only" x-text="label('{{ $c['handle'] }}', {{ $c['contributions'] }})">{{ $contributionLabel }}</span>
+                        </span>
+                    </span>
                     <span class="text-xs text-[#71717a] group-hover:text-mw-600 transition-colors truncate max-w-full">{{ $c['name'] }}</span>
                 </a>
             @endforeach
-        </div>
-
-        {{-- Companies backing Magewire --}}
-        <h3 class="text-center text-sm font-semibold uppercase tracking-wide text-[#9ca3af] mb-6">Organizations</h3>
-        <div class="flex flex-wrap justify-center gap-6">
-            <a href="https://hyva.io" target="_blank" rel="noopener"
-               class="group flex flex-col items-center gap-2 w-20"
-               title="Hyvä Themes">
-                <img src="{{ \App\Support\FrontendAssets::url('images/identity/organizations/hyva') }}"
-                     alt="Hyvä Themes" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low"
-                     class="h-14 w-14 rounded-full ring-2 ring-transparent group-hover:ring-mw-400 transition-all">
-                <span class="text-xs text-[#71717a] group-hover:text-mw-600 transition-colors truncate max-w-full">Hyvä</span>
-            </a>
         </div>
 
     </div>
