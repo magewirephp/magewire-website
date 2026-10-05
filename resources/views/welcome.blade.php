@@ -552,7 +552,7 @@
                class="painted-card group overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <div class="aspect-square overflow-hidden bg-[#fff9f4]">
                     <x-responsive-image src="/images/compatibility/mage-os.webp"
-                         alt="Abstract modular commerce foundation connected to a storefront and dashboard"
+                         alt="Painted Mage-OS logo above a connected storefront and administration dashboard"
                          width="768" height="768"
                          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]" sizes="(min-width: 1200px) 368px, (min-width: 640px) calc((100vw - 96px) / 3), calc(100vw - 48px)" />
                 </div>

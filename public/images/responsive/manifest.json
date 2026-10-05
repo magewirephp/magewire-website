@@ -35,10 +35,10 @@
     "avif": ""
   },
   "/images/compatibility/mage-os.webp": {
-    "fallback": "/images/compatibility/mage-os.webp?v=b3941550550c",
+    "fallback": "/images/compatibility/mage-os.webp?v=11f013a2ab20",
     "width": 768,
     "height": 768,
-    "webp": "/images/responsive/compatibility-mage-os-384-1620466bf65b.webp 384w, /images/responsive/compatibility-mage-os-576-57a702f8c94b.webp 576w, /images/compatibility/mage-os.webp?v=b3941550550c 768w",
+    "webp": "/images/responsive/compatibility-mage-os-384-b906a9f51297.webp 384w, /images/responsive/compatibility-mage-os-576-7cc974683286.webp 576w, /images/compatibility/mage-os.webp?v=11f013a2ab20 768w",
     "avif": ""
   },
   "/images/compatibility/magento-open-source.webp": {

@@ -32,9 +32,19 @@ Constraints: preserve the original image aspect ratio and broadly the original c
 
 ### mage-os
 
+The central symbol was corrected using the official mark from the [Mage-OS website](https://mage-os.org/) and its [media kit](https://mage-os.org/about/media-kit/). The [reference SVG](compatibility/mage-os-reference.svg) retains the original four paths and orange fills; the artwork follows its wide connected zigzag silhouette.
+
+Correction prompt (built-in imagegen edit, with the existing artwork as Image 1 and a PNG rendering of the official reference SVG as Image 2):
+
 ```text
-Image-specific invariants: Keep the central orange modular Mage-OS geometric foundation, a little storefront on the left, administration dashboard on the right, connecting paths and green check medallion.
-Framing: square.
+Use case: precise-object-edit.
+Asset type: Mage-OS compatibility illustration on the Magewire website.
+Input images: Image 1 is the EDIT TARGET, an existing square gouache illustration. Image 2 is the authoritative OFFICIAL MAGE-OS LOGO MARK reference, shown on transparency; use its exact shape and proportions.
+Primary request: Correct ONLY the large orange symbol in Image 1. The existing tall folded cube is the wrong logo. Replace it with the actual wide Mage-OS mark from Image 2.
+Logo fidelity is the highest priority: faithfully copy the entire connected horizontal zigzag silhouette, its two upper peaks and three lower points, the exact arrangement of three isometric orange faces, the notches and edges, and the width-to-height ratio of approximately 2.08:1. Keep both official orange colors. Do not invent a generic M, single cube, V, Magento hexagon, extra block, lettering, or emblem. The reference already includes its isometric geometry; do not rotate it or apply extra perspective.
+Style: keep the website's hand-painted matte gouache treatment. Apply restrained brush texture to the accurately shaped logo faces while keeping the geometry crisp and unmistakable at small card size. Its outline must match Image 2, not the original symbol.
+Composition: place the corrected logo prominently in the upper center of the original scene, with its naturally wider and shorter proportions. Keep it fully visible and clearly separated from the storefront and dashboard. Keep the original cream painted sky, dark foundation platform, little storefront on the left, administration dashboard on the right, orange connecting paths and green check medallion, their scale and spatial arrangement unchanged. Adjust only the logo's immediate shadow if needed.
+Constraints: one finished square image; opaque background; no text, no watermark, no additional objects; preserve the existing scene and palette apart from replacing the incorrect symbol.
 ```
 
 ### magento-open-source

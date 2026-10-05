@@ -111,22 +111,22 @@
   },
   {
     "source": "/images/compatibility/mage-os.webp",
-    "originalBytes": 56698,
+    "originalBytes": 53784,
     "webp": [
       {
         "width": 384,
-        "url": "/images/responsive/compatibility-mage-os-384-1620466bf65b.webp",
-        "bytes": 29536
+        "url": "/images/responsive/compatibility-mage-os-384-b906a9f51297.webp",
+        "bytes": 28346
       },
       {
         "width": 576,
-        "url": "/images/responsive/compatibility-mage-os-576-57a702f8c94b.webp",
-        "bytes": 44800
+        "url": "/images/responsive/compatibility-mage-os-576-7cc974683286.webp",
+        "bytes": 42390
       },
       {
         "width": 768,
-        "url": "/images/compatibility/mage-os.webp?v=b3941550550c",
-        "bytes": 56698
+        "url": "/images/compatibility/mage-os.webp?v=11f013a2ab20",
+        "bytes": 53784
       }
     ],
     "avif": []
