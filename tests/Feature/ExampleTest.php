@@ -92,6 +92,21 @@ class ExampleTest extends TestCase
             ->assertSee('Compatible with Magewire V1 + V3');
     }
 
+    public function test_homepage_announces_the_security_release(): void
+    {
+        $this->get('/')
+            ->assertOk()
+            ->assertSee('id="security-notice"', false)
+            ->assertSee('Magewire 3.7.2')
+            ->assertSee('href="https://github.com/magewirephp/magewire/releases/tag/3.7.2"', false)
+            ->assertSee('data-notice-dismiss="3.7.2"', false)
+            ->assertSee("localStorage.getItem('magewire:notice-dismissed') === '3.7.2'", false);
+
+        $this->get('/why')
+            ->assertOk()
+            ->assertDontSee('id="security-notice"', false);
+    }
+
     public function test_why_page_tells_the_project_story(): void
     {
         $this->get('/why')

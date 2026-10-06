@@ -84,5 +84,10 @@ Alpine.data('contributorStats', () => ({
     },
 }));
 
+document.querySelectorAll('[data-notice-dismiss]').forEach(button => button.addEventListener('click', () => {
+    document.documentElement.classList.add('notice-dismissed');
+    try { localStorage.setItem('magewire:notice-dismissed', button.dataset.noticeDismiss); } catch {}
+}));
+
 window.Alpine = Alpine;
 Alpine.start();

@@ -14,6 +14,24 @@
 <header id="site-nav" role="banner"
         x-data="{ menu: false }" @keydown.escape.window="if (menu) { menu = false; $refs.menuToggle.focus() }"
         class="nav-glass {{ ($sticky ?? false) ? 'sticky' : 'fixed' }} site-header">
+    @if ($notice ?? false)
+        <div id="security-notice" class="site-notice" role="region" aria-label="Security notice">
+            <div class="site-notice__inner">
+                <span class="site-notice__tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0 3.75h.008M9 3.6 3.75 6v5.25c0 4.6 3.4 8.4 8.25 9.75 4.85-1.35 8.25-5.15 8.25-9.75V6L15 3.6a7.5 7.5 0 0 0-6 0Z"/></svg>
+                    Security
+                </span>
+                <p class="site-notice__text">
+                    <span class="site-notice__long"><strong>Magewire 3.7.2</strong> fixes a high-severity vulnerability affecting 3.0.0&ndash;3.7.1.</span>
+                    <span class="site-notice__short"><strong>3.7.2</strong>: high-severity fix.</span>
+                    <a href="https://github.com/magewirephp/magewire/releases/tag/3.7.2" target="_blank" rel="noopener" class="site-notice__link">Upgrade now&nbsp;&rarr;</a>
+                </p>
+                <button type="button" class="site-notice__dismiss" data-notice-dismiss="3.7.2" aria-label="Dismiss security notice">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path stroke-linecap="round" d="m6 6 12 12M18 6 6 18"/></svg>
+                </button>
+            </div>
+        </div>
+    @endif
     <div class="site-header__bar">
         <a href="/" class="site-header__brand" aria-label="Magewire, go to homepage">MagewirePHP</a>
 

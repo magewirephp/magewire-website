@@ -11,6 +11,12 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#f26322">
+    <script>
+        // Hide the security notice before first paint when it was already dismissed
+        try {
+            if (localStorage.getItem('magewire:notice-dismissed') === '3.7.2') document.documentElement.classList.add('notice-dismissed');
+        } catch {}
+    </script>
     @include('partials.assets', ['hero' => true])
 </head>
 <body class="bg-[#fafafa] text-[#1a1a1a] antialiased font-sans overflow-x-hidden">
@@ -26,7 +32,7 @@
 {{-- ══════════════════════════════════
      NAVIGATION
      ══════════════════════════════════ --}}
-@include('partials.header')
+@include('partials.header', ['notice' => true])
 
 <main id="main">
 
@@ -34,7 +40,7 @@
      HERO: painted sky
      ══════════════════════════════════ --}}
 <section id="hero" data-painted-scene class="painted-hero relative z-10 min-h-[100svh] flex flex-col items-center justify-center
-                pt-24 pb-32 px-6 overflow-hidden">
+                pt-[calc(6rem+var(--site-notice-height))] pb-32 px-6 overflow-hidden">
 
     {{-- Painted sky behind the introduction --}}
     <div class="painted-hero__scene" aria-hidden="true">
