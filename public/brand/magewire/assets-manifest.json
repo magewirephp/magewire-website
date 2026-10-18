@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 1,
+  "name": "Magewire character brand assets",
+  "gaze": "down-right, including both pupil highlights",
+  "colors": {
+    "orange": "#ff4f00",
+    "ink": "#111111",
+    "pupil": "#141b2a",
+    "white": "#ffffff",
+    "dark": "#141b2a",
+    "paper": "#fff8f2"
+  },
+  "archive": "magewire-brand-assets.zip",
+  "assets": [
+    {
+      "id": "character-color",
+      "title": "Orange character",
+      "kind": "character",
+      "theme": "light",
+      "width": 512,
+      "height": 560,
+      "transparent": true,
+      "svg": "svg/character-color.svg",
+      "png": [
+        {
+          "width": 64,
+          "height": 70,
+          "path": "png/character-color-64.png"
+        },
+        {
+          "width": 128,
+          "height": 140,
+          "path": "png/character-color-128.png"
+        },
+        {
+          "width": 256,
+          "height": 280,
+          "path": "png/character-color-256.png"
+        },
+        {
+          "width": 512,
+          "height": 560,
+          "path": "png/character-color-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 1120,
+          "path": "png/character-color-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 2240,
+          "path": "png/character-color-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 1120,
+        "path": "webp/character-color-1024.webp"
+      }
+    },
+    {
+      "id": "character-black",
+      "title": "Black character",
+      "kind": "character",
+      "theme": "light",
+      "width": 512,
+      "height": 560,
+      "transparent": true,
+      "svg": "svg/character-black.svg",
+      "png": [
+        {
+          "width": 64,
+          "height": 70,
+          "path": "png/character-black-64.png"
+        },
+        {
+          "width": 128,
+          "height": 140,
+          "path": "png/character-black-128.png"
+        },
+        {
+          "width": 256,
+          "height": 280,
+          "path": "png/character-black-256.png"
+        },
+        {
+          "width": 512,
+          "height": 560,
+          "path": "png/character-black-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 1120,
+          "path": "png/character-black-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 2240,
+          "path": "png/character-black-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 1120,
+        "path": "webp/character-black-1024.webp"
+      }
+    },
+    {
+      "id": "character-white",
+      "title": "White character",
+      "kind": "character",
+      "theme": "dark",
+      "width": 512,
+      "height": 560,
+      "transparent": true,
+      "svg": "svg/character-white.svg",
+      "png": [
+        {
+          "width": 64,
+          "height": 70,
+          "path": "png/character-white-64.png"
+        },
+        {
+          "width": 128,
+          "height": 140,
+          "path": "png/character-white-128.png"
+        },
+        {
+          "width": 256,
+          "height": 280,
+          "path": "png/character-white-256.png"
+        },
+        {
+          "width": 512,
+          "height": 560,
+          "path": "png/character-white-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 1120,
+          "path": "png/character-white-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 2240,
+          "path": "png/character-white-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 1120,
+        "path": "webp/character-white-1024.webp"
+      }
+    },
+    {
+      "id": "wordmark-black",
+      "title": "Black wordmark",
+      "kind": "wordmark",
+      "theme": "light",
+      "width": 599.748,
+      "height": 128,
+      "transparent": true,
+      "svg": "svg/wordmark-black.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 109,
+          "path": "png/wordmark-black-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 218,
+          "path": "png/wordmark-black-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 437,
+          "path": "png/wordmark-black-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 218,
+        "path": "webp/wordmark-black-1024.webp"
+      }
+    },
+    {
+      "id": "wordmark-white",
+      "title": "White wordmark",
+      "kind": "wordmark",
+      "theme": "dark",
+      "width": 599.748,
+      "height": 128,
+      "transparent": true,
+      "svg": "svg/wordmark-white.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 109,
+          "path": "png/wordmark-white-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 218,
+          "path": "png/wordmark-white-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 437,
+          "path": "png/wordmark-white-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 218,
+        "path": "webp/wordmark-white-1024.webp"
+      }
+    },
+    {
+      "id": "wordmark-orange",
+      "title": "Orange wordmark",
+      "kind": "wordmark",
+      "theme": "light",
+      "width": 599.748,
+      "height": 128,
+      "transparent": true,
+      "svg": "svg/wordmark-orange.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 109,
+          "path": "png/wordmark-orange-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 218,
+          "path": "png/wordmark-orange-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 437,
+          "path": "png/wordmark-orange-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 218,
+        "path": "webp/wordmark-orange-1024.webp"
+      }
+    },
+    {
+      "id": "horizontal-color",
+      "title": "Horizontal logo · color",
+      "kind": "horizontal",
+      "theme": "light",
+      "width": 751.295,
+      "height": 224,
+      "transparent": true,
+      "svg": "svg/horizontal-color.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 153,
+          "path": "png/horizontal-color-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 305,
+          "path": "png/horizontal-color-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 611,
+          "path": "png/horizontal-color-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 305,
+        "path": "webp/horizontal-color-1024.webp"
+      }
+    },
+    {
+      "id": "stacked-color",
+      "title": "Stacked logo · color",
+      "kind": "stacked",
+      "theme": "light",
+      "width": 800,
+      "height": 741.665,
+      "transparent": true,
+      "svg": "svg/stacked-color.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 475,
+          "path": "png/stacked-color-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 949,
+          "path": "png/stacked-color-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 1899,
+          "path": "png/stacked-color-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 949,
+        "path": "webp/stacked-color-1024.webp"
+      }
+    },
+    {
+      "id": "horizontal-reverse",
+      "title": "Horizontal logo · reverse",
+      "kind": "horizontal",
+      "theme": "dark",
+      "width": 751.295,
+      "height": 224,
+      "transparent": true,
+      "svg": "svg/horizontal-reverse.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 153,
+          "path": "png/horizontal-reverse-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 305,
+          "path": "png/horizontal-reverse-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 611,
+          "path": "png/horizontal-reverse-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 305,
+        "path": "webp/horizontal-reverse-1024.webp"
+      }
+    },
+    {
+      "id": "stacked-reverse",
+      "title": "Stacked logo · reverse",
+      "kind": "stacked",
+      "theme": "dark",
+      "width": 800,
+      "height": 741.665,
+      "transparent": true,
+      "svg": "svg/stacked-reverse.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 475,
+          "path": "png/stacked-reverse-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 949,
+          "path": "png/stacked-reverse-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 1899,
+          "path": "png/stacked-reverse-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 949,
+        "path": "webp/stacked-reverse-1024.webp"
+      }
+    },
+    {
+      "id": "horizontal-black",
+      "title": "Horizontal logo · black",
+      "kind": "horizontal",
+      "theme": "light",
+      "width": 751.295,
+      "height": 224,
+      "transparent": true,
+      "svg": "svg/horizontal-black.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 153,
+          "path": "png/horizontal-black-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 305,
+          "path": "png/horizontal-black-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 611,
+          "path": "png/horizontal-black-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 305,
+        "path": "webp/horizontal-black-1024.webp"
+      }
+    },
+    {
+      "id": "stacked-black",
+      "title": "Stacked logo · black",
+      "kind": "stacked",
+      "theme": "light",
+      "width": 800,
+      "height": 741.665,
+      "transparent": true,
+      "svg": "svg/stacked-black.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 475,
+          "path": "png/stacked-black-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 949,
+          "path": "png/stacked-black-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 1899,
+          "path": "png/stacked-black-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 949,
+        "path": "webp/stacked-black-1024.webp"
+      }
+    },
+    {
+      "id": "horizontal-white",
+      "title": "Horizontal logo · white",
+      "kind": "horizontal",
+      "theme": "dark",
+      "width": 751.295,
+      "height": 224,
+      "transparent": true,
+      "svg": "svg/horizontal-white.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 153,
+          "path": "png/horizontal-white-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 305,
+          "path": "png/horizontal-white-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 611,
+          "path": "png/horizontal-white-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 305,
+        "path": "webp/horizontal-white-1024.webp"
+      }
+    },
+    {
+      "id": "stacked-white",
+      "title": "Stacked logo · white",
+      "kind": "stacked",
+      "theme": "dark",
+      "width": 800,
+      "height": 741.665,
+      "transparent": true,
+      "svg": "svg/stacked-white.svg",
+      "png": [
+        {
+          "width": 512,
+          "height": 475,
+          "path": "png/stacked-white-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 949,
+          "path": "png/stacked-white-1024.png"
+        },
+        {
+          "width": 2048,
+          "height": 1899,
+          "path": "png/stacked-white-2048.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 949,
+        "path": "webp/stacked-white-1024.webp"
+      }
+    },
+    {
+      "id": "avatar-light",
+      "title": "Light avatar",
+      "kind": "avatar",
+      "theme": "light",
+      "width": 512,
+      "height": 512,
+      "transparent": false,
+      "svg": "svg/avatar-light.svg",
+      "png": [
+        {
+          "width": 128,
+          "height": 128,
+          "path": "png/avatar-light-128.png"
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "path": "png/avatar-light-256.png"
+        },
+        {
+          "width": 512,
+          "height": 512,
+          "path": "png/avatar-light-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 1024,
+          "path": "png/avatar-light-1024.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 1024,
+        "path": "webp/avatar-light-1024.webp"
+      }
+    },
+    {
+      "id": "avatar-dark",
+      "title": "Dark avatar",
+      "kind": "avatar",
+      "theme": "dark",
+      "width": 512,
+      "height": 512,
+      "transparent": false,
+      "svg": "svg/avatar-dark.svg",
+      "png": [
+        {
+          "width": 128,
+          "height": 128,
+          "path": "png/avatar-dark-128.png"
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "path": "png/avatar-dark-256.png"
+        },
+        {
+          "width": 512,
+          "height": 512,
+          "path": "png/avatar-dark-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 1024,
+          "path": "png/avatar-dark-1024.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 1024,
+        "path": "webp/avatar-dark-1024.webp"
+      }
+    },
+    {
+      "id": "avatar-orange",
+      "title": "Orange avatar",
+      "kind": "avatar",
+      "theme": "light",
+      "width": 512,
+      "height": 512,
+      "transparent": false,
+      "svg": "svg/avatar-orange.svg",
+      "png": [
+        {
+          "width": 128,
+          "height": 128,
+          "path": "png/avatar-orange-128.png"
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "path": "png/avatar-orange-256.png"
+        },
+        {
+          "width": 512,
+          "height": 512,
+          "path": "png/avatar-orange-512.png"
+        },
+        {
+          "width": 1024,
+          "height": 1024,
+          "path": "png/avatar-orange-1024.png"
+        }
+      ],
+      "webp": {
+        "width": 1024,
+        "height": 1024,
+        "path": "webp/avatar-orange-1024.webp"
+      }
+    },
+    {
+      "id": "social-light",
+      "title": "Light social card",
+      "kind": "social",
+      "theme": "light",
+      "width": 1200,
+      "height": 630,
+      "transparent": false,
+      "svg": "svg/social-light.svg",
+      "png": [
+        {
+          "width": 1200,
+          "height": 630,
+          "path": "png/social-light-1200.png"
+        }
+      ],
+      "webp": {
+        "width": 1200,
+        "height": 630,
+        "path": "webp/social-light-1200.webp"
+      }
+    },
+    {
+      "id": "social-dark",
+      "title": "Dark social card",
+      "kind": "social",
+      "theme": "dark",
+      "width": 1200,
+      "height": 630,
+      "transparent": false,
+      "svg": "svg/social-dark.svg",
+      "png": [
+        {
+          "width": 1200,
+          "height": 630,
+          "path": "png/social-dark-1200.png"
+        }
+      ],
+      "webp": {
+        "width": 1200,
+        "height": 630,
+        "path": "webp/social-dark-1200.webp"
+      }
+    }
+  ],
+  "files": [
+    "OFL-Outfit.txt",
+    "README.md",
+    "assets-manifest.json",
+    "gallery.css",
+    "icons/android-chrome-192x192.png",
+    "icons/android-chrome-512x512.png",
+    "icons/apple-touch-icon.png",
+    "icons/favicon-16x16.png",
+    "icons/favicon-32x32.png",
+    "icons/favicon-48x48.png",
+    "icons/favicon-64x64.png",
+    "icons/favicon.ico",
+    "icons/favicon.svg",
+    "icons/maskable-icon-512x512.png",
+    "icons/site.webmanifest",
+    "index.html",
+    "magewire-brand-assets.zip",
+    "png/avatar-dark-1024.png",
+    "png/avatar-dark-128.png",
+    "png/avatar-dark-256.png",
+    "png/avatar-dark-512.png",
+    "png/avatar-light-1024.png",
+    "png/avatar-light-128.png",
+    "png/avatar-light-256.png",
+    "png/avatar-light-512.png",
+    "png/avatar-orange-1024.png",
+    "png/avatar-orange-128.png",
+    "png/avatar-orange-256.png",
+    "png/avatar-orange-512.png",
+    "png/character-black-1024.png",
+    "png/character-black-128.png",
+    "png/character-black-2048.png",
+    "png/character-black-256.png",
+    "png/character-black-512.png",
+    "png/character-black-64.png",
+    "png/character-color-1024.png",
+    "png/character-color-128.png",
+    "png/character-color-2048.png",
+    "png/character-color-256.png",
+    "png/character-color-512.png",
+    "png/character-color-64.png",
+    "png/character-white-1024.png",
+    "png/character-white-128.png",
+    "png/character-white-2048.png",
+    "png/character-white-256.png",
+    "png/character-white-512.png",
+    "png/character-white-64.png",
+    "png/horizontal-black-1024.png",
+    "png/horizontal-black-2048.png",
+    "png/horizontal-black-512.png",
+    "png/horizontal-color-1024.png",
+    "png/horizontal-color-2048.png",
+    "png/horizontal-color-512.png",
+    "png/horizontal-reverse-1024.png",
+    "png/horizontal-reverse-2048.png",
+    "png/horizontal-reverse-512.png",
+    "png/horizontal-white-1024.png",
+    "png/horizontal-white-2048.png",
+    "png/horizontal-white-512.png",
+    "png/social-dark-1200.png",
+    "png/social-light-1200.png",
+    "png/stacked-black-1024.png",
+    "png/stacked-black-2048.png",
+    "png/stacked-black-512.png",
+    "png/stacked-color-1024.png",
+    "png/stacked-color-2048.png",
+    "png/stacked-color-512.png",
+    "png/stacked-reverse-1024.png",
+    "png/stacked-reverse-2048.png",
+    "png/stacked-reverse-512.png",
+    "png/stacked-white-1024.png",
+    "png/stacked-white-2048.png",
+    "png/stacked-white-512.png",
+    "png/wordmark-black-1024.png",
+    "png/wordmark-black-2048.png",
+    "png/wordmark-black-512.png",
+    "png/wordmark-orange-1024.png",
+    "png/wordmark-orange-2048.png",
+    "png/wordmark-orange-512.png",
+    "png/wordmark-white-1024.png",
+    "png/wordmark-white-2048.png",
+    "png/wordmark-white-512.png",
+    "preview.png",
+    "svg/avatar-dark.svg",
+    "svg/avatar-light.svg",
+    "svg/avatar-orange.svg",
+    "svg/character-black.svg",
+    "svg/character-color.svg",
+    "svg/character-white.svg",
+    "svg/horizontal-black.svg",
+    "svg/horizontal-color.svg",
+    "svg/horizontal-reverse.svg",
+    "svg/horizontal-white.svg",
+    "svg/social-dark.svg",
+    "svg/social-light.svg",
+    "svg/stacked-black.svg",
+    "svg/stacked-color.svg",
+    "svg/stacked-reverse.svg",
+    "svg/stacked-white.svg",
+    "svg/wordmark-black.svg",
+    "svg/wordmark-orange.svg",
+    "svg/wordmark-white.svg",
+    "webp/avatar-dark-1024.webp",
+    "webp/avatar-light-1024.webp",
+    "webp/avatar-orange-1024.webp",
+    "webp/character-black-1024.webp",
+    "webp/character-color-1024.webp",
+    "webp/character-white-1024.webp",
+    "webp/horizontal-black-1024.webp",
+    "webp/horizontal-color-1024.webp",
+    "webp/horizontal-reverse-1024.webp",
+    "webp/horizontal-white-1024.webp",
+    "webp/social-dark-1200.webp",
+    "webp/social-light-1200.webp",
+    "webp/stacked-black-1024.webp",
+    "webp/stacked-color-1024.webp",
+    "webp/stacked-reverse-1024.webp",
+    "webp/stacked-white-1024.webp",
+    "webp/wordmark-black-1024.webp",
+    "webp/wordmark-orange-1024.webp",
+    "webp/wordmark-white-1024.webp"
+  ]
+}

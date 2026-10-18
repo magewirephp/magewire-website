@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Dark avatar">
+<rect width="512" height="512" fill="#141b2a"/><g transform="translate(73.143 56) scale(0.714)"><path fill="#ff4f00" d="M245 26 Q256 20 267 26 L472 137 Q492 148 492 170 V408 Q492 425 481 436 L443 474 V490 Q443 536 399 536 H357 Q313 536 313 492 V491 Q313 472 294 472 H218 Q199 472 199 491 V492 Q199 536 155 536 H113 Q69 536 69 490 V474 L31 436 Q20 425 20 408 V170 Q20 148 40 137 Z"/>
+  <g fill="#ffffff">
+    <ellipse cx="181" cy="245" rx="47" ry="65"/>
+    <ellipse cx="331" cy="257" rx="46" ry="64"/>
+  </g>
+  <g fill="#141b2a">
+    <ellipse cx="195" cy="264" rx="28" ry="31"/>
+    <ellipse cx="343" cy="277" rx="28" ry="31"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="203" cy="276" r="12"/>
+    <circle cx="351" cy="289" r="12"/>
+  </g></g>
+</svg>

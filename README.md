@@ -56,6 +56,25 @@ contributor list or when a portrait or organization logo changes.
 Font files and their OFL licenses live in `public/fonts/`. The files are the same
 Latin subsets previously served by Bunny Fonts, preserving the typography.
 
+## Brand assets
+
+The Magewire character logo pack lives in `public/brand/magewire/`. Open
+`public/brand/magewire/index.html` to compare and download the character,
+horizontal and stacked logos, wordmarks, avatars, social cards and web icons.
+The pack includes transparent SVG/PNG exports, lossless WebP files and a ZIP.
+See its [usage guide](public/brand/magewire/README.md) for choosing a version.
+
+Editable masters and the approved concept reference live in
+`resources/brand/magewire/`. After editing them, run:
+
+```shell
+npm run brand:build
+npm run brand:check
+```
+
+Commit both the masters and generated pack so PHP-only deployments have the
+assets. Adding the pack does not replace the site's current header or favicon.
+
 ## Production performance
 
 Use `APP_ENV=production` and `APP_DEBUG=false`, then run:
