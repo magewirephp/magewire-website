@@ -18,6 +18,16 @@ async function compile() {
         if (result.status !== 0) throw new Error('Tailwind compilation failed');
 
         const manifest = JSON.parse(await readFile('public/images/identity/manifest.json', 'utf8'));
+        for (const path of [
+            'brand/magewire/svg/horizontal-color.svg',
+            'brand/magewire/png/social-light-1200.png',
+            'brand/magewire/icons/site.webmanifest',
+            'favicon.svg',
+            'favicon.ico',
+            'apple-touch-icon.png',
+        ]) {
+            manifest[path] = `/${path}?v=${hash(await readFile(`public/${path}`))}`;
+        }
         let fonts = await readFile('resources/css/fonts.css', 'utf8');
         for (const match of fonts.matchAll(/\/fonts\/([^')]+\.woff2)/g)) {
             const path = `fonts/${match[1]}`;

@@ -65,8 +65,11 @@ These paths work once this asset pack is deployed with the website:
 ```
 
 The web manifest includes 192px and 512px icons and a separate maskable icon
-with a larger safe area. The existing website header, footer, social metadata
-and root favicon are not automatically changed by installing this pack.
+with a larger safe area. The website uses the horizontal color logo in its
+shared header and footer, with the light social card for link previews on all
+public pages. The footer links to this gallery. The brand build synchronizes
+the root favicons and Apple touch icon with this pack; the frontend build adds
+content hashes to the URLs used by the templates.
 
 ## Source and typeface
 

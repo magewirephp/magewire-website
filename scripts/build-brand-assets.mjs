@@ -10,6 +10,11 @@ const source = resolve(root, 'resources/brand/magewire');
 const output = resolve(root, 'public/brand/magewire');
 const manifestName = 'assets-manifest.json';
 const archiveName = 'magewire-brand-assets.zip';
+const siteIcons = {
+    'favicon.svg': 'icons/favicon.svg',
+    'favicon.ico': 'icons/favicon.ico',
+    'apple-touch-icon.png': 'icons/apple-touch-icon.png',
+};
 sharp.concurrency(2);
 
 // A small, deterministic ZIP writer keeps the asset build dependency-free apart
@@ -66,6 +71,9 @@ async function verify() {
     for (const filename of manifest.files) {
         assert(!filename.startsWith('/') && !filename.split('/').includes('..'), `Unsafe path: ${filename}`);
         assert((await stat(resolve(output, filename))).size > 0, `Empty file: ${filename}`);
+    }
+    for (const [filename, original] of Object.entries(siteIcons)) {
+        assert((await readFile(resolve(root, 'public', filename))).equals(await readFile(resolve(output, original))), `Website icon is out of date: ${filename}`);
     }
     for (const asset of manifest.assets) {
         const svg = await readFile(resolve(output, asset.svg), 'utf8');
@@ -327,5 +335,8 @@ const manifest = {
 };
 await save(manifestName, JSON.stringify(manifest, null, 2) + '\n');
 await save(archiveName, zip([...files.entries()].sort(([a], [b]) => a.localeCompare(b))));
+for (const [filename, original] of Object.entries(siteIcons)) {
+    await writeFile(resolve(root, 'public', filename), files.get(original));
+}
 await verify();
 console.log(`Built the Magewire pack at public/brand/magewire/ (${(files.get(archiveName).length / 1024).toFixed(0)} KiB ZIP).`);

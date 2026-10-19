@@ -27,6 +27,12 @@
   "images/identity/people/Tjitse-E": "/images/identity/people-Tjitse-E-d52d0477116c.jpg",
   "images/identity/people/Vinai": "/images/identity/people-Vinai-b88f99d8a3e0.jpg",
   "images/identity/people/wpoortman": "/images/identity/people-wpoortman-f417d8a9e952.jpg",
+  "brand/magewire/svg/horizontal-color.svg": "/brand/magewire/svg/horizontal-color.svg?v=5ade548d07fd",
+  "brand/magewire/png/social-light-1200.png": "/brand/magewire/png/social-light-1200.png?v=fcd5804dbfd7",
+  "brand/magewire/icons/site.webmanifest": "/brand/magewire/icons/site.webmanifest?v=9dac30eb3fa1",
+  "favicon.svg": "/favicon.svg?v=8b6337faa733",
+  "favicon.ico": "/favicon.ico?v=b33569d40fff",
+  "apple-touch-icon.png": "/apple-touch-icon.png?v=5092057210f5",
   "fonts/inter-latin-400-normal.woff2": "/fonts/inter-latin-400-normal.woff2?v=8909904ab6c8",
   "fonts/inter-latin-500-normal.woff2": "/fonts/inter-latin-500-normal.woff2?v=f3779f1efccc",
   "fonts/inter-latin-600-normal.woff2": "/fonts/inter-latin-600-normal.woff2?v=f9a06e79cd3a",
@@ -35,6 +41,6 @@
   "fonts/inter-latin-900-normal.woff2": "/fonts/inter-latin-900-normal.woff2?v=d5c0ed7b8b5d",
   "fonts/jetbrains-mono-latin-400-normal.woff2": "/fonts/jetbrains-mono-latin-400-normal.woff2?v=14425ba9c695",
   "fonts/jetbrains-mono-latin-500-normal.woff2": "/fonts/jetbrains-mono-latin-500-normal.woff2?v=cb182feeed4d",
-  "css/app.css": "/css/app.css?v=8d073da3dbca",
+  "css/app.css": "/css/app.css?v=96deccd7048d",
   "js/app.js": "/js/app.js?v=e6d21427fad2"
 }
