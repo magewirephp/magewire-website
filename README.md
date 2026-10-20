@@ -137,8 +137,8 @@ The initial quotes from Marcus Venghaus, Vinai Kopp, Kiel Pykett, and Ryan Copel
 come from the [Magewire V1 README, 15 March 2023](https://github.com/magewirephp/magewire/blob/30d9ad4236c697c171475b69dde3a6c809acc8a5/README.md#developers-say).
 Source URLs are kept in the configuration and the blockquote's `cite` metadata;
 the cards do not display source links. Wording is preserved with line breaks
-joined and Markdown links converted to plain text; the role descriptions reflect
-that historical snapshot.
+joined and Markdown links converted to plain text. Attribution details are
+maintained separately and can be updated as people's roles or company names change.
 
 No frontend rebuild is needed when changing quote content.
 Run `php artisan config:cache` when deploying content changes to a site with
