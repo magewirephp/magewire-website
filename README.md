@@ -138,7 +138,7 @@ come from the [Magewire V1 README, 15 March 2023](https://github.com/magewirephp
 Source URLs are kept in the configuration and the blockquote's `cite` metadata;
 the cards do not display source links. Wording is preserved with line breaks
 joined and Markdown links converted to plain text; the role descriptions reflect
-that historical snapshot. The section identifies the feedback as originating in V1.
+that historical snapshot.
 
 No frontend rebuild is needed when changing quote content.
 Run `php artisan config:cache` when deploying content changes to a site with

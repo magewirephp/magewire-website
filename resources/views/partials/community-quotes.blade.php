@@ -10,9 +10,6 @@
                     class="painted-title mx-auto max-w-3xl text-4xl font-bold tracking-tight text-[#1a1a1a] sm:text-5xl">
                     What people say
                 </h2>
-                <p class="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#71717a]">
-                    Originally shared by the community during Magewire V1.
-                </p>
             </div>
 
             <div @class([
