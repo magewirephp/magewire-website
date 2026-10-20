@@ -45,7 +45,7 @@ return [
         [
             'quote' => 'Magewire is an awesome tool for Magento developers to build great interactive frontend features. It brings the backend closer to the frontend and speeds up development times. We are now using Magewire in all our projects where it makes sense to do so. I highly recommend it to Magento developers.',
             'name' => 'Ryan Copeland',
-            'role' => 'Founder, Solution Architect & Developer · Foundation Commerce',
+            'role' => 'Founder of Foundation Commerce',
             'source' => 'https://github.com/magewirephp/magewire/blob/30d9ad4236c697c171475b69dde3a6c809acc8a5/README.md?plain=1#L59-L63',
         ],
     ],
