@@ -114,6 +114,29 @@ are maintained alongside the people listed in `resources/views/welcome.blade.php
   and heading accents, using the brush masks in `public/images/ui/`.
 - `routes/web.php` defines public URLs and redirects.
 
+### Community quotes on the homepage
+
+Add quotes to the `quotes` list in `config/testimonials.php`. They appear after
+compatibility and before Tools, in the order you add them:
+
+```php
+'quotes' => [
+    [
+        'quote' => 'Replace this with the person\'s exact words.',
+        'name' => 'Their full name',
+        'role' => 'Their role or company', // Optional.
+        'source' => 'https://example.com/original-quote', // Optional.
+    ],
+],
+```
+
+Use genuine quotes and attribute them to the person who said them. The section
+is hidden until the first quote is added. One quote is centered; multiple quotes
+use a responsive grid. No frontend rebuild is needed when changing quote content.
+Run `php artisan config:cache` when deploying content changes to a site with
+cached configuration. The markup lives in
+`resources/views/partials/community-quotes.blade.php`.
+
 Keep code examples aligned with the current
 [Magewire V3 guides](https://docs.magewirephp.nl/) and
 [core source](https://github.com/magewirephp/magewire). Link changing platform

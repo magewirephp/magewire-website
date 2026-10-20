@@ -692,6 +692,12 @@
 
 
 {{-- ══════════════════════════════════
+     COMMUNITY QUOTES
+     ══════════════════════════════════ --}}
+@include('partials.community-quotes')
+
+
+{{-- ══════════════════════════════════
      TOOLS
      ══════════════════════════════════ --}}
 <section id="tools" class="painted-section painted-section--ink painted-section--after-paper relative overflow-hidden px-6 py-36">
