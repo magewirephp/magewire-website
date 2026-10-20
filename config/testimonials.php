@@ -21,8 +21,8 @@ return [
     |
     */
 
-    // Recovered from the Magewire V1 README on 15 March 2023. Role descriptions
-    // reflect that snapshot; quote wording is preserved with line breaks joined.
+    // Recovered from the Magewire V1 README on 15 March 2023, with line breaks
+    // joined. Attribution details are maintained separately from quote wording.
     'quotes' => [
         [
             'quote' => 'This is a game-changing tool! You can build practically anything with almost no javascript. It saves a significant amount of time and is incredibly easy to work with. It\'s not a matter of whether you should use it, you simply must use it.',
@@ -33,13 +33,13 @@ return [
         [
             'quote' => 'Magewire is like magic sauce that can save a ton of time implementing features! It’s great to see more tools from the Laravel ecosystem being made available within Magento - thanks Willem!',
             'name' => 'Vinai Kopp',
-            'role' => 'Technical Director and Partner · Hyvä Themes',
+            'role' => 'Technical Director and Partner · Hyvä',
             'source' => 'https://github.com/magewirephp/magewire/blob/30d9ad4236c697c171475b69dde3a6c809acc8a5/README.md?plain=1#L43-L46',
         ],
         [
             'quote' => 'Magewire is one of my favourite tools! It even makes frontend morons like me capable of dynamic UIs! More people should check it out.',
             'name' => 'Kiel Pykett',
-            'role' => 'Technical Lead Magento Developer · Fisheye',
+            'role' => 'Magento Developer at Hyvä',
             'source' => 'https://github.com/magewirephp/magewire/blob/30d9ad4236c697c171475b69dde3a6c809acc8a5/README.md?plain=1#L54-L57',
         ],
         [
