@@ -114,6 +114,37 @@ are maintained alongside the people listed in `resources/views/welcome.blade.php
   and heading accents, using the brush masks in `public/images/ui/`.
 - `routes/web.php` defines public URLs and redirects.
 
+### Community quotes on the homepage
+
+Add quotes to the `quotes` list in `config/testimonials.php`. They appear after
+compatibility and before Tools, in the order you add them:
+
+```php
+'quotes' => [
+    [
+        'quote' => 'Replace this with the person\'s exact words.',
+        'name' => 'Their full name',
+        'role' => 'Their role or company', // Optional.
+        'source' => 'https://example.com/original-quote', // Optional.
+    ],
+],
+```
+
+Use genuine quotes and attribute them to the person who said them. The section
+is hidden if the list is empty. One quote is centered; multiple quotes use a
+responsive grid, with four quotes arranged in two columns on wider screens.
+The initial quotes from Marcus Venghaus, Vinai Kopp, Kiel Pykett, and Ryan Copeland
+come from the [Magewire V1 README, 15 March 2023](https://github.com/magewirephp/magewire/blob/30d9ad4236c697c171475b69dde3a6c809acc8a5/README.md#developers-say).
+Source URLs are kept in the configuration and the blockquote's `cite` metadata;
+the cards do not display source links. Wording is preserved with line breaks
+joined and Markdown links converted to plain text; the role descriptions reflect
+that historical snapshot.
+
+No frontend rebuild is needed when changing quote content.
+Run `php artisan config:cache` when deploying content changes to a site with
+cached configuration. The markup lives in
+`resources/views/partials/community-quotes.blade.php`.
+
 Keep code examples aligned with the current
 [Magewire V3 guides](https://docs.magewirephp.nl/) and
 [core source](https://github.com/magewirephp/magewire). Link changing platform
