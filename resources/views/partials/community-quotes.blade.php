@@ -11,7 +11,7 @@
                     What people say
                 </h2>
                 <p class="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#71717a]">
-                    Thoughts from developers using Magewire.
+                    Originally shared by the community during Magewire V1.
                 </p>
             </div>
 
@@ -19,7 +19,7 @@
                 'grid gap-6',
                 'mx-auto max-w-2xl' => count($quotes) === 1,
                 'md:grid-cols-2' => count($quotes) >= 2,
-                'lg:grid-cols-3' => count($quotes) >= 3,
+                'lg:grid-cols-3' => count($quotes) >= 3 && count($quotes) !== 4,
             ])>
                 @foreach ($quotes as $quote)
                     <figure class="painted-card flex h-full min-w-0 flex-col p-8 sm:p-10">

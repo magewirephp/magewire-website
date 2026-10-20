@@ -131,8 +131,15 @@ compatibility and before Tools, in the order you add them:
 ```
 
 Use genuine quotes and attribute them to the person who said them. The section
-is hidden until the first quote is added. One quote is centered; multiple quotes
-use a responsive grid. No frontend rebuild is needed when changing quote content.
+is hidden if the list is empty. One quote is centered; multiple quotes use a
+responsive grid, with four quotes arranged in two columns on wider screens.
+The initial quotes from Marcus Venghaus, Vinai Kopp, Kiel Pykett, and Ryan Copeland
+come from the [Magewire V1 README, 15 March 2023](https://github.com/magewirephp/magewire/blob/30d9ad4236c697c171475b69dde3a6c809acc8a5/README.md#developers-say).
+Each card links to its original passage. Wording is preserved with line breaks
+joined and Markdown links converted to plain text; the role descriptions reflect
+that historical snapshot. The section identifies the feedback as originating in V1.
+
+No frontend rebuild is needed when changing quote content.
 Run `php artisan config:cache` when deploying content changes to a site with
 cached configuration. The markup lives in
 `resources/views/partials/community-quotes.blade.php`.
