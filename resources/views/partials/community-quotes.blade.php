@@ -33,15 +33,6 @@
                             @if ($quote['role'] ?? null)
                                 <p class="mt-1 text-sm leading-relaxed text-[#71717a]">{{ $quote['role'] }}</p>
                             @endif
-                            @if ($quote['source'] ?? null)
-                                <a href="{{ $quote['source'] }}" target="_blank" rel="noopener noreferrer"
-                                   class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-mw-600 underline-offset-4 hover:underline focus-visible:underline">
-                                    Read the original<span class="sr-only"> quote from {{ $quote['name'] }}</span>
-                                    <svg class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 4h10v10M16 4 4 16" />
-                                    </svg>
-                                </a>
-                            @endif
                         </figcaption>
                     </figure>
                 @endforeach
