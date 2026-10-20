@@ -73,7 +73,10 @@ npm run brand:check
 ```
 
 Commit both the masters and generated pack so PHP-only deployments have the
-assets. Adding the pack does not replace the site's current header or favicon.
+assets. The shared header and footer use the character logo, and all public
+pages use its icons and social card. The brand build also synchronizes the root
+favicons and Apple touch icon. Run `npm run build` afterwards to refresh the
+versioned asset URLs used by the templates.
 
 ## Production performance
 

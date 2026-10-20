@@ -27,7 +27,9 @@
 
     <div class="painted-footer__content">
         <p class="painted-footer__eyebrow">Built by the community</p>
-        <a href="/" class="painted-footer__brand" aria-label="MagewirePHP, go to homepage">MagewirePHP</a>
+        <a href="/" class="painted-footer__brand" aria-label="Magewire, go to homepage">
+            <x-brand-logo class="painted-footer__logo" loading="lazy" />
+        </a>
         <p class="painted-footer__description">Reactive Magento, PHP-first.</p>
 
         <nav aria-label="Footer" class="painted-footer__nav">
@@ -39,6 +41,7 @@
                     ['label' => 'GitHub', 'url' => 'https://github.com/magewirephp/magewire', 'external' => true],
                     ['label' => 'Sponsors', 'url' => 'https://github.com/sponsors/wpoortman', 'external' => true],
                     ['label' => 'Discord', 'url' => 'https://discord.gg/magewire', 'external' => true],
+                    ['label' => 'Brand assets', 'url' => '/brand/magewire/index.html', 'external' => false],
                 ];
             @endphp
             @foreach ($footerLinks as $link)

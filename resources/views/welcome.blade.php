@@ -3,14 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Magewire: Reactive Magento, PHP-first</title>
-    <meta name="description" content="Build interactive Magento 2 interfaces with PHP components and PHTML. Magewire handles browser updates while you keep using Magento layouts and services.">
-
-    {{-- Favicon --}}
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta name="theme-color" content="#f26322">
+    @php
+        $pageTitle = 'Magewire: Reactive Magento, PHP-first';
+        $pageDescription = 'Build interactive Magento 2 interfaces with PHP components and PHTML. Magewire handles browser updates while you keep using Magento layouts and services.';
+    @endphp
+    <title>{{ $pageTitle }}</title>
+    <meta name="description" content="{{ $pageDescription }}">
+    @include('partials.brand-meta')
     <script>
         // Hide the security notice before first paint when it was already dismissed
         try {

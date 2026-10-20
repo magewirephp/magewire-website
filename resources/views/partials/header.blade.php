@@ -33,7 +33,9 @@
         </div>
     @endif
     <div class="site-header__bar">
-        <a href="/" class="site-header__brand" aria-label="Magewire, go to homepage">MagewirePHP</a>
+        <a href="/" class="site-header__brand" aria-label="Magewire, go to homepage">
+            <x-brand-logo class="site-header__logo" />
+        </a>
 
         <nav aria-label="Primary" class="site-header__nav">
             @foreach ($headerLinks as $link)

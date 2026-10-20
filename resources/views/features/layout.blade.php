@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title') | Magewire Features</title>
-    <meta name="description" content="@yield('description')">
-
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta name="theme-color" content="#f26322">
+    @php
+        $pageTitle = trim($__env->yieldContent('title')).' | Magewire Features';
+        $pageDescription = trim($__env->yieldContent('description'));
+    @endphp
+    <title>{{ $pageTitle }}</title>
+    <meta name="description" content="{{ $pageDescription }}">
+    @include('partials.brand-meta')
     @include('partials.assets', ['hero' => false])
 </head>
 <body class="overflow-x-hidden bg-[#fafafa] font-sans text-[#1a1a1a] antialiased">

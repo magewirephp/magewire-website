@@ -31,13 +31,14 @@ html { scroll-padding-top: calc(var(--site-header-height) + var(--site-notice-he
 }
 
 .site-header__brand {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     flex-shrink: 0;
-    color: #343b2d;
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: -.055em;
     text-decoration: none;
 }
+
+.site-header__logo { display: block; width: 192px; height: auto; }
 
 .site-header__nav { display: flex; align-items: center; gap: 21px; }
 .site-header__link {
@@ -164,7 +165,7 @@ html { scroll-padding-top: calc(var(--site-header-height) + var(--site-notice-he
 @media (max-width: 479px) {
     .site-header__bar,
     .site-notice__inner { width: calc(100% - 32px); gap: 12px; }
-    .site-header__brand { font-size: 1.125rem; }
+    .site-header__logo { width: 154px; }
     .site-header__discord { display: none; }
 }
 
