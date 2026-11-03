@@ -72,10 +72,6 @@ html { scroll-padding-top: calc(var(--site-header-height) + var(--site-notice-he
 
 .site-header__icon:hover { color: #a43b15; }
 .site-header__icon svg { width: 17px; height: 17px; }
-.site-header__motion svg { width: 12px; height: 12px; }
-.site-header__motion .site-header__play { display: none; }
-.site-header__motion[aria-pressed="true"] .site-header__pause { display: none; }
-.site-header__motion[aria-pressed="true"] .site-header__play { display: inline; }
 .site-header__menu-toggle,
 .site-header__mobile { display: none; }
 .site-header [hidden] { display: none; }
